@@ -1,0 +1,109 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[5].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.js","import":"Sorts_Mill_Goudy","arguments":[{"weight":"400","subsets":["latin"],"display":"swap"}],"variableName":"goudy"} ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin-ext */
+@font-face {
+  font-family: '__Sorts_Mill_Goudy_1d6ffb';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/_next/static/media/8d4ed2742d096374-s.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: '__Sorts_Mill_Goudy_1d6ffb';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/_next/static/media/ebdb008c821dc7b4-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__Sorts_Mill_Goudy_Fallback_1d6ffb';src: local("Times New Roman");ascent-override: 90.54%;descent-override: 45.08%;line-gap-override: 0.00%;size-adjust: 106.03%
+}.__className_1d6ffb {font-family: '__Sorts_Mill_Goudy_1d6ffb', '__Sorts_Mill_Goudy_Fallback_1d6ffb';font-weight: 400;font-style: normal
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./src/styles/globals.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+body {
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    margin-top: 3.6em;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+    border: 2px solid #b27734;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b27734;
+    border-radius:80px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b26734;
+    }
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/navbar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.navbar_container__5j_gw {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    white-space: nowrap;
+    margin-right: 3em;
+    padding-top: 1em;
+    height: 75px;
+    width: 100vw;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #b27734;
+}
+
+.navbar_navbar_item__vwZF5{
+    flex: 1 1;
+    display:flex;
+    position: relative;
+}
+
+.navbar_content__9_n7x {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.25em;
+    margin: 0 auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    justify-content: space-evenly;
+    transition: all linear 0.3s;
+}
+
+    .navbar_content__9_n7x:hover {
+        cursor: pointer;
+        text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    }
+
+#navbar_gallery__WUOAH{
+    margin-left:auto;
+    margin-right:auto;
+
+}
