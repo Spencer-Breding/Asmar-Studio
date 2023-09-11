@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    white-space: nowrap;
+    margin-right: 3em;
+    padding-top: 1em;
+    height: 75px;
+    width: 100vw;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #b27734;
+}
+
+.navbar_item{
+    flex: 1;
+    display:flex;
+    position: relative;
+}
+
+.content {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    width: fit-content;
+    padding: 0.25em;
+    margin: 0 auto;
+    user-select: none;
+    justify-content: space-evenly;
+    transition: all linear 0.3s;
+}
+
+    .content:hover {
+        cursor: pointer;
+        text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    }
+
+#gallery{
+    margin-left:auto;
+    margin-right:auto;
+
+}

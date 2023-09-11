@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  width:100%;
+}
+
+    .main div {
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        font-size: 22px;
+        font-weight:600;
+        margin:auto;
+    }
+
+        .main div text {
+            justify-content: space-evenly;
+            flex: 1;
+            text-align: center;
+            text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+            letter-spacing: 2px;
+        }
+
+#more {
+    margin-top:1em;
+    color: white;
+    text-align: center;
+    text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo{
+    width: 50vw;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
