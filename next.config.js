@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-}
+  // Add your image configuration here
+  images: {
+    loader: 'default',
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

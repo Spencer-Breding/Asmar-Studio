@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/home.module.css'
-import logo from '/public/images/AsmarStudioLogoBlackBackground.jpg'
+import logo from '/public/images/LogoBlack.jpg'
 
 export const metadata = {
     title: 'Asmar Studio',
