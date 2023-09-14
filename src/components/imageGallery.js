@@ -34,7 +34,7 @@ export default function ImageGallery() {
         { source: "./images/gallery/Cart.jpg", description: "Kristoff's Cart" },
         { source: "./images/gallery/Mowgli.jpg", description: "Mowgli" },
         { source: "./images/gallery/Raven.jpg", description: "Raven" },
-        { source: "./images/gallery/NinjaTurtles.jpg", description: "Ninja Turtles" },
+        { source: "./images/gallery/Turtles.jpg", description: "Ninja Turtles" },
         { source: "./images/gallery/Paramount.jpg", description: "Paramount Mountain" },
         { source: "./images/gallery/Pinocchio.jpg", description: "3D Pinocchio Billboard" },
         { source: "./images/gallery/QueensGambit.png", description: "Giant Chess Pieces" },
