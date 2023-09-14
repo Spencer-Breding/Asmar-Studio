@@ -96,7 +96,7 @@ function Navbar(props) {
                         className: (_styles_navbar_module_css__WEBPACK_IMPORTED_MODULE_4___default().logo_link),
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
                             className: (_styles_navbar_module_css__WEBPACK_IMPORTED_MODULE_4___default().logo),
-                            src: "/images/LogoBlack.jpg",
+                            src: "./images/LogoBlack.jpg",
                             alt: "Asmar Studio Logo",
                             width: 100,
                             height: 75

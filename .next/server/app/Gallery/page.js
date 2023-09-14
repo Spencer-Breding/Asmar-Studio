@@ -676,7 +676,7 @@ function ImageGallery() {
             description: "The Frogcats"
         },
         {
-            source: "./images/gallery/FrogCats2.png",
+            source: "./images/gallery/Frogcats2.png",
             description: "Frogcats Display"
         },
         {
@@ -692,7 +692,7 @@ function ImageGallery() {
             description: "30ft tall Iron Throne - Rockefeller Center"
         },
         {
-            source: "./images/gallery/GiantLipstick.jpg",
+            source: "./images/gallery/Giantlipstick.jpg",
             description: "6ft Tall Lipstick"
         },
         {
@@ -732,7 +732,7 @@ function ImageGallery() {
             description: "Raven"
         },
         {
-            source: "./images/gallery/NinjaTurtles.jpg",
+            source: "./images/gallery/Turtles.jpg",
             description: "Ninja Turtles"
         },
         {
