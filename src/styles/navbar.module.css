@@ -1,4 +1,4 @@
-.container {
+.nav_container {
     display: flex;
     position: fixed;
     background-color: black;
@@ -60,4 +60,241 @@
     margin-left:auto;
     margin-right:auto;
 
+}
+
+.burger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 100vw;
+    height: 2em;
+    cursor: pointer;
+    z-index: 3;
+    visibility: hidden;
+    background-color: rgba(178,119,52, 0.5);
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+    .burger:focus {
+        outline: none;
+    }
+
+.burger_line1, .burger_line2, .burger_line3 {
+    width: 2em;
+    height: 0.2em;
+    background-color: white;
+    transform-origin: 1px;
+    border-radius: 10px;
+    position: relative;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform-origin: 1px;
+    left: 90vw;
+}
+
+.burger a {
+    text-decoration: none;
+}
+
+.x_left {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    transform: rotate(45deg) translateY(-0.25em);
+}
+
+.x_right {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    transform: rotate(-45deg) translateY(0.25em);
+}
+
+.burger_dropdown {
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    pointer-events: none;
+    cursor:default;
+    transform-origin: top center;
+    z-index: 1;
+    pointer-events: all;
+    height:100vh;
+    background-color:rgba(0,255,255, 0.5);
+    overscroll-behavior: contain;
+    animation: rotateMenu 300ms ease-in-out forwards;
+    transform-origin: top center;
+    width: 70vw;
+    padding-left: 2.25em;
+}
+
+@media (max-width: 48em) {
+
+    .burger {
+        visibility:visible;
+    }
+
+    .nav_container {
+        display:none;
+    }
+
+    .logo_link {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility:hidden;
+    }
+
+    .navbar_item {
+        visibility: hidden;
+    }
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+
+    70% {
+        transform: rotateX(20deg)
+    }
+
+    100% {
+        transform: rotateX(0deg)
+    }
+}
+
+@keyframes openLine1 {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate(0, 10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(5px, 0px) rotate(45deg);
+    }
+}
+
+@keyframes openLine2 {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes openLine3 {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate(0, -10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(5px, 0px) rotate(-45deg);
+    }
+}
+
+/* Keyframes for closing the burger menu */
+@keyframes closeLine1 {
+    0% {
+        transform: translate(5px, 0px) rotate(45deg);
+    }
+
+    75% {
+        transform: translate(0, 10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes closeLine2 {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes closeLine3 {
+    0% {
+        transform: translate(5px, 0px) rotate(-45deg);
+    }
+
+    75% {
+        transform: translate(0, -10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.openLine1, .openLine3, .closeLine1, .closeLine3 {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.openLine2, .closeLine2 {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.openLine1 {
+    animation-name: openLine1;
+}
+
+.closeLine1 {
+    animation-name: closeLine1;
+}
+
+.openLine2 {
+    animation-name: openLine2;
+}
+
+.closeLine2 {
+    animation-name: closeLine2;
+}
+
+.openLine3 {
+    animation-name: openLine3;
+}
+
+.closeLine3 {
+    animation-name: closeLine3;
+}
+
+.noAnimation {
+    transition: none !important;
 }

@@ -27,6 +27,7 @@
             text-align: center;
             text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
             letter-spacing: 2px;
+            flex-wrap:wrap;
         }
 
 #home_more__U_0Wj {
@@ -46,3 +47,9 @@
     margin-right:auto;
 }
 
+
+@media (max-width: 48em) {
+    .home_main__C5E0Z div{
+        font-size: 18px;
+    }
+}

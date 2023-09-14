@@ -1,3 +1,309 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/navbar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.navbar_nav_container__QPZKY {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    white-space: nowrap;
+    margin-right: 3em;
+    padding-left:1.75em;
+    padding-top: 1em;
+    height: 75px;
+    width: 100vw;
+    border-bottom: 2px solid #b27734;
+    gap: 2.5em;
+}
+
+.navbar_navbar_item__vwZF5{
+    margin-top:auto;
+    margin-bottom:auto;
+    display:flex;
+    position: relative;
+}
+
+.navbar_content__9_n7x {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.25em;
+    margin: 0 auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    justify-content: space-evenly;
+    transition: all linear 0.3s;
+}
+
+    .navbar_content__9_n7x:hover {
+        cursor: pointer;
+        text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    }
+
+.navbar_logo___IyD2 {
+    transition: all 0.3s linear;
+}
+
+    .navbar_logo___IyD2:hover {
+        filter: brightness(1.1);
+    }
+
+    .navbar_logo_link__6UnTX{
+        position:absolute;
+        left: 3em;
+    }
+
+#navbar_gallery__WUOAH{
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.navbar_burger__9Cho4 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 100vw;
+    height: 2em;
+    cursor: pointer;
+    z-index: 3;
+    visibility: hidden;
+    background-color: rgba(178,119,52, 0.5);
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+    .navbar_burger__9Cho4:focus {
+        outline: none;
+    }
+
+.navbar_burger_line1__5zNDk, .navbar_burger_line2__byGLq, .navbar_burger_line3__YKyki {
+    width: 2em;
+    height: 0.2em;
+    background-color: white;
+    transform-origin: 1px;
+    border-radius: 10px;
+    position: relative;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transform-origin: 1px;
+    left: 90vw;
+}
+
+.navbar_burger__9Cho4 a {
+    text-decoration: none;
+}
+
+.navbar_x_left__kxkkL {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    transform: rotate(45deg) translateY(-0.25em);
+}
+
+.navbar_x_right__28YBf {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+    transform: rotate(-45deg) translateY(0.25em);
+}
+
+.navbar_burger_dropdown__xy4gN {
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    pointer-events: none;
+    cursor:default;
+    transform-origin: top center;
+    z-index: 1;
+    pointer-events: all;
+    height:100vh;
+    background-color:rgba(0,255,255, 0.5);
+    overscroll-behavior: contain;
+    animation: navbar_rotateMenu__4tXnX 300ms ease-in-out forwards;
+    transform-origin: top center;
+    width: 70vw;
+    padding-left: 2.25em;
+}
+
+@media (max-width: 48em) {
+
+    .navbar_burger__9Cho4 {
+        visibility:visible;
+    }
+
+    .navbar_nav_container__QPZKY {
+        display:none;
+    }
+
+    .navbar_logo_link__6UnTX {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility:hidden;
+    }
+
+    .navbar_navbar_item__vwZF5 {
+        visibility: hidden;
+    }
+}
+
+@keyframes navbar_rotateMenu__4tXnX {
+    0% {
+        transform: rotateX(-90deg)
+    }
+
+    70% {
+        transform: rotateX(20deg)
+    }
+
+    100% {
+        transform: rotateX(0deg)
+    }
+}
+
+@keyframes navbar_openLine1__q_lqC {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate(0, 10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(5px, 0px) rotate(45deg);
+    }
+}
+
+@keyframes navbar_openLine2__nPICC {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes navbar_openLine3__HUKTJ {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate(0, -10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(5px, 0px) rotate(-45deg);
+    }
+}
+
+/* Keyframes for closing the burger menu */
+@keyframes navbar_closeLine1__ZybSM {
+    0% {
+        transform: translate(5px, 0px) rotate(45deg);
+    }
+
+    75% {
+        transform: translate(0, 10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes navbar_closeLine2___FRDF {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes navbar_closeLine3__5rQ7o {
+    0% {
+        transform: translate(5px, 0px) rotate(-45deg);
+    }
+
+    75% {
+        transform: translate(0, -10px) rotate(0);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.navbar_openLine1__q_lqC, .navbar_openLine3__HUKTJ, .navbar_closeLine1__ZybSM, .navbar_closeLine3__5rQ7o {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.navbar_openLine2__nPICC, .navbar_closeLine2___FRDF {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.navbar_openLine1__q_lqC {
+    animation-name: navbar_openLine1__q_lqC;
+}
+
+.navbar_closeLine1__ZybSM {
+    animation-name: navbar_closeLine1__ZybSM;
+}
+
+.navbar_openLine2__nPICC {
+    animation-name: navbar_openLine2__nPICC;
+}
+
+.navbar_closeLine2___FRDF {
+    animation-name: navbar_closeLine2___FRDF;
+}
+
+.navbar_openLine3__HUKTJ {
+    animation-name: navbar_openLine3__HUKTJ;
+}
+
+.navbar_closeLine3__5rQ7o {
+    animation-name: navbar_closeLine3__5rQ7o;
+}
+
+.navbar_noAnimation__0bM5w {
+    transition: none !important;
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[5].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.js","import":"Sorts_Mill_Goudy","arguments":[{"weight":"400","subsets":["latin"],"display":"swap"}],"variableName":"goudy"} ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -53,57 +359,9 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: #b26734;
     }
-/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/navbar.module.css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************/
-.navbar_container__5j_gw {
-    display: flex;
-    position: fixed;
-    background-color: black;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    margin: 0;
-    white-space: nowrap;
-    margin-right: 3em;
-    padding-top: 1em;
-    height: 75px;
-    width: 100vw;
-    justify-content: space-evenly;
-    border-bottom: 2px solid #b27734;
-}
 
-.navbar_navbar_item__vwZF5{
-    flex: 1 1;
-    display:flex;
-    position: relative;
-}
-
-.navbar_content__9_n7x {
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0.25em;
-    margin: 0 auto;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    justify-content: space-evenly;
-    transition: all linear 0.3s;
-}
-
-    .navbar_content__9_n7x:hover {
-        cursor: pointer;
-        text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+@media (max-width: 48em) {
+    body{
+        margin-top:0em;
     }
-
-#navbar_gallery__WUOAH{
-    margin-left:auto;
-    margin-right:auto;
-
 }

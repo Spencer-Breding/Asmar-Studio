@@ -45,22 +45,25 @@
         margin-bottom:0;
     }
 
-@media(max-width: 1600px){
-    .galleryItems_gallery_item__904ck{
-        width: 30%;
-    }
-}
-
 @media(max-width: 1024px) {
-
-        .galleryItems_gallery_item__904ck p {
-            font-size: 18px;
-        }
+    .galleryItems_gallery_item__904ck{
+        width:30%;
+    }
 }
 
 @media(max-width: 800px) {
     .galleryItems_gallery_item__904ck {
-        width: 40%;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+        .galleryItems_gallery_item__904ck p {
+            font-size: 1.35rem;
+        }
+}
+
+@media(max-width: 400px){
+    .galleryItems_gallery_item__904ck p{
+        font-size: 1rem;
     }
 }
 
@@ -76,8 +79,8 @@
     background: rgba(0,0,0, 1);
     display: flex;
     flex-direction: column;
-    z-index: 2;
-    overscroll-behavior:contain;
+    z-index: 3;
+    overscroll-behavior: contain;
 }
 
 .Lightbox_imageContainer__hYwFZ {
@@ -87,6 +90,7 @@
     height: 100%;
     width: -moz-fit-content;
     width: fit-content;
+    max-width: 90vw;
 }
 
 .Lightbox_mainImageContainer__6SdBs {
@@ -145,7 +149,7 @@
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
-    z-index:1;
+    z-index: 1;
 }
 
     .Lightbox_arrowButton__btQIu.Lightbox_left__1DiIn {
@@ -168,7 +172,7 @@
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
-    z-index:1;
+    z-index: 1;
 }
 
 .Lightbox_previewContainer__G7ZNf {
@@ -186,11 +190,11 @@
 
 .Lightbox_previewImage__ItZj4 {
     width: 5rem;
-    height:5rem;
+    height: 5rem;
     margin: 1rem 1rem;
     cursor: pointer;
     object-fit: cover;
-    border:none;
+    border: none;
 }
 
 .Lightbox_selectedPreview__8AYYU {
@@ -254,13 +258,72 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+@media(max-width:48em) {
+    .Lightbox_arrowButton__btQIu {
+        display: none;
+    }
+}
+
+@media(max-width:37.5em) {
+    .Lightbox_imageContainer__hYwFZ {
+        max-width: 100vw;
+    }
+
+    .Lightbox_imageDescription__JjUt0 {
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .Lightbox_previewImage__ItZj4 {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .Lightbox_placeholder__Eyz6h {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .Lightbox_closeButton__u2OeW {
+        top: 10px;
+        right: 10px;
+        font-size: 2.25rem;
+    }
+}
+
+@media(max-width:25em) {
+    .Lightbox_imageDescription__JjUt0 {
+        font-size: 1.25rem;
+    }
+
+    .Lightbox_previewImage__ItZj4 {
+        width: 2.75rem;
+        height: 2.75rem;
+        margin: 0.5rem 0.5rem;
+    }
+
+    .Lightbox_placeholder__Eyz6h {
+        width: 2.75rem;
+        height: 2.75rem;
+        margin: 0.5rem 0.5rem;
+    }
+
+    .Lightbox_closeButton__u2OeW {
+        top: 5px;
+        right: 5px;
+        font-size: 2rem;
+    }
+}
+
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/Gallery.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************/
 .Gallery_container__nNRQm {
     display: block;
     position: relative;
-    width: 95vw;
+    width: 95%;
     height: -moz-fit-content;
     height: fit-content;
     margin: auto;
@@ -270,5 +333,19 @@
     margin-right: 3em;
     margin-top: 0.5em;
     padding-top: 0.5em;
+}
+
+@media(max-width: 1024px) {
+    .Gallery_container__nNRQm {
+        padding-left:1em;
+        margin-right:1em;
+    }
+}
+
+@media (max-width: 48em) {
+    .Gallery_container__nNRQm{
+        padding-top:0;
+        margin-top:0;
+    }
 }
 

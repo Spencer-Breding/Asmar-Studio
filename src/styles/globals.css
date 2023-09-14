@@ -26,3 +26,9 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: #b26734;
     }
+
+@media (max-width: 48em) {
+    body{
+        margin-top:0em;
+    }
+}

@@ -39,15 +39,9 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [isVisible, setIsVisible] = useState(false);
     const [imageAnimation, setImageAnimation] = useState('');
     const [transitioning, setTransitioning] = useState(false);
-    const [touchStartX, setTouchStartX] = useState(0);
-    const [touchEndX, setTouchEndX] = useState(0);
-    const handleTouchStart = (e) => {
-        setTouchStartX(e.changedTouches[0].screenX);
-    };
-
-    const handleTouchEnd = (e) => {
-        setTouchEndX(e.changedTouches[0].screenX);
-    };
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const MIN_SWIPE_DISTANCE = 50;
 
     var previewIdx
     if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -56,11 +50,11 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         previewIdx = 3
     }
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(true), 50);
+        const timer = setTimeout(() => setIsVisible(true), 25);
         return () => clearTimeout(timer);
     }, []);
 
-    const handleAnimation = useCallback((nextIndex, callback) => {
+    const handleAnimation = useCallback(async (nextIndex, callback) => {
         const direction = nextIndex > currentIndex ? 'left' : 'right';
         const exitAnimation = direction === 'left' ? styles.animateOutToLeft : styles.animateOutToRight;
         const enterAnimation = styles[`animateInFrom${direction === 'left' ? 'Right' : 'Left'}`];
@@ -68,32 +62,21 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         setImageAnimation(exitAnimation);
         setTransitioning(true);
 
-        setTimeout(() => {
-            callback();
+        await new Promise(resolve => setTimeout(resolve, 400));
+
+        callback();
+
+        requestAnimationFrame(() => {
             setImageAnimation(enterAnimation);
 
-            setTimeout(() => {
-                setImageAnimation('');
-                setTransitioning(false);
-            }, 400);
-        }, 400);
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    setImageAnimation('');
+                    setTransitioning(false);
+                }, 400);
+            });
+        });
     }, [currentIndex]);
-
-    useEffect(() => {
-        if (touchStartX - touchEndX > 75) {
-            // Swipe left (go to next)
-            if (currentIndex < items.length - 1 && !transitioning) {
-                handleAnimation(currentIndex + 1, onNext);
-            }
-        }
-
-        if (touchEndX - touchStartX > 75) {
-            // Swipe right (go to previous)
-            if (currentIndex > 0 && !transitioning) {
-                handleAnimation(currentIndex - 1, onPrev);
-            }
-        }
-    }, [currentIndex, handleAnimation, items.length, onNext, onPrev, touchEndX, touchStartX, transitioning]);
 
     const previewItems = getPreviewItems(currentIndex, items);
 
@@ -120,19 +103,38 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         }
     }, [handleClose, currentIndex, items.length, transitioning, handleAnimation, onNext, onPrev]);
 
+    const handleTouchStart = (e) => {
+        touchStartX = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (transitioning) return;
+
+        touchEndX = e.changedTouches[0].clientX;
+
+        const swipeDistance = Math.abs(touchEndX - touchStartX);
+
+        if (swipeDistance < MIN_SWIPE_DISTANCE) {
+            return;
+        }
+
+        if (touchEndX < touchStartX && currentIndex < items.length - 1) {
+            handleAnimation(currentIndex + 1, onNext);
+        } else if (touchEndX > touchStartX && currentIndex > 0) {
+            handleAnimation(currentIndex - 1, onPrev);
+        }
+    };
+
     useEffect(() => {
-        // Adding the event listener when the component mounts
         document.addEventListener('keydown', handleKeyPress);
         document.addEventListener('touchstart', handleTouchStart);
         document.addEventListener('touchend', handleTouchEnd);
-
-        // Removing the event listener when the component unmounts
         return () => {
             document.removeEventListener('keydown', handleKeyPress);
             document.removeEventListener('touchstart', handleTouchStart);
             document.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [handleKeyPress]);
+    }, [handleKeyPress, handleTouchEnd, handleTouchStart]);
 
     return (
         <div className={`${styles.lightbox} ${isVisible ? styles.fadeIn : styles.fadeOut}`}>
@@ -155,7 +157,8 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                     &#10095;
                 </button>
             )}
-            <div className={styles.imageContainer}>
+            <div className={styles.imageContainer} onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
                         <img className={styles.mainImage} src={item.source} alt={item.description} />

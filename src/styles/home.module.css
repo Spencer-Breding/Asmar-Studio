@@ -23,6 +23,7 @@
             text-align: center;
             text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
             letter-spacing: 2px;
+            flex-wrap:wrap;
         }
 
 #more {
@@ -40,4 +41,11 @@
     height:auto;
     margin-left:auto;
     margin-right:auto;
+}
+
+
+@media (max-width: 48em) {
+    .main div{
+        font-size: 18px;
+    }
 }
