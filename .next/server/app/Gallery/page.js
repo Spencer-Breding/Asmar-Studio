@@ -365,11 +365,15 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(6786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(8038);
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__(2451);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./src/styles/galleryItems.module.css
 var galleryItems_module = __webpack_require__(6873);
 var galleryItems_module_default = /*#__PURE__*/__webpack_require__.n(galleryItems_module);
 ;// CONCATENATED MODULE: ./src/components/galleryItem.js
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
 
 function GalleryItem({ items, setCurrentIndex }) {
     return /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -377,9 +381,11 @@ function GalleryItem({ items, setCurrentIndex }) {
         children: items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (galleryItems_module_default()).gallery_item,
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                         src: item.source,
                         alt: item.description,
+                        width: 640,
+                        height: 480,
                         style: {
                             width: "100%",
                             height: "auto"
@@ -612,11 +618,8 @@ function Lightbox({ item, items, currentIndex, onClose, onPrev, onNext, onThumbn
     });
 }
 
-// EXTERNAL MODULE: ./public/images/LogoBlack.jpg
-var LogoBlack = __webpack_require__(2227);
 ;// CONCATENATED MODULE: ./src/components/imageGallery.js
 /* __next_internal_client_entry_do_not_use__ default auto */ 
-
 
 
 
@@ -917,7 +920,7 @@ function Gallery() {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,403,704], () => (__webpack_exec__(7538)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,403,94], () => (__webpack_exec__(7538)));
 module.exports = __webpack_exports__;
 
 })();

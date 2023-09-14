@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Link from 'next/link'
+import Image from 'next/image';
 import styles from '../styles/navbar.module.css'
 
 function Burger(props) {
@@ -43,8 +44,8 @@ export default function Navbar(props) {
         <>
             <div className={styles.nav_container}>
                 <Link href="/" className={styles.logo_link}>
-                    <img className={styles.logo} src="/images/LogoBlack.jpg"
-                        alt="Asmar Logo" />
+                    <Image className={styles.logo} src="/images/LogoBlack.jpg"
+                        alt="Asmar Studio Logo" width={100} height={75} />
                 </Link>
                 <div className={styles.navbar_item}>
                     <Link className={styles.content} href="/About">

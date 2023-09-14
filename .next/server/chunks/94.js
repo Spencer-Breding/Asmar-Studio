@@ -1,5 +1,5 @@
-exports.id = 704;
-exports.ids = [704];
+exports.id = 94;
+exports.ids = [94];
 exports.modules = {
 
 /***/ 1780:
@@ -97,7 +97,7 @@ function Navbar(props) {
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
                             className: (_styles_navbar_module_css__WEBPACK_IMPORTED_MODULE_4___default().logo),
                             src: "/images/LogoBlack.jpg",
-                            alt: "title",
+                            alt: "Asmar Studio Logo",
                             width: 100,
                             height: 75
                         })
@@ -252,18 +252,6 @@ function RootLayout({ children }) {
     });
 }
 
-
-/***/ }),
-
-/***/ 2227:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/LogoBlack.98cab211.jpg","height":4676,"width":6114,"blurDataURL":"data:image/jpeg;base64,/9j/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAGAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAeEAABAwQDAAAAAAAAAAAAAAAAERIVAQMEMhNRU//EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AnMtiQPFH2vLWiubsvYACGv/Z","blurWidth":8,"blurHeight":6});
 
 /***/ }),
 
