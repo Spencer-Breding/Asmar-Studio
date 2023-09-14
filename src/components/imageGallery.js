@@ -24,7 +24,7 @@ export default function ImageGallery() {
         { source: "./images/gallery/GiantClam.jpg", description: "Giant Clam with Pearl" },
         { source: "./images/gallery/Throne.jpg", description: "30ft tall Iron Throne" },
         { source: "./images/gallery/ThroneRockefeller.jpg", description: "30ft tall Iron Throne - Rockefeller Center" },
-        { source: "./images/gallery/Giantlipstick.jpg", description: "6ft Tall Lipstick" },
+        { source: "./images/gallery/GiantLipstick.jpg", description: "6ft Tall Lipstick" },
         { source: "./images/gallery/GoldenGate.jpg", description: "Golden Gate Bridge" },
         { source: "./images/gallery/HauntedHouse.jpg", description: "Haunted House Entrance" },
         { source: "./images/gallery/HouseWithClocks.jpg", description: "The House with a Clock in its Walls" },
