@@ -628,155 +628,155 @@ function ImageGallery() {
     const [currentIndex, setCurrentIndex] = (0,react_.useState)(null);
     const imageList = [
         {
-            source: "/images/gallery/AbsolemCaterpillaHookah.jpg",
+            source: "./images/gallery/Caterpilla.jpg",
             description: "Absolem Caterpillar Alice in Wonderland"
         },
         {
-            source: "/images/gallery/AlaskaAir.jpg",
+            source: "./images/gallery/Alaska.jpg",
             description: "Alaska Air Tail Section Display"
         },
         {
-            source: "/images/gallery/CityUnderSiege.jpg",
+            source: "./images/gallery/Siege.jpg",
             description: "City Under Siege"
         },
         {
-            source: "/images/gallery/CustomBar.jpg",
+            source: "./images/gallery/CustomBar.jpg",
             description: "Bar Backdrop"
         },
         {
-            source: "/images/gallery/CustomDesk.jpg",
+            source: "./images/gallery/CustomDesk.jpg",
             description: "Custom Sculpted Desk"
         },
         {
-            source: "/images/gallery/Disenchanted.jpg",
+            source: "./images/gallery/Disenchanted.jpg",
             description: "Disenchanted"
         },
         {
-            source: "/images/gallery/DisplayStand.jpg",
+            source: "./images/gallery/DisplayStand.jpg",
             description: "Custom Display Stand"
         },
         {
-            source: "/images/gallery/DoraBallPit.jpg",
+            source: "./images/gallery/Dora.jpg",
             description: "Ball Pit"
         },
         {
-            source: "/images/gallery/Dragon.jpg",
+            source: "./images/gallery/Dragon.jpg",
             description: "Chinese Dragon"
         },
         {
-            source: "/images/gallery/DragonHeadFireplace.jpg",
+            source: "./images/gallery/DragonHead.jpg",
             description: "Dragon's Face Fireplace"
         },
         {
-            source: "/images/gallery/EspolonTequila.jpg",
+            source: "./images/gallery/Espolon.jpg",
             description: "Epsolon Tequila"
         },
         {
-            source: "/images/gallery/Frogcats.png",
+            source: "./images/gallery/Frogcats.png",
             description: "The Frogcats"
         },
         {
-            source: "/images/gallery/FrogCats2.PNG",
+            source: "./images/gallery/FrogCats2.png",
             description: "Frogcats Display"
         },
         {
-            source: "/images/gallery/GiantClamWithPearl.JPG",
+            source: "./images/gallery/GiantClam.jpg",
             description: "Giant Clam with Pearl"
         },
         {
-            source: "/images/gallery/GiantIronThrone.jpg",
+            source: "./images/gallery/Throne.jpg",
             description: "30ft tall Iron Throne"
         },
         {
-            source: "/images/gallery/GiantIronThroneRockefellerCenter.jpg",
+            source: "./images/gallery/ThroneRockefeller.jpg",
             description: "30ft tall Iron Throne - Rockefeller Center"
         },
         {
-            source: "/images/gallery/GiantLipstick.JPG",
+            source: "./images/gallery/GiantLipstick.jpg",
             description: "6ft Tall Lipstick"
         },
         {
-            source: "/images/gallery/GoldenGateBridge.JPG",
+            source: "./images/gallery/GoldenGate.jpg",
             description: "Golden Gate Bridge"
         },
         {
-            source: "/images/gallery/HauntedHouse.jpg",
+            source: "./images/gallery/HauntedHouse.jpg",
             description: "Haunted House Entrance"
         },
         {
-            source: "/images/gallery/HouseWithClocks.jpg",
+            source: "./images/gallery/HouseWithClocks.jpg",
             description: "The House with a Clock in its Walls"
         },
         {
-            source: "/images/gallery/IMAX_GiantDog.jpg",
+            source: "./images/gallery/IMAXDog.jpg",
             description: "IMAX Dog"
         },
         {
-            source: "/images/gallery/Kong'sHand.jpg",
+            source: "./images/gallery/KongHand.jpg",
             description: "Loading Kong's Hand"
         },
         {
-            source: "/images/gallery/KongSkull.jpg",
+            source: "./images/gallery/KongSkull.jpg",
             description: "Skulls at Kong's Island"
         },
         {
-            source: "/images/gallery/Kristoff'sCart.jpg",
+            source: "./images/gallery/Cart.jpg",
             description: "Kristoff's Cart"
         },
         {
-            source: "/images/gallery/Mowgli.jpg",
+            source: "./images/gallery/Mowgli.jpg",
             description: "Mowgli"
         },
         {
-            source: "/images/gallery/MythicQuestRaven.jpg",
+            source: "./images/gallery/Raven.jpg",
             description: "Raven"
         },
         {
-            source: "/images/gallery/NinjaTurtles.JPG",
+            source: "./images/gallery/NinjaTurtles.jpg",
             description: "Ninja Turtles"
         },
         {
-            source: "/images/gallery/Paramount.jpg",
+            source: "./images/gallery/Paramount.jpg",
             description: "Paramount Mountain"
         },
         {
-            source: "/images/gallery/Pinocchio Billboard.jpg",
+            source: "./images/gallery/Pinocchio.jpg",
             description: "3D Pinocchio Billboard"
         },
         {
-            source: "/images/gallery/QueensGambit.png",
+            source: "./images/gallery/QueensGambit.png",
             description: "Giant Chess Pieces"
         },
         {
-            source: "/images/gallery/RampageFreewayRamp.JPG",
+            source: "./images/gallery/Rampage.jpg",
             description: "Destroyed Freeway Ramp"
         },
         {
-            source: "/images/gallery/Skeleton.jpeg",
+            source: "./images/gallery/Skeleton.jpeg",
             description: "Skeleton"
         },
         {
-            source: "/images/gallery/TheMeg.jpg",
+            source: "./images/gallery/TheMeg.jpg",
             description: "The Meg Tunnel"
         },
         {
-            source: "/images/gallery/ANW_TRex.PNG",
+            source: "./images/gallery/ANWTRex.png",
             description: "T-Rex"
         },
         {
-            source: "/images/gallery/TrexHead.jpg",
+            source: "./images/gallery/TrexHead.jpg",
             description: "Touching Up T-Rex Head"
         },
         {
-            source: "/images/gallery/TRexHead2.jpg",
+            source: "./images/gallery/TRexHead2.jpg",
             description: "Checking T-Rex Teeth"
         },
         {
-            source: "/images/gallery/TrexInProgress.jpg",
+            source: "./images/gallery/TrexProgress.jpg",
             description: "More T-Rex Work"
         },
         {
-            source: "/images/gallery/UglyDollsBooth.jpg",
+            source: "./images/gallery/UglyDolls.jpg",
             description: "Another Convention Booth"
         }
     ];
