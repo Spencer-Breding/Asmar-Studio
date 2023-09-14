@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import GalleryItem from './galleryItem';
 import styles from '../styles/Gallery.module.css';
 import Lightbox from './lightbox';
+import logo from '/public/images/LogoBlack.jpg'
 
 export default function ImageGallery() {
     const [currentIndex, setCurrentIndex] = useState(null);
