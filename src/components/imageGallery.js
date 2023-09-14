@@ -10,7 +10,6 @@ export default function ImageGallery() {
     const imageList = [
         { source: "/images/gallery/AbsolemCaterpillaHookah.jpg", description: "Absolem Caterpillar Alice in Wonderland" },
         { source: "/images/gallery/AlaskaAir.jpg", description: "Alaska Air Tail Section Display" },
-        { source: "/images/gallery/ANW_TRex.PNG", description: "T-Rex" },
         { source: "/images/gallery/CityUnderSiege.jpg", description: "City Under Siege" },
         { source: "/images/gallery/CustomBar.jpg", description: "Bar Backdrop" },
         { source: "/images/gallery/CustomDesk.jpg", description: "Custom Sculpted Desk" },
@@ -42,6 +41,7 @@ export default function ImageGallery() {
         { source: "/images/gallery/RampageFreewayRamp.JPG", description: "Destroyed Freeway Ramp" },
         { source: "/images/gallery/Skeleton.jpeg", description: "Skeleton" },
         { source: "/images/gallery/TheMeg.jpg", description: "The Meg Tunnel" },
+        { source: "/images/gallery/ANW_TRex.PNG", description: "T-Rex" },
         { source: "/images/gallery/TrexHead.jpg", description: "Touching Up T-Rex Head" },
         { source: "/images/gallery/TRexHead2.jpg", description: "Checking T-Rex Teeth" },
         { source: "/images/gallery/TrexInProgress.jpg", description: "More T-Rex Work" },

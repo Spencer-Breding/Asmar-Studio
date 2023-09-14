@@ -1,7 +1,7 @@
 .container {
     display: block;
     position: relative;
-    width: 95vw;
+    width: 95%;
     height: fit-content;
     margin: auto;
     padding-bottom: 2em;
@@ -10,4 +10,11 @@
     margin-right: 3em;
     margin-top: 0.5em;
     padding-top: 0.5em;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        padding-left:1em;
+        margin-right:1em;
+    }
 }

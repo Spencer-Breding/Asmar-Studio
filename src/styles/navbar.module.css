@@ -6,25 +6,27 @@
     top: 0;
     left: 0;
     z-index: 1;
-    margin: 0;
+    margin: auto;
     white-space: nowrap;
     margin-right: 3em;
+    padding-left:1.75em;
     padding-top: 1em;
     height: 75px;
     width: 100vw;
-    justify-content: space-evenly;
     border-bottom: 2px solid #b27734;
+    gap: 2.5em;
 }
 
 .navbar_item{
-    flex: 1;
+    margin-top:auto;
+    margin-bottom:auto;
     display:flex;
     position: relative;
 }
 
 .content {
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
@@ -39,6 +41,19 @@
     .content:hover {
         cursor: pointer;
         text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    }
+
+.logo {
+    transition: all 0.3s linear;
+}
+
+    .logo:hover {
+        filter: brightness(1.1);
+    }
+
+    .logo_link{
+        position:absolute;
+        left: 3em;
     }
 
 #gallery{

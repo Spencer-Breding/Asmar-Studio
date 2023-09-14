@@ -40,21 +40,23 @@
         margin-bottom:0;
     }
 
-@media(max-width: 1600px){
-    .gallery_item{
-        width: 30%;
-    }
-}
-
 @media(max-width: 1024px) {
-
-        .gallery_item p {
-            font-size: 18px;
-        }
+    .gallery_item{
+        width:30%;
+    }
 }
 
 @media(max-width: 800px) {
     .gallery_item {
-        width: 40%;
+        width: fit-content;
+    }
+        .gallery_item p {
+            font-size: 1.35rem;
+        }
+}
+
+@media(max-width: 400px){
+    .gallery_item p{
+        font-size: 1rem;
     }
 }

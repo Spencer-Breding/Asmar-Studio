@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     z-index: 2;
-    overscroll-behavior:contain;
+    overscroll-behavior: contain;
 }
 
 .imageContainer {
@@ -17,6 +17,7 @@
     margin: auto;
     height: 100%;
     width: fit-content;
+    max-width: 90vw;
 }
 
 .mainImageContainer {
@@ -71,7 +72,7 @@
     color: white;
     cursor: pointer;
     user-select: none;
-    z-index:1;
+    z-index: 1;
 }
 
     .arrowButton.left {
@@ -92,7 +93,7 @@
     color: white;
     cursor: pointer;
     user-select: none;
-    z-index:1;
+    z-index: 1;
 }
 
 .previewContainer {
@@ -107,11 +108,11 @@
 
 .previewImage {
     width: 5rem;
-    height:5rem;
+    height: 5rem;
     margin: 1rem 1rem;
     cursor: pointer;
     object-fit: cover;
-    border:none;
+    border: none;
 }
 
 .selectedPreview {
@@ -173,4 +174,63 @@
 .fadeOut {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+@media(max-width:50em) {
+    .arrowButton {
+        display: none;
+    }
+}
+
+@media(max-width:37.5em) {
+    .imageContainer {
+        max-width: 100vw;
+    }
+
+    .imageDescription {
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .previewImage {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .placeholder {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .closeButton {
+        top: 10px;
+        right: 10px;
+        font-size: 2.25rem;
+    }
+}
+
+@media(max-width:25em) {
+    .imageDescription {
+        font-size: 1.25rem;
+    }
+
+    .previewImage {
+        width: 2.75rem;
+        height: 2.75rem;
+        margin: 0.5rem 0.5rem;
+    }
+
+    .placeholder {
+        width: 2.75rem;
+        height: 2.75rem;
+        margin: 0.5rem 0.5rem;
+    }
+
+    .closeButton {
+        top: 5px;
+        right: 5px;
+        font-size: 2rem;
+    }
 }

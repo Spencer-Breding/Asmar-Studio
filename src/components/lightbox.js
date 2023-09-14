@@ -3,8 +3,18 @@ import { useState, useEffect, useCallback } from 'react';
 import styles from '../styles/Lightbox.module.css';
 
 const getPreviewItems = (currentIndex, items) => {
-    let startIdx = currentIndex - 3;
-    let endIdx = startIdx + 7;
+    var startIdx
+    if (window.matchMedia("(max-width: 37.5em)").matches) {
+        startIdx = currentIndex - 2
+    } else {
+        startIdx = currentIndex - 3
+    }
+    var endIdx
+    if (window.matchMedia("(max-width: 37.5em)").matches) {
+        endIdx = startIdx + 5
+    } else {
+        endIdx = startIdx + 7
+    }
     const placeholder = { source: "", description: "" };
     let placeholdersBefore = 0;
     let placeholdersAfter = 0;
@@ -29,7 +39,22 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [isVisible, setIsVisible] = useState(false);
     const [imageAnimation, setImageAnimation] = useState('');
     const [transitioning, setTransitioning] = useState(false);
+    const [touchStartX, setTouchStartX] = useState(0);
+    const [touchEndX, setTouchEndX] = useState(0);
+    const handleTouchStart = (e) => {
+        setTouchStartX(e.changedTouches[0].screenX);
+    };
 
+    const handleTouchEnd = (e) => {
+        setTouchEndX(e.changedTouches[0].screenX);
+    };
+
+    var previewIdx
+    if (window.matchMedia("(max-width: 37.5em)").matches) {
+        previewIdx = 2
+    } else {
+        previewIdx = 3
+    }
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 50);
         return () => clearTimeout(timer);
@@ -53,6 +78,22 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
             }, 400);
         }, 400);
     }, [currentIndex]);
+
+    useEffect(() => {
+        if (touchStartX - touchEndX > 75) {
+            // Swipe left (go to next)
+            if (currentIndex < items.length - 1 && !transitioning) {
+                handleAnimation(currentIndex + 1, onNext);
+            }
+        }
+
+        if (touchEndX - touchStartX > 75) {
+            // Swipe right (go to previous)
+            if (currentIndex > 0 && !transitioning) {
+                handleAnimation(currentIndex - 1, onPrev);
+            }
+        }
+    }, [currentIndex, handleAnimation, items.length, onNext, onPrev, touchEndX, touchStartX, transitioning]);
 
     const previewItems = getPreviewItems(currentIndex, items);
 
@@ -82,10 +123,14 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     useEffect(() => {
         // Adding the event listener when the component mounts
         document.addEventListener('keydown', handleKeyPress);
+        document.addEventListener('touchstart', handleTouchStart);
+        document.addEventListener('touchend', handleTouchEnd);
 
         // Removing the event listener when the component unmounts
         return () => {
             document.removeEventListener('keydown', handleKeyPress);
+            document.removeEventListener('touchstart', handleTouchStart);
+            document.removeEventListener('touchend', handleTouchEnd);
         };
     }, [handleKeyPress]);
 
@@ -119,7 +164,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                 </div>
                 <div className={styles.previewContainer}>
                     {previewItems.map((previewItem, index) => {
-                        const actualIndex = currentIndex + index - 3;
+                        const actualIndex = currentIndex + index - previewIdx;
                         const isPlaceholder = previewItem.source === "";
 
                         if (isPlaceholder) {
@@ -137,7 +182,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                                 key={index}
                                 src={previewItem.source}
                                 alt={previewItem.description}
-                                className={`${styles.previewImage} ${index === 3 ? styles.selectedPreview : ''}`}
+                                className={`${styles.previewImage} ${index === previewIdx ? styles.selectedPreview : ''}`}
                                 onClick={() => {
                                     if (actualIndex === currentIndex) {
                                         return;
