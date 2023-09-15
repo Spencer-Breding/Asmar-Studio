@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from '../styles/galleryItems.module.css'
 
-export default function GalleryItem({ items, setCurrentIndex, priorityType }) {
+export default function GalleryItem({ items, setCurrentIndex, priorityType, loadingType }) {
     return (
         <div className={styles.gallery}>
             {items.map((item, index) => (
@@ -13,6 +13,7 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType }) {
                         width={640}
                         height={480}
                         style={{ width: '100%', height: 'auto' }}
+                        loading={loadingType }
                         priority={priorityType }
                         onClick={() => {
                             setCurrentIndex(index)
