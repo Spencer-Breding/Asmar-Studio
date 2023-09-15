@@ -44,7 +44,7 @@ export default function Navbar(props) {
         <>
             <div className={styles.nav_container}>
                 <Link href="/" className={styles.logo_link}>
-                    <Image className={styles.logo} src="./images/LogoBlack.jpg" loading='eager'
+                    <Image className={styles.logo} src="./images/LogoBlackSmall.webp" priority={true }
                         alt="Asmar Studio Logo" width={100} height={75} />
                 </Link>
                 <div className={styles.navbar_item}>
@@ -75,7 +75,35 @@ export default function Navbar(props) {
             </div>
             <Burger>
                 <div className={styles.burger_dropdown}>
-
+                    <Link href="/" className={styles.burger_logo}>
+                        <Image className={styles.logo} src="./images/LogoBlackSmall.jpg" loading='eager'
+                            alt="Asmar Studio Logo" width={100} height={75} />
+                    </Link>
+                    <div className={styles.burger_item}>
+                        <Link className={styles.content} href="/About">
+                            <text>ABOUT US</text>
+                        </Link>
+                    </div>
+                    <div className={styles.burger_item}>
+                        <Link className={styles.content} href="/Capabilities">
+                            <text>CAPABILITIES</text>
+                        </Link>
+                    </div>
+                    <div className={styles.burger_item}>
+                        <Link id={styles.gallery} className={styles.content} href="/Gallery">
+                            <text>GALLERY</text>
+                        </Link>
+                    </div>
+                    <div className={styles.burger_item}>
+                        <Link className={styles.content} href="/Contact">
+                            <text>CONTACT US</text>
+                        </Link>
+                    </div>
+                    <div className={styles.burger_item}>
+                        <Link className={styles.content} href="/Testimonials">
+                            <text>TESTIMONIALS</text>
+                        </Link>
+                    </div>
                 </div>
             </Burger>
         </>

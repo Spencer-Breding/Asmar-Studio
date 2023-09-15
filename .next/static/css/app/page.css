@@ -1,0 +1,55 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/home.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.home_main__C5E0Z {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width:100%;
+}
+
+    .home_main__C5E0Z div {
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        font-size: 22px;
+        font-weight:600;
+        margin:auto;
+    }
+
+        .home_main__C5E0Z div text {
+            justify-content: space-evenly;
+            flex: 1 1;
+            text-align: center;
+            text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+            letter-spacing: 2px;
+            flex-wrap:wrap;
+        }
+
+#home_more__U_0Wj {
+    margin-top:1em;
+    color: white;
+    text-align: center;
+    text-shadow: 1.5px 0 0 #b27734, 0 -1.5px 0 #b27734, 0 1.5px 0 #b27734, -1.5px 0 0 #b27734;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.home_logo__fwoF8{
+    width: 50vw;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+@media (max-width: 48em) {
+    .home_main__C5E0Z div{
+        font-size: 18px;
+    }
+}

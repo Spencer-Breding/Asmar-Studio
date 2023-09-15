@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from '../styles/galleryItems.module.css'
 
-export default function GalleryItem({ items, setCurrentIndex }) {
+export default function GalleryItem({ items, setCurrentIndex, loadingType }) {
     return (
         <div className={styles.gallery}>
             {items.map((item, index) => (
@@ -13,7 +13,7 @@ export default function GalleryItem({ items, setCurrentIndex }) {
                         width={640}
                         height={480}
                         style={{ width: '100%', height: 'auto' }}
-                        loading="lazy"
+                        loading={loadingType }
                         onClick={() => {
                             setCurrentIndex(index)
                             document.body.style.overflowY = 'hidden'

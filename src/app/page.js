@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/home.module.css'
-import logo from '/public/images/LogoBlack.jpg'
+import logo from '/public/images/LogoBlack.webp'
 
 export const metadata = {
     title: 'Asmar Studio',
@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <React.Fragment>
             <main className={styles.main}>
-                <Image className={styles.logo} src={logo} alt="Asmar Studio Logo" />
+                <Image className={styles.logo} src={logo} alt="Asmar Studio Logo" priority={true} />
                 <div>
                     <text>SET BUILDING</text>
                     <text>PROP MAKING</text>
