@@ -49,12 +49,12 @@ export default function ImageGallery() {
     ]
 
     const thumbList = [
-        { source: "./images/gallery/Caterpilla.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: true },
-        { source: "./images/gallery/Alaska.webp", description: "Alaska Air Tail Section Display", priorityType: true },
-        { source: "./images/gallery/Siege.webp", description: "City Under Siege", priorityType: true },
-        { source: "./images/gallery/CustomBar.webp", description: "Bar Backdrop", priorityType: true },
-        { source: "./images/gallery/CustomDesk.webp", description: "Custom Sculpted Desk", priorityType: true },
-        { source: "./images/gallery/Disenchanted.webp", description: "Disenchanted", priorityType: true },
+        { source: "./images/gallery/Caterpilla.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: true, loadingType: "eager" },
+        { source: "./images/gallery/Alaska.webp", description: "Alaska Air Tail Section Display", priorityType: true, loadingType: "eager" },
+        { source: "./images/gallery/Siege.webp", description: "City Under Siege", priorityType: true, loadingType: "eager" },
+        { source: "./images/gallery/CustomBar.webp", description: "Bar Backdrop", priorityType: true, loadingType: "eager" },
+        { source: "./images/gallery/CustomDesk.webp", description: "Custom Sculpted Desk", priorityType: true, loadingType: "eager" },
+        { source: "./images/gallery/Disenchanted.webp", description: "Disenchanted", priorityType: true, loadingType: "eager" },
         { source: "./images/gallery/DisplayStand.webp", description: "Custom Display Stand", priorityType: false, loadingType: "lazy" },
         { source: "./images/gallery/DoraThumb.webp", description: "Ball Pit", priorityType: false, loadingType: "lazy" },
         { source: "./images/gallery/Dragon.webp", description: "Chinese Dragon", priorityType: false, loadingType: "lazy" },
