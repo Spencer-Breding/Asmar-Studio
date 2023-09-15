@@ -44,7 +44,7 @@ export default function Navbar(props) {
         <>
             <div className={styles.nav_container}>
                 <Link href="/" className={styles.logo_link}>
-                    <Image className={styles.logo} src="./images/LogoBlack.jpg"
+                    <Image className={styles.logo} src="./images/LogoBlack.jpg" loading='eager'
                         alt="Asmar Studio Logo" width={100} height={75} />
                 </Link>
                 <div className={styles.navbar_item}>
