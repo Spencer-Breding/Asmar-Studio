@@ -49,9 +49,9 @@ export default function ImageGallery() {
     ]
 
     const thumbList = [
-        { source: "./images/thumbnails/CaterpillaThumb.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: false, loadingType: "lazy" },
-        { source: "./images/thumbnails/AlaskaThumb.webp", description: "Alaska Air Tail Section Display", priorityType: false, loadingType: "lazy" },
-        { source: "./images/thumbnails/SiegeThumb.webp", description: "City Under Siege", priorityType: false, loadingType: "lazy" },
+        { source: "./images/thumbnails/CaterpillaThumb.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: false, loadingType: "eager" },
+        { source: "./images/thumbnails/AlaskaThumb.webp", description: "Alaska Air Tail Section Display", priorityType: false, loadingType: "eager" },
+        { source: "./images/thumbnails/SiegeThumb.webp", description: "City Under Siege", priorityType: false, loadingType: "eager" },
         { source: "./images/thumbnails/CustomBarThumb.webp", description: "Bar Backdrop", priorityType: false, loadingType: "lazy" },
         { source: "./images/thumbnails/CustomDeskThumb.webp", description: "Custom Sculpted Desk", priorityType: false, loadingType: "lazy" },
         { source: "./images/thumbnails/DisenchantedThumb.webp", description: "Disenchanted", priorityType: false, loadingType: "lazy" },
