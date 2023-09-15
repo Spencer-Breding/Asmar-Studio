@@ -13,7 +13,6 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType }) {
                         width={640}
                         height={480}
                         style={{ width: '100%', height: 'auto' }}
-                        loading="lazy"
                         priority={priorityType }
                         onClick={() => {
                             setCurrentIndex(index)
