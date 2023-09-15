@@ -20,16 +20,25 @@
     max-height: 50vh
 }
 
-    .galleryItems_gallery_item__904ck img {
-        position: relative;
-        margin: auto;
-        max-height: 85%;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        filter: brightness(1);
-        transition: all 0.3s ease-in-out;
-        border: 2px solid #b27734;
-    }
+.galleryItems_imageWrapper___Sr8l {
+    display: flex;
+    align-items: center; /* New */
+    justify-content: center; /* New */
+    position: relative;
+    margin: auto;
+    max-height: 85%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+}
+
+.galleryItems_gallery_item__904ck img {
+    object-fit: contain;
+    width: 100%;
+    position: relative !important;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #b27734;
+}
 
         .galleryItems_gallery_item__904ck img:hover {
             transform: scale(1.025);

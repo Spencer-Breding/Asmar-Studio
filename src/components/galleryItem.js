@@ -7,19 +7,20 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         <div className={styles.gallery}>
             {items.map((item, index) => (
                 <div key={index} className={styles.gallery_item}>
-                    <Image
-                        src={item.source}
-                        alt={item.description}
-                        width={640}
-                        height={480}
-                        style={{ width: '100%', height: 'auto' }}
-                        loading={loadingType }
-                        priority={priorityType }
-                        onClick={() => {
-                            setCurrentIndex(index)
-                            document.body.style.overflowY = 'hidden'
-                        }}
-                    />
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src={item.source}
+                            alt={item.description}
+                            loading={loadingType}
+                            priority={priorityType}
+                            onClick={() => {
+                                setCurrentIndex(index)
+                                document.body.style.overflowY = 'hidden'
+                            }}
+                            layout="fill"
+                            objectFit="contain"
+                        />
+                    </div>
                     <p>{item.description}</p>
                 </div>
             ))}
