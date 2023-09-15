@@ -19,7 +19,11 @@ export default function Home() {
                     <text>SCULPTURES</text>
                     <text>CUSTOM FURNITURE</text>
                 </div>
-                <text id={styles.more }>...AND MUCH MORE</text>
+                <text id={styles.more}>...AND MUCH MORE</text>
+                <text className={styles.headerText}>About Us</text>
+                <text className={styles.headerText}>Capabilities</text>
+                <text className={styles.headerText}>Gallery</text>
+                <text className={styles.headerText}>Testimonials</text>
             </main></React.Fragment>
     )
 }
