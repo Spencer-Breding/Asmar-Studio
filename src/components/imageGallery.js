@@ -8,12 +8,12 @@ export default function ImageGallery() {
     const [currentIndex, setCurrentIndex] = useState(null);
 
     const imageList = [
-        { source: "./images/gallery/Caterpilla.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: true, loadingType: "eager"  },
-        { source: "./images/gallery/Alaska.webp", description: "Alaska Air Tail Section Display", priorityType: true, loadingType: "eager"  },
-        { source: "./images/gallery/Siege.webp", description: "City Under Siege", priorityType: true, loadingType: "eager"  },
-        { source: "./images/gallery/CustomBar.webp", description: "Bar Backdrop", priorityType: true, loadingType: "eager"  },
-        { source: "./images/gallery/CustomDesk.webp", description: "Custom Sculpted Desk", priorityType: true, loadingType: "eager"  },
-        { source: "./images/gallery/Disenchanted.webp", description: "Disenchanted", priorityType: true, loadingType: "eager"  },
+        { source: "./images/gallery/Caterpilla.webp", description: "Absolem Caterpillar Alice in Wonderland", priorityType: false, loadingType: "lazy"  },
+        { source: "./images/gallery/Alaska.webp", description: "Alaska Air Tail Section Display", priorityType: false, loadingType: "lazy"  },
+        { source: "./images/gallery/Siege.webp", description: "City Under Siege", priorityType: false, loadingType: "lazy"  },
+        { source: "./images/gallery/CustomBar.webp", description: "Bar Backdrop", priorityType: false, loadingType: "lazy"  },
+        { source: "./images/gallery/CustomDesk.webp", description: "Custom Sculpted Desk", priorityType: false, loadingType: "lazy"  },
+        { source: "./images/gallery/Disenchanted.webp", description: "Disenchanted", priorityType: false, loadingType: "lazy"  },
         { source: "./images/gallery/DisplayStand.webp", description: "Custom Display Stand", priorityType: false, loadingType: "lazy" },
         { source: "./images/gallery/Dora.webp", description: "Ball Pit", priorityType: false, loadingType: "lazy" },
         { source: "./images/gallery/Dragon.webp", description: "Chinese Dragon", priorityType: false, loadingType: "lazy"  },

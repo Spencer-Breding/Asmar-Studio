@@ -18,7 +18,7 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
                                 document.body.style.overflowY = 'hidden'
                             }}
                             fill
-                            objectFit="contain"
+                            contain
                         />
                     </div>
                     <p>{item.description}</p>
