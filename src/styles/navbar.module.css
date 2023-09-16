@@ -96,36 +96,12 @@
     transform-origin: 1px;
     border-radius: 10px;
     position: relative;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
     transform-origin: 1px;
     left: 90vw;
 }
 
 .burger a {
     text-decoration: none;
-}
-
-.x_left {
-    width: 2rem;
-    height: 0.25rem;
-    background: white;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-    transform: rotate(45deg) translateY(-0.25em);
-}
-
-.x_right {
-    width: 2rem;
-    height: 0.25rem;
-    background: white;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-    transform: rotate(-45deg) translateY(0.25em);
 }
 
 .burger_dropdown {
@@ -296,8 +272,4 @@
 
 .closeLine3 {
     animation-name: closeLine3;
-}
-
-.noAnimation {
-    transition: none !important;
 }

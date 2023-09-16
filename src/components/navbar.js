@@ -7,6 +7,7 @@ import styles from '../styles/navbar.module.css'
 function Burger(props) {
     const ref = useRef(null);
     const [openBurger, setOpenBurger] = useState(false);
+    const [firstClick, setFirstClick] = useState(false);  // New state for tracking the first click
 
     const closeBurger = useCallback((e) => {
         if (ref.current && openBurger && !ref.current.contains(e.target)) {
@@ -25,9 +26,11 @@ function Burger(props) {
 
     const handleClick = () => {
         setOpenBurger(!openBurger);
+        setFirstClick(true);  // Update firstClick when the burger is clicked
     };
 
-    const animationClass = openBurger ? 'openLine' : 'closeLine';
+    // Conditional animation class
+    const animationClass = openBurger && firstClick ? 'openLine' : firstClick ? 'closeLine' : '';
 
     return (
         <div className={styles.burger} ref={ref} onClick={handleClick}>
