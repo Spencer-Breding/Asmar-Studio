@@ -56,7 +56,7 @@
 
 @media(max-width: 800px) {
     .gallery_item {
-        width: fit-content;
+        width: 80%;
     }
         .gallery_item p {
             font-size: 1.35rem;
