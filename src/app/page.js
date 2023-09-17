@@ -14,18 +14,19 @@ export default function Home() {
             <main className={styles.main}>
                 <Image className={styles.logo} src={logo} alt="Asmar Studio Logo" priority={true} />
                 <div className={styles.textDiv }>
-                    <text>SET BUILDING</text>
-                    <text>PROP MAKING</text>
-                    <text>FABRICATION</text>
-                    <text>SCULPTURES</text>
-                    <text>CUSTOM FURNITURE</text>
+                    <p>SET BUILDING</p>
+                    <p>PROP MAKING</p>
+                    <p>FABRICATION</p>
+                    <p>SCULPTURES</p>
+                    <p>CUSTOM FURNITURE</p>
                 </div>
                 <text id={styles.more}>...AND MUCH MORE</text>
-                <text className={styles.headerText}>About Us</text>
-                <text className={styles.headerText}>Capabilities</text>
-                <text className={styles.headerText}>Gallery</text>
+                <h2 id="AboutUs" className={styles.headerText}>About Us</h2>
+                <h2 id="Capabilities" className={styles.headerText}>Capabilities</h2>
+                <h2 id="Gallery" className={styles.headerText}>Gallery</h2>
                 <ImageGallery/>
-                <text className={styles.headerText}>Testimonials</text>
+                <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
+                <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
             </main></React.Fragment>
     )
 }

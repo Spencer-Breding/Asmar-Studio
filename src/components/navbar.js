@@ -1,114 +1,163 @@
 "use client";
-import React, { useState, useCallback, useEffect, useRef } from 'react';
-import Link from 'next/link'
+import React, { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../styles/navbar.module.css'
 
-function Burger(props) {
-    const ref = useRef(null);
+export default function Navbar(props) {
     const [openBurger, setOpenBurger] = useState(false);
-    const [firstClick, setFirstClick] = useState(false);  // New state for tracking the first click
-
-    const closeBurger = useCallback((e) => {
-        if (ref.current && openBurger && !ref.current.contains(e.target)) {
-            setOpenBurger(false);
-        }
-    }, [openBurger]);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            document.addEventListener('click', closeBurger);
-        }
-        return () => {
-            document.removeEventListener('click', closeBurger);
-        };
-    }, [closeBurger, openBurger]);
-
-    const handleClick = () => {
-        setOpenBurger(!openBurger);
-        setFirstClick(true);  // Update firstClick when the burger is clicked
-    };
-
-    // Conditional animation class
+    const [firstClick, setFirstClick] = useState(false);
+    const [isFirstRender, setIsFirstRender] = useState(true);
     const animationClass = openBurger && firstClick ? 'openLine' : firstClick ? 'closeLine' : '';
 
-    return (
-        <div className={styles.burger} ref={ref} onClick={handleClick}>
-            <span className={`${styles.burger_line1} ${styles[`${animationClass}1`]}`} />
-            <span className={`${styles.burger_line2} ${styles[`${animationClass}2`]}`} />
-            <span className={`${styles.burger_line3} ${styles[`${animationClass}3`]}`} />
-            {openBurger && props.children}
-        </div>
-    );
-}
+    const closeBurger = () => {
+        setOpenBurger(false);
+    };
 
-export default function Navbar(props) {
+    const toggleBurger = () => {
+        setOpenBurger(!openBurger);
+        setFirstClick(true);
+    };
+
+    const handleScroll = useCallback((sectionId) => {
+        const element = document.getElementById(sectionId);
+        const navbar = document.getElementById('navbar');
+        const burgerMenu = document.getElementById('burger');
+
+        if (element) {
+            let offsetHeightInPx = 0;
+
+            if (navbar && window.getComputedStyle(navbar).display !== 'none') {
+                offsetHeightInPx = parseFloat(window.getComputedStyle(navbar).height);
+                offsetHeightInPx -= 12;
+            } else if (burgerMenu && window.getComputedStyle(burgerMenu).display !== 'none') {
+                offsetHeightInPx = parseFloat(window.getComputedStyle(burgerMenu).height);
+                offsetHeightInPx += 8;
+            }
+
+            const rect = element.getBoundingClientRect();
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementPosition = rect.top - bodyRect;
+            const offsetPosition = elementPosition - offsetHeightInPx;
+
+            const adjustScroll = () => {
+                const rect = element.getBoundingClientRect();
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementPosition = rect.top - bodyRect;
+                const offsetPosition = elementPosition - offsetHeightInPx;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+
+            adjustScroll();
+
+            const gallery = document.getElementById("galleryContainer");
+            if (gallery) {
+                gallery.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('load', adjustScroll);
+                });
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        let isInitialRender = true;
+
+        const sectionIds = ["AboutUs", "Capabilities", "Gallery", "Testimonials", "Contact"];
+
+        const resizeObserver = new ResizeObserver((entries) => {
+            if (isInitialRender) {
+                isInitialRender = false;
+                return;
+            }
+
+            for (let entry of entries) {
+                if (sectionIds.includes(entry.target.id)) {
+                    console.log("Resize observed for:", entry.target.id);
+                    scrollToSection(entry.target.id);
+                }
+            }
+        });
+
+        sectionIds.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                resizeObserver.observe(element);
+            }
+        });
+
+        return () => {
+            sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    resizeObserver.unobserve(element);
+                }
+            });
+        };
+    }, []);
+
+    const handleItemClick = (section) => {
+        handleScroll(section);
+        closeBurger();
+    }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
     return (
         <>
-            <div className={styles.nav_container}>
-                <Link href="/" className={styles.logo_link}>
-                    <Image className={styles.logo} src="./images/LogoBlackSmall.webp" priority={true }
-                        alt="Asmar Studio Logo" width={100} height={75} />
-                </Link>
-                <div className={styles.navbar_item}>
-                    <Link className={styles.content} href="/About">
-                        <text>ABOUT US</text>
-                    </Link>
+            <div id="navbar" className={styles.nav_container}>
+                <Image className={styles.logo} src="./images/LogoBlackSmall.webp" priority={true}
+                    alt="Asmar Studio Logo" width={100} height={75} onClick={() => scrollToTop()} />
+                <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
+                    <p>ABOUT US</p>
                 </div>
-                <div className={styles.navbar_item}>
-                    <Link className={styles.content} href="/Capabilities">
-                        <text>CAPABILITIES</text>
-                    </Link>
+                <div className={styles.navbar_item} onClick={() => handleItemClick("Capabilities")}>
+                    <p>CAPABILITIES</p>
                 </div>
-                <div className={styles.navbar_item}>
-                    <Link id={styles.gallery} className={styles.content} href="/Gallery">
-                        <text>GALLERY</text>
-                    </Link>
+                <div className={styles.navbar_item} onClick={() => handleItemClick("Gallery")}>
+                    <p>GALLERY</p>
                 </div>
-                <div className={styles.navbar_item}>
-                    <Link className={styles.content} href="/Contact">
-                        <text>CONTACT US</text>
-                    </Link>
+                <div className={styles.navbar_item} onClick={() => handleItemClick("Testimonials")}>
+                    <p>TESTIMONIALS</p>
                 </div>
-                <div className={styles.navbar_item}>
-                    <Link className={styles.content} href="/Testimonials">
-                        <text>TESTIMONIALS</text>
-                    </Link>
+                <div className={styles.navbar_item} onClick={() => handleItemClick("Contact")}>
+                    <p>CONTACT US</p>
                 </div>
             </div>
-            <Burger>
-                <div className={styles.burger_dropdown}>
-                    <Link href="/" className={styles.burger_logo}>
-                        <Image className={styles.logo} src="./images/LogoBlackSmall.jpg" loading='eager'
-                            alt="Asmar Studio Logo" width={100} height={75} />
-                    </Link>
-                    <div className={styles.burger_item}>
-                        <Link className={styles.content} href="/About">
-                            <text>ABOUT US</text>
-                        </Link>
-                    </div>
-                    <div className={styles.burger_item}>
-                        <Link className={styles.content} href="/Capabilities">
-                            <text>CAPABILITIES</text>
-                        </Link>
-                    </div>
-                    <div className={styles.burger_item}>
-                        <Link id={styles.gallery} className={styles.content} href="/Gallery">
-                            <text>GALLERY</text>
-                        </Link>
-                    </div>
-                    <div className={styles.burger_item}>
-                        <Link className={styles.content} href="/Contact">
-                            <text>CONTACT US</text>
-                        </Link>
-                    </div>
-                    <div className={styles.burger_item}>
-                        <Link className={styles.content} href="/Testimonials">
-                            <text>TESTIMONIALS</text>
-                        </Link>
-                    </div>
+            <div id="burger" className={styles.burger}>
+                <div className={styles.burgerButton} onClick={toggleBurger}>
+                    <span className={`${styles.burger_line1} ${styles[`${animationClass}1`]}`} />
+                    <span className={`${styles.burger_line2} ${styles[`${animationClass}2`]}`} />
+                    <span className={`${styles.burger_line3} ${styles[`${animationClass}3`]}`} />
                 </div>
-            </Burger>
+                {openBurger &&
+                    <div  className={`${styles.burger_dropdown} ${openBurger ? styles.burger_dropdown_slide_in : styles.burger_dropdown_slide_out}`}>
+                        <Image className={styles.burger_logo} src="./images/LogoBlackSmall.webp" priority={true}
+                            alt="Asmar Studio Logo" width={100} height={75} onClick={() => { scrollToTop(), closeBurger() }} />
+                        <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
+                            <p>ABOUT US</p>
+                        </div>
+                        <div className={styles.burger_item} onClick={() => handleItemClick("Capabilities")}>
+                            <p>CAPABILITIES</p>
+                        </div>
+                        <div className={styles.burger_item} onClick={() => handleItemClick("Gallery")}>
+                            <p>GALLERY</p>
+                        </div>
+                        <div className={styles.burger_item} onClick={() => handleItemClick("Testimonials")}>
+                            <p>TESTIMONIALS</p>
+                        </div>
+                        <div className={styles.burger_item} onClick={() => handleItemClick("Contact")}>
+                            <p>CONTACT US</p>
+                        </div>
+                    </div>
+                }
+            </div>
         </>
     )
 }

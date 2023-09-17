@@ -105,7 +105,7 @@ export default function ImageGallery() {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="galleryContainer">
             <GalleryItem items={thumbList} setCurrentIndex={(index) => setCurrentIndex(index)} />
             {currentIndex !== null && (
                 <Lightbox
