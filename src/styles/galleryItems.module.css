@@ -23,19 +23,18 @@
     margin: auto;
     max-height: 85%;
     max-width: fit-content;
-
+    border: 2px solid #b27734;
 }
 
-.gallery_item img {
+.imageWrapper img {
     object-fit: contain;
     width: 100%;
     position: relative !important;
     height: auto;
     transition: all 0.3s ease-in-out;
-    border: 2px solid #b27734;
 }
 
-        .gallery_item img:hover {
+        .imageWrapper img:hover {
             transform: scale(1.025);
             cursor: pointer;
         }
