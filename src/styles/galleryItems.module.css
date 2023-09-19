@@ -21,6 +21,7 @@
     justify-content: center;
     position: relative;
     margin: auto;
+    padding:0;
     max-height: 85%;
     max-width: 100%;
     transition: 0.3s all ease-in-out;
