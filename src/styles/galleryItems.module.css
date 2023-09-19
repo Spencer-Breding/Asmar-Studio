@@ -5,6 +5,8 @@
     height: fit-content;
     gap: 3em;
     justify-content: space-evenly;
+    width:100%;
+    margin:auto;
 }
 
 .gallery_item {
@@ -13,6 +15,7 @@
     width: 30%;
     height: 60vh;
     position: relative;
+    margin:auto;
 }
 
 .imageWrapper {
@@ -26,9 +29,11 @@
     height: auto;
     border: 2px solid #b27734;
     overflow: hidden;
+    margin:auto;
 }
 
     .imageWrapper img {
+        display:flex;
         width: 100%;
         height: 100%;
         margin: auto;
