@@ -11,25 +11,33 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         const img = imageElements[index];
         if (!img) return;
 
-        const imgWidth = img.naturalWidth;
-        const imgHeight = img.naturalHeight;
-        const aspectRatio = imgWidth / imgHeight;
+        const adjustDimensions = () => {
+            const imgWidth = img.naturalWidth;
+            const imgHeight = img.naturalHeight;
+            const aspectRatio = imgWidth / imgHeight;
 
-        const wrapper = img.parentNode;
-        const wrapperWidth = wrapper.clientWidth;
-        const wrapperHeight = wrapper.clientHeight;
+            const wrapper = img.parentNode;
+            const wrapperWidth = wrapper.clientWidth;
+            const wrapperHeight = wrapper.clientHeight;
 
-        let newWidth = wrapperHeight * aspectRatio;
-        let newHeight = wrapperHeight;
+            let newWidth = wrapperHeight * aspectRatio;
+            let newHeight = wrapperHeight;
 
-        if (newWidth > wrapperWidth) {
-            newWidth = wrapperWidth;
-            newHeight = wrapperWidth / aspectRatio;
+            if (newWidth > wrapperWidth) {
+                newWidth = wrapperWidth;
+                newHeight = wrapperWidth / aspectRatio;
+            }
+
+            const newDimensions = [...imageWrapperDimensions];
+            newDimensions[index] = { width: newWidth, height: newHeight };
+            setImageWrapperDimensions(newDimensions);
+        };
+
+        if (img.complete) {
+            adjustDimensions();
+        } else {
+            img.addEventListener('load', adjustDimensions);
         }
-
-        const newDimensions = [...imageWrapperDimensions];
-        newDimensions[index] = { width: newWidth, height: newHeight };
-        setImageWrapperDimensions(newDimensions);
     };
 
     // Effect to set up and clean up resize listener
