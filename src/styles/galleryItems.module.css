@@ -19,18 +19,15 @@
     display: inline-block;
     max-height: 85%;
     max-width: 100%;
-    border: 2px solid #b27734;
     line-height: 0;
     transition: 0.3s all ease-in-out;
     margin:auto;
-    border: 2px solid #b27734;
 }
 
     .imageWrapper img {
         width: auto;
         height: auto;
-        max-width: 100%;
-        max-height: 100%;
+        border: 2px solid #b27734;
         object-fit: contain;
         vertical-align: middle;
         position: relative !important;
