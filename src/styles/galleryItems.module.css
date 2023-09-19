@@ -16,7 +16,7 @@
 }
 
 .imageWrapper {
-    display: inline;
+    display: flex;
     max-height: 85%;
     line-height: 0;
     transition: 0.3s all ease-in-out;
@@ -28,18 +28,21 @@
     filter: drop-shadow(0 -2px 0 #b27734) drop-shadow(0 2px 0 #b27734) drop-shadow(-2px 0 0 #b27734) drop-shadow(2px 0 0 #b27734);
 }
 
-    .imageWrapper img {
-        display:inline-block;
-        width: auto;
-        max-height: 100%;
-        margin: auto;
-        padding: 0;
-        vertical-align: middle;
-        position: relative !important;
-        object-fit: contain;
-    }
+.gallery_item img {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    max-height: 85%;
+    margin: auto;
+    padding: 0;
+    vertical-align: middle;
+    position: relative !important;
+    object-fit: contain;
+    transition: 0.3s all ease-in-out;
+    filter: drop-shadow(0 -2px 0 #b27734) drop-shadow(0 2px 0 #b27734) drop-shadow(-2px 0 0 #b27734) drop-shadow(2px 0 0 #b27734);
+}
 
-    .imageWrapper:hover {
+    .gallery_item img:hover {
         transform: scale(1.025);
         cursor: pointer;
     }
