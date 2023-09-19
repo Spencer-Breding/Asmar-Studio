@@ -23,6 +23,7 @@
     margin: auto;
     max-height: 85%;
     max-width: fit-content;
+
 }
 
 .gallery_item img {
@@ -49,16 +50,17 @@
     }
 
 @media(max-width: 800px) {
-    .imageWrapper {
-        width: 80%;
+    .gallery_item {
+        width: 95%;
     }
         .gallery_item p {
-            font-size: 1.35rem;
+            font-size: 1.35em;
+            margin-top:0.5em;
         }
 }
 
 @media(max-width: 400px){
     .gallery_item p{
-        font-size: 1rem;
+        font-size: 1em;
     }
 }
