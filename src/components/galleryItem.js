@@ -40,7 +40,6 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         }
     };
 
-    // Effect to set up and clean up resize listener
     useEffect(() => {
         const handleResize = () => {
             for (let index = 0; index < items.length; index++) {
@@ -54,6 +53,12 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
             window.removeEventListener('resize', handleResize);
         };
     }, [imageWrapperDimensions, imageElements]);
+
+    useEffect(() => {
+        for (let index = 0; index < items.length; index++) {
+            adjustWrapperDimensions(index);
+        }
+    }, [items]);
 
     return (
         <div className={styles.gallery}>
