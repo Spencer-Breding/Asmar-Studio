@@ -22,7 +22,7 @@
     transition: 0.3s all ease-in-out;
     margin: auto;
     padding: 0;
-    width: auto;
+    width: fit-content;
     height: auto;
     border: 2px solid #b27734;
     overflow:hidden;
