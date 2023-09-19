@@ -17,15 +17,13 @@
 
 .imageWrapper {
     display: flex;
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 85%;
     line-height: 0;
     transition: 0.3s all ease-in-out;
     margin: auto;
     padding: 0;
     width: auto;
     height: auto;
-    border: 2px solid #b27734;
 }
 
     .imageWrapper img {
@@ -55,13 +53,17 @@
 @media(max-width: 800px) {
     .gallery_item {
         width: 90%;
-        height: auto;
-        max-height: 50vh;
+        height: 50vh;
     }
 
     .imageWrapper {
 
     }
+
+        .imageWrapper:hover {
+            transform: none;
+            cursor: pointer;
+        }
 
     .gallery_item p {
         font-size: 1.35em;
