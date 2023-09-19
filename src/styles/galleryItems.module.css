@@ -30,6 +30,8 @@
 }
 
     .imageWrapper img {
+        height:fit-content;
+        width:fit-content;
         max-width: 100%;
         max-height: 100%;
         position: relative !important;
@@ -51,7 +53,7 @@
 
 @media(max-width: 800px) {
     .gallery_item {
-        width: 95vw;
+        width: 90vw;
     }
 
         .gallery_item p {
