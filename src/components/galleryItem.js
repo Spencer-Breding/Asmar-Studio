@@ -5,54 +5,32 @@ import styles from '../styles/galleryItems.module.css';
 
 export default function GalleryItem({ items, setCurrentIndex, priorityType, loadingType }) {
     const [imageWrapperDimensions, setImageWrapperDimensions] = useState([]);
-    const [imageElements, setImageElements] = useState([]);
 
-    const adjustWrapperDimensions = (index) => {
-        const img = imageElements[index];
-        if (!img) return;
+    const adjustWrapperDimensions = (event, index) => {
+        const img = event.target;
+        const imgWidth = img.naturalWidth;
+        const imgHeight = img.naturalHeight;
+        const aspectRatio = imgWidth / imgHeight;
 
-        const adjustDimensions = () => {
-            const imgWidth = img.naturalWidth;
-            const imgHeight = img.naturalHeight;
-            const aspectRatio = imgWidth / imgHeight;
+        // Get the dimensions of the imageWrapper
+        const wrapper = img.parentNode;
+        const wrapperWidth = wrapper.clientWidth;
+        const wrapperHeight = wrapper.clientHeight;
 
-            const wrapper = img.parentNode;
-            const wrapperWidth = wrapper.clientWidth;
-            const wrapperHeight = wrapper.clientHeight;
+        // Calculate the new dimensions
+        let newWidth = wrapperHeight * aspectRatio;
+        let newHeight = wrapperHeight;
 
-            let newWidth = wrapperHeight * aspectRatio;
-            let newHeight = wrapperHeight;
-
-            if (newWidth > wrapperWidth) {
-                newWidth = wrapperWidth;
-                newHeight = wrapperWidth / aspectRatio;
-            }
-
-            const newDimensions = [...imageWrapperDimensions];
-            newDimensions[index] = { width: newWidth, height: newHeight };
-            setImageWrapperDimensions(newDimensions);
-        };
-
-        if (img.complete) {
-            adjustDimensions();
-        } else {
-            img.addEventListener('load', adjustDimensions);
+        // If calculated width is greater than the wrapper width, recalculate dimensions based on width constraint
+        if (newWidth > wrapperWidth) {
+            newWidth = wrapperWidth;
+            newHeight = wrapperWidth / aspectRatio;
         }
+
+        const newDimensions = [...imageWrapperDimensions];
+        newDimensions[index] = { width: newWidth, height: newHeight };
+        setImageWrapperDimensions(newDimensions);
     };
-
-    useEffect(() => {
-        const handleResize = () => {
-            for (let index = 0; index < items.length; index++) {
-                adjustWrapperDimensions(index);
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [imageWrapperDimensions, imageElements]);
 
     return (
         <div className={styles.gallery}>
@@ -62,7 +40,7 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
                         className={styles.imageWrapper}
                         style={{
                             height: imageWrapperDimensions[index]?.height,
-                            width: imageWrapperDimensions[index]?.width,
+                            width: imageWrapperDimensions[index]?.width
                         }}
                     >
                         <Image
@@ -74,12 +52,8 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
                                 setCurrentIndex(index);
                                 document.body.style.overflowY = 'hidden';
                             }}
-                            onLoad={(event) => {
-                                const newImageElements = [...imageElements];
-                                newImageElements[index] = event.target;
-                                setImageElements(newImageElements);
-                                adjustWrapperDimensions(index);
-                            }}
+                            onLoad={(event) => adjustWrapperDimensions(event, index)}
+                            layout="fill"
                         />
                     </div>
                     <p>{item.description}</p>
@@ -88,4 +62,3 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         </div>
     );
 }
-
