@@ -11,21 +11,16 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         if (img.complete) {
             const imgWidth = img.naturalWidth;
             const imgHeight = img.naturalHeight;
-            console.log(`Natural dimensions for index ${index}: ${imgWidth} x ${imgHeight}`);
 
             const aspectRatio = imgWidth / imgHeight;
 
-
-            // Get the dimensions of the imageWrapper
             const wrapper = img.parentNode;
             const wrapperWidth = wrapper.clientWidth;
             const wrapperHeight = wrapper.clientHeight;
 
-            // Calculate the new dimensions
             let newWidth = wrapperHeight * aspectRatio;
             let newHeight = wrapperHeight;
 
-            // If calculated width is greater than the wrapper width, recalculate dimensions based on width constraint
             if (newWidth > wrapperWidth) {
                 newWidth = wrapperWidth;
                 newHeight = wrapperWidth / aspectRatio;
