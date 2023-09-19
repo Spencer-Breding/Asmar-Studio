@@ -7,7 +7,7 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         <div className={styles.gallery}>
             {items.map((item, index) => (
                 <div key={index} className={styles.gallery_item}>
-
+                    <div className={styles.imageWrapper}>
                         <Image
                             src={item.source}
                             alt={item.description}
@@ -19,6 +19,7 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
                             }}
                             fill="true"
                         />
+                    </div>
                     <p>{item.description}</p>
                 </div>
             ))}
