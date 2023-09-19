@@ -24,6 +24,7 @@
     padding: 0;
     width: auto;
     height: auto;
+    border: 2px solid #b27734;
     overflow:hidden;
 }
 
@@ -35,8 +36,6 @@
         vertical-align: middle;
         position: relative !important;
         object-fit: contain;
-        object-position: 0% 0%;
-        border: 2px solid #b27734;
     }
 
     .imageWrapper:hover {
