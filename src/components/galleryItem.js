@@ -7,17 +7,19 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
         <div className={styles.gallery}>
             {items.map((item, index) => (
                 <div key={index} className={styles.gallery_item}>
-                    <div className={styles.imageWrapper}>
+                    <div className={styles.image_wrapper}>
                         <Image
                             src={item.source}
                             alt={item.description}
+                            layout="responsive"  // Makes the image responsive
+                            width={1}  // The actual value doesn't matter when layout="responsive"
+                            height={1} // The actual value doesn't matter when layout="responsive"
                             loading={loadingType}
                             priority={priorityType}
                             onClick={() => {
                                 setCurrentIndex(index)
                                 document.body.style.overflowY = 'hidden'
                             }}
-                            fill="true"
                         />
                     </div>
                     <p>{item.description}</p>
