@@ -30,9 +30,10 @@
         height: auto;
         margin: auto;
         padding: 0;
-        border: 2px solid #b27734;
+        filter: drop-shadow(0 -2px 0 #b27734) drop-shadow(0 2px 0 #b27734) drop-shadow(-2px 0 0 #b27734) drop-shadow(2px 0 0 #b27734);
         vertical-align: middle;
         position: relative !important;
+        object-fit:contain;
     }
 
     .imageWrapper:hover {
