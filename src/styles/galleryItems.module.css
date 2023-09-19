@@ -24,8 +24,8 @@
     padding: 0;
     width: fit-content;
     height: auto;
-    border: 2px solid #b27734;
-    overflow:hidden;
+    overflow: hidden;
+    filter: drop-shadow(0 -2px 0 #b27734) drop-shadow(0 2px 0 #b27734) drop-shadow(-2px 0 0 #b27734) drop-shadow(2px 0 0 #b27734);
 }
 
     .imageWrapper img {
