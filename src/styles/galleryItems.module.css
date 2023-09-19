@@ -23,6 +23,7 @@
     transition: 0.3s all ease-in-out;
     margin: auto;
     width:fit-content;
+    object-fit:cover;
 }
 
     .imageWrapper img {
@@ -57,7 +58,7 @@
     }
 
     .imageWrapper {
-        width:fit-content;
+
     }
 
     .gallery_item p {
