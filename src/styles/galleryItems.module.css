@@ -22,18 +22,20 @@
     line-height: 0;
     transition: 0.3s all ease-in-out;
     margin: auto;
-    width:fit-content;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border: 2px solid #b27734;
 }
 
     .imageWrapper img {
         width: 100%;
-        height: auto;
+        height: 100%;
         margin: auto;
         padding: 0;
-        filter: drop-shadow(0 -2px 0 #b27734) drop-shadow(0 2px 0 #b27734) drop-shadow(-2px 0 0 #b27734) drop-shadow(2px 0 0 #b27734);
         vertical-align: middle;
         position: relative !important;
-        object-fit:contain;
+        object-fit: contain;
     }
 
     .imageWrapper:hover {
