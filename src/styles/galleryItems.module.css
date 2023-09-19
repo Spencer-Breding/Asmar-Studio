@@ -23,7 +23,6 @@
     transition: 0.3s all ease-in-out;
     margin: auto;
     width:fit-content;
-    object-fit:cover;
 }
 
     .imageWrapper img {
@@ -34,6 +33,7 @@
         border: 2px solid #b27734;
         vertical-align: middle;
         position: relative !important;
+        object-fit:contain;
     }
 
     .imageWrapper:hover {
