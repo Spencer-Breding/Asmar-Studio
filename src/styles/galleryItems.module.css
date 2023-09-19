@@ -16,15 +16,13 @@
 }
 
 .imageWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding:0;
+    display: inline-block;
     max-height: 85%;
     max-width: 100%;
+    border: 2px solid #b27734;
+    line-height: 0;
     transition: 0.3s all ease-in-out;
+    margin:auto;
     border: 2px solid #b27734;
 }
 
@@ -34,7 +32,7 @@
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
-        margin: auto; /* Add auto margin to center the image */
+        vertical-align: middle;
         position: relative !important;
     }
 
