@@ -21,18 +21,20 @@
     justify-content: center;
     position: relative;
     margin: auto;
+    width:fit-content;
+    height:auto;
     max-height: 85%;
-    max-width: fit-content;
-    border: 2px solid #b27734;
+    max-width: 100%;
 }
 
-.imageWrapper img {
-    object-fit: contain;
-    width: 100%;
-    position: relative !important;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-}
+    .imageWrapper img {
+        object-fit: contain;
+        width: 100%;
+        position: relative !important;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid #b27734;
+    }
 
         .imageWrapper img:hover {
             transform: scale(1.025);
@@ -50,7 +52,7 @@
 
 @media(max-width: 800px) {
     .gallery_item {
-        width: 95%;
+        width: 95vw;
     }
 
         .gallery_item p {
@@ -58,9 +60,16 @@
             margin-top:0.5em;
         }
 
-    .imageWrapper{
-        width:fit-content;
+    .imageWrapper {
+        width: fit-content;
+        height: 100%;
     }
+
+        .imageWrapper img {
+            width: fit-content;
+            height: 100%;
+            object-fit: contain;
+        }
 }
 
 @media(max-width: 400px){
