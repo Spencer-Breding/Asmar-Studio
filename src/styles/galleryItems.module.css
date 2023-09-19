@@ -16,7 +16,7 @@
 }
 
 .imageWrapper {
-    display: inline-block;
+    display: flex;
     max-height: 85%;
     max-width: 100%;
     line-height: 0;
@@ -27,8 +27,8 @@
     .imageWrapper img {
         width: auto;
         height: auto;
+        margin:auto;
         border: 2px solid #b27734;
-        object-fit: contain;
         vertical-align: middle;
         position: relative !important;
     }
