@@ -12,28 +12,28 @@
     flex-direction: column;
     width: 30%;
     height: auto;
-    max-height: 50vh
+    max-height: 50vh;
+    position:relative;
 }
 
 .imageWrapper {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: auto;
-    width:fit-content;
-    height:auto;
+    width: auto;
+    height: auto;
     max-height: 85%;
     max-width: 100%;
+    border: 2px solid #b27734;
 }
 
     .imageWrapper img {
         object-fit: contain;
-        width: 100%;
+        max-width: 100%; /* Changed from width to max-width */
+        max-height: 100%; /* Added max-height */
         position: relative !important;
-        height: auto;
-        transition: all 0.3s ease-in-out;
-        border: 2px solid #b27734;
     }
 
         .imageWrapper img:hover {
@@ -62,13 +62,12 @@
 
     .imageWrapper {
         width: fit-content;
-        height: 100%;
+        height: fit-content;
     }
 
         .imageWrapper img {
-            width: fit-content;
-            height: 100%;
-            object-fit: contain;
+            width: auto;
+            height:auto;
         }
 }
 
