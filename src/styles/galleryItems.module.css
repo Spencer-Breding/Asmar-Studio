@@ -48,14 +48,8 @@
         margin-bottom:0;
     }
 
-@media(max-width: 1024px) {
-    .gallery_item{
-        width:30%;
-    }
-}
-
 @media(max-width: 800px) {
-    .gallery_item {
+    .imageWrapper {
         width: 80%;
     }
         .gallery_item p {
