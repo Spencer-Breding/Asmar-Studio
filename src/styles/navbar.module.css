@@ -48,7 +48,7 @@
     left: 3em;
     top: .75em;
     height: 4.75em;
-    width: 6.25em;
+    width: auto;
     transition: all 0.3s linear;
 }
 
