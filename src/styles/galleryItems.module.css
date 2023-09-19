@@ -17,8 +17,8 @@
 
 .imageWrapper {
     display: flex;
-    align-items: center; /* New */
-    justify-content: center; /* New */
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin: auto;
     max-height: 85%;
@@ -53,10 +53,15 @@
     .gallery_item {
         width: 95%;
     }
+
         .gallery_item p {
             font-size: 1.35em;
             margin-top:0.5em;
         }
+
+    .imageWrapper{
+        width:fit-content;
+    }
 }
 
 @media(max-width: 400px){
