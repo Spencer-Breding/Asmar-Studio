@@ -6,7 +6,7 @@ export default function ImageGallery({ items, setCurrentIndex }) {
         <div className={styles.gallery}>
             {items.map((item, index) => (
                 <div key={index} className={styles.gallery_item}>
-                    <div className={styles.image_wrapper}>
+                    <div className={styles.imageWrapper}>
                         <Image
                             src={item.source}
                             alt={item.description}
