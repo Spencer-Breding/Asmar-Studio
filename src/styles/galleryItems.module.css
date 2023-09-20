@@ -1,4 +1,4 @@
-﻿.gallery {
+.gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,37 +16,28 @@
     height: 60vh;
     position: relative;
     margin:auto;
+}   
+.imageWrapper {
+    display:flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #b27734;
+    margin:auto;
+    transition: 0.3s all ease-in-out;
 }
 
-.imageWrapper {
-    display: flex;
-    max-height: 85%;
-    line-height: 0;
-    transition: 0.3s all ease-in-out;
-    margin: auto;
-    padding: 0;
-    width: auto;
-    height: auto;
-    border: 2px solid #b27734;
-    overflow: hidden;
-    margin:auto;
-    position:relative;
-}
+    .imageWrapper:hover {
+        transform: scale(1.025);
+        cursor: pointer;
+    }
 
     .imageWrapper img {
         display:flex;
         width: 100%;
         height: 100%;
-        margin: auto;
-        padding: 0;
-        vertical-align: middle;
-        position: relative !important;
         object-fit: contain;
-    }
-
-    .imageWrapper:hover {
-        transform: scale(1.025);
-        cursor: pointer;
+        margin:auto;
     }
 
 .gallery_item p {
