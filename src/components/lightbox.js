@@ -1,4 +1,5 @@
 "use client";
+import { CldImage } from 'next-cloudinary';
 import { useState, useEffect, useCallback } from 'react';
 import styles from '../styles/Lightbox.module.css';
 
@@ -161,7 +162,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                 onTouchEnd={handleTouchEnd}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
-                        <img className={styles.mainImage} src={item.source} alt={item.description} />
+                        <CldImage className={styles.mainImage} src={item.source} alt={item.description} fill />
                     </div>
                     <p className={styles.imageDescription}>{item.description}</p>
                 </div>
@@ -181,20 +182,23 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                         }
 
                         return (
-                            <img
-                                key={index}
-                                src={previewItem.source}
-                                alt={previewItem.description}
-                                className={`${styles.previewImage} ${index === previewIdx ? styles.selectedPreview : ''}`}
-                                onClick={() => {
-                                    if (actualIndex === currentIndex) {
-                                        return;
-                                    }
-                                    if (!transitioning) {
-                                        handleAnimation(actualIndex, () => onThumbnailClick(actualIndex));
-                                    }
-                                }}
-                            />
+                            <div className={styles.previewImageWrapper }>
+                                <CldImage
+                                    key={index}
+                                    src={previewItem.source}
+                                    alt={previewItem.description}
+                                    className={`${styles.previewImage} ${index === previewIdx ? styles.selectedPreview : ''}`}
+                                    onClick={() => {
+                                        if (actualIndex === currentIndex) {
+                                            return;
+                                        }
+                                        if (!transitioning) {
+                                            handleAnimation(actualIndex, () => onThumbnailClick(actualIndex));
+                                        }
+                                    }}
+                                    fill
+                                />
+                            </div>
                         );
                     })}
                 </div>

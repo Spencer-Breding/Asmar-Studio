@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback, useEffect } from 'react';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 import styles from '../styles/navbar.module.css'
 
 export default function Navbar(props) {
@@ -112,7 +112,7 @@ export default function Navbar(props) {
     return (
         <>
             <div id="navbar" className={styles.nav_container}>
-                <Image className={styles.logo} src="./images/LogoBlackSmall.webp" priority={true}
+                <CldImage className={styles.logo} src="Asmar Studio/zzaoiklmfooi7cv1uqk3" priority={true}
                     alt="Asmar Studio Logo" width={100} height={75} onClick={() => scrollToTop()} />
                 <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
                     <p>ABOUT US</p>
@@ -138,7 +138,7 @@ export default function Navbar(props) {
                 </div>
                 {openBurger &&
                     <div  className={`${styles.burger_dropdown} ${openBurger ? styles.burger_dropdown_slide_in : styles.burger_dropdown_slide_out}`}>
-                        <Image className={styles.burger_logo} src="./images/LogoBlackSmall.webp" priority={true}
+                        <CldImage className={styles.burger_logo} src="Asmar Studio/zzaoiklmfooi7cv1uqk3" priority={true}
                             alt="Asmar Studio Logo" width={100} height={75} onClick={() => { scrollToTop(), closeBurger() }} />
                         <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
                             <p>ABOUT US</p>
