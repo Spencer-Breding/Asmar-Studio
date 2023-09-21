@@ -22,27 +22,30 @@
 }
 
 .imageWrapper {
-    display: inline-block; /* Adjusts dimensions based on content */
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
     border: 2px solid #b27734;
-    line-height: 0; /* To remove any extra vertical spacing */
+    line-height: 0;
     overflow: hidden;
-    vertical-align: middle; /* To align inline-block vertically */
+    vertical-align: middle;
     max-height: 85%;
     position: relative;
     transition: 0.3s all ease-in-out;
-    margin:auto;
+    margin: auto;
+    /* Add a box-sizing for good measure */
+    box-sizing: border-box;
 }
 
     .imageWrapper img {
-        display:flex;
         width: auto;
         height: auto;
-        max-width: 100%; /* Limit width to the parent element */
-        max-height: 100%; /* Limit height to the parent element */
+        max-width: 100%;
+        max-height: 100%;
         object-fit: contain;
-        vertical-align: middle; /* To remove extra white space at the bottom */
+        margin: 0; /* Add this line */
+        padding: 0; /* Add this line */
         position:relative !important;
-        margin:auto;
     }
 
     .imageWrapper:hover {
