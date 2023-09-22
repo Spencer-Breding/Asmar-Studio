@@ -155,7 +155,7 @@ export default function Navbar(props) {
         <>
             <div id="navbar" className={styles.nav_container}>
                 <CldImage className={styles.logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
-                    alt="Asmar Studio Logo" width={100} height={75} onClick={() => scrollToTop()} />
+                    alt="Asmar Studio Logo" width={100} height={77} onClick={() => scrollToTop()} />
                 <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
                     <p>ABOUT US</p>
                 </div>
@@ -181,7 +181,7 @@ export default function Navbar(props) {
                 {shouldRender &&
                     <div className={`${styles.burger_dropdown} ${activeClass}`}>
                         <CldImage className={styles.burger_logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
-                            alt="Asmar Studio Logo" width={100} height={75} onClick={() => { scrollToTop(), closeBurger() }} />
+                            alt="Asmar Studio Logo" width={100} height={77} onClick={() => { scrollToTop(), closeBurger() }} />
                         <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
                             <p>ABOUT US</p>
                         </div>
