@@ -1,25 +1,28 @@
 "use client";
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/navbar.module.css'
 
 export default function Navbar(props) {
-    const [openBurger, setOpenBurger] = useState(false);
-    const [shouldRender, setShouldRender] = useState(false);
-    const [activeClass, setActiveClass] = useState('');
-    const [firstClick, setFirstClick] = useState(false);
-    const [isFirstRender, setIsFirstRender] = useState(true);
-    const animationClass = openBurger && firstClick ? 'openLine' : firstClick ? 'closeLine' : '';
+    const [state, setState] = useState({
+        openBurger: false,
+        shouldRender: false,
+        activeClass: '',
+        firstClick: false,
+    });
 
+    const animationClass = state.openBurger && state.firstClick ? 'openLine' : state.firstClick ? 'closeLine' : '';
+
+    const sectionIds = useMemo(() => ["AboutUs", "Capabilities", "Gallery", "Testimonials", "Contact"], []);
 
     const closeBurger = () => {
-        setOpenBurger(false);
+        setState(prevState => ({ ...prevState, openBurger: false }));
     };
 
     const toggleBurger = () => {
-        setOpenBurger(!openBurger);
-        setFirstClick(true);
+        setState(prevState => ({ ...prevState, openBurger: !prevState.openBurger, firstClick: true }));
     };
+
 
     const handleScroll = useCallback((sectionId) => {
         const element = document.getElementById(sectionId);
@@ -103,47 +106,39 @@ export default function Navbar(props) {
     }, []);
 
     useEffect(() => {
-        let frameId;
         let timer;
 
-        const runAnimation = () => {
-            if (openBurger) {
-                setShouldRender(true);
-                setActiveClass("");
-                // Use requestAnimationFrame for slide-in
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        setActiveClass(styles.burger_dropdown_slide_in);
-                    });
-                });
-            } else {
-                setActiveClass(styles.burger_dropdown_slide_out);
-                // Use setTimeout for slide-out
-                timer = setTimeout(() => {
-                    if (!openBurger) {
-                        setShouldRender(false);
-                    }
-                }, 500);
-            }
-        };
+        if (state.openBurger) {
+            setState(prevState => ({ ...prevState, shouldRender: true, activeClass: '' }));
 
-        runAnimation();
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    setState(prevState => ({ ...prevState, activeClass: styles.burger_dropdown_slide_in }));
+                });
+            });
+        } else {
+            setState(prevState => ({ ...prevState, activeClass: styles.burger_dropdown_slide_out }));
+
+            timer = setTimeout(() => {
+                if (!state.openBurger) {
+                    setState(prevState => ({ ...prevState, shouldRender: false }));
+                }
+            }, 500);
+        }
 
         return () => {
-            if (frameId) {
-                cancelAnimationFrame(frameId);
-            }
             if (timer) {
                 clearTimeout(timer);
             }
         };
-    }, [openBurger]);
+    }, [state.openBurger, styles.burger_dropdown_slide_in, styles.burger_dropdown_slide_out]);
 
 
-    const handleItemClick = (section) => {
-        handleScroll(section);
-        closeBurger();
-    }
+
+const handleItemClick = useCallback((section) => {
+    handleScroll(section);
+    closeBurger();
+}, [handleScroll]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -178,8 +173,8 @@ export default function Navbar(props) {
                     <span className={`${styles.burger_line2} ${styles[`${animationClass}2`]}`} />
                     <span className={`${styles.burger_line3} ${styles[`${animationClass}3`]}`} />
                 </div>
-                {shouldRender &&
-                    <div className={`${styles.burger_dropdown} ${activeClass}`}>
+                {state.shouldRender &&
+                    <div className={`${styles.burger_dropdown} ${state.activeClass}`}>
                         <CldImage className={styles.burger_logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
                             alt="Asmar Studio Logo" width={100} height={77} onClick={() => { scrollToTop(), closeBurger() }} />
                         <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
