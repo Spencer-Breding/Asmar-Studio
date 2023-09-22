@@ -77,8 +77,7 @@
 
     .gallery_item {
         max-width: 70%;
-        max-height: 50vh;
-        width: auto;
+        width: fit-content;
         height:auto;
     }
 
