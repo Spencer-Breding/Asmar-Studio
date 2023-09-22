@@ -1,7 +1,7 @@
+"use client";
 import React from 'react'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary';
 import styles from '../styles/home.module.css'
-import logo from '/public/images/LogoBlack.webp'
 import ImageGallery from '../components/imageGallery'
 
 export const metadata = {
@@ -12,8 +12,8 @@ export default function Home() {
     return (
         <React.Fragment>
             <main className={styles.main}>
-                <Image className={styles.logo} src={logo} alt="Asmar Studio Logo" priority={true} />
-                <div className={styles.textDiv }>
+                <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" alt="Asmar Studio Logo" priority={true} width={1000} height={1000} />
+                <div className={styles.textDiv}>
                     <p>SET BUILDING</p>
                     <p>PROP MAKING</p>
                     <p>FABRICATION</p>
@@ -24,7 +24,7 @@ export default function Home() {
                 <h2 id="AboutUs" className={styles.headerText}>About Us</h2>
                 <h2 id="Capabilities" className={styles.headerText}>Capabilities</h2>
                 <h2 id="Gallery" className={styles.headerText}>Gallery</h2>
-                <ImageGallery/>
+                <ImageGallery />
                 <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
                 <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
             </main></React.Fragment>

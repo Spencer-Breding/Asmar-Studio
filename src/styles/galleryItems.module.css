@@ -25,13 +25,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #b27734;
+    border: 2px solid #dc9102;
     line-height: 0;
     overflow: hidden;
     vertical-align: middle;
     max-height: 85%;
-    max-width:100%;
-    width:fit-content;
+    max-width: 100%;
+    width: fit-content;
     position: relative;
     transition: 0.3s all ease-in-out;
     margin: auto;
@@ -65,7 +65,7 @@
 
 @media(max-width:1368px){
     .gallery_item{
-        width: 45%;
+        width: 30%;
     }
 }
 
@@ -76,8 +76,8 @@
 
     .gallery_item{
         max-width:90%;
-        width:fit-content;
-        height:auto;
+        width:auto;
+        height:50vh;
     }
 
     .imageWrapper:hover {

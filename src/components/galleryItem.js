@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from 'react';
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/galleryItems.module.css';
 

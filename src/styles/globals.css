@@ -13,18 +13,18 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
     background: black;
-    border: 2px solid #b27734;
+    border: 2px solid #dc9102;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #b27734;
-    border-radius:80px;
+    background: #dc9102;
+    border-radius: 80px;
 }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: #b26734;
+        background: #bd7c02;
     }
 
 @media (max-width: 48em) {

@@ -7,13 +7,14 @@
     left: 0;
     z-index: 1;
     margin: auto;
+    margin-top:0;
     white-space: nowrap;
     margin-right: 3em;
-    padding-left:1.75em;
-    padding-top: 1em;
+    padding-left: 1.75em;
+    padding-top: 0.5em;
     height: 75px;
     width: 100%;
-    border-bottom: 2px solid #b27734;
+    border-bottom: 2px solid #dc9102;
     gap: 2.5em;
 }
 
@@ -40,13 +41,13 @@
 
     .navbar_item p:hover {
         cursor: pointer;
-        text-shadow: 1px 0 0 #b27734, 0 -1px 0 #b27734, 0 1px 0 #b27734, -1px 0 0 #b27734;
+        text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
     }
 
 .logo {
     position: absolute;
     left: 3em;
-    top: .75em;
+    top: .25em;
     height: 4.75em;
     width: auto;
     transition: all 0.3s linear;
@@ -75,7 +76,7 @@
     height: 2em;
     z-index: 3;
     visibility: hidden;
-    background-color: rgba(178,119,52, 0.5);
+    background-color: rgba(200,148,2, 0.5);
     padding-top: 0.25em;
     padding-bottom: 0.25em;
 }
@@ -107,7 +108,6 @@
 }
 
 .burger_dropdown {
-    position: absolute;
     top: 2.5em;
     left: 0;
     display: flex;
@@ -121,8 +121,6 @@
     height: 95vh;
     background-color: rgba(0,0,0);
     overscroll-behavior: contain;
-    animation: slideIn 500ms ease-in-out forwards;
-    transform-origin: top center;
     width: 100vw;
     align-items: center;
     justify-content: center;

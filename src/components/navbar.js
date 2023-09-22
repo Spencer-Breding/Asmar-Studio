@@ -5,9 +5,12 @@ import styles from '../styles/navbar.module.css'
 
 export default function Navbar(props) {
     const [openBurger, setOpenBurger] = useState(false);
+    const [shouldRender, setShouldRender] = useState(false);
+    const [activeClass, setActiveClass] = useState('');
     const [firstClick, setFirstClick] = useState(false);
     const [isFirstRender, setIsFirstRender] = useState(true);
     const animationClass = openBurger && firstClick ? 'openLine' : firstClick ? 'closeLine' : '';
+
 
     const closeBurger = () => {
         setOpenBurger(false);
@@ -62,6 +65,7 @@ export default function Navbar(props) {
         }
     }, []);
 
+
     useEffect(() => {
         let isInitialRender = true;
 
@@ -98,6 +102,44 @@ export default function Navbar(props) {
         };
     }, []);
 
+    useEffect(() => {
+        let frameId;
+        let timer;
+
+        const runAnimation = () => {
+            if (openBurger) {
+                setShouldRender(true);
+                setActiveClass("");
+                // Use requestAnimationFrame for slide-in
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        setActiveClass(styles.burger_dropdown_slide_in);
+                    });
+                });
+            } else {
+                setActiveClass(styles.burger_dropdown_slide_out);
+                // Use setTimeout for slide-out
+                timer = setTimeout(() => {
+                    if (!openBurger) {
+                        setShouldRender(false);
+                    }
+                }, 500);
+            }
+        };
+
+        runAnimation();
+
+        return () => {
+            if (frameId) {
+                cancelAnimationFrame(frameId);
+            }
+            if (timer) {
+                clearTimeout(timer);
+            }
+        };
+    }, [openBurger]);
+
+
     const handleItemClick = (section) => {
         handleScroll(section);
         closeBurger();
@@ -112,7 +154,7 @@ export default function Navbar(props) {
     return (
         <>
             <div id="navbar" className={styles.nav_container}>
-                <CldImage className={styles.logo} src="Asmar Studio/zzaoiklmfooi7cv1uqk3" priority={true}
+                <CldImage className={styles.logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
                     alt="Asmar Studio Logo" width={100} height={75} onClick={() => scrollToTop()} />
                 <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
                     <p>ABOUT US</p>
@@ -136,9 +178,9 @@ export default function Navbar(props) {
                     <span className={`${styles.burger_line2} ${styles[`${animationClass}2`]}`} />
                     <span className={`${styles.burger_line3} ${styles[`${animationClass}3`]}`} />
                 </div>
-                {openBurger &&
-                    <div  className={`${styles.burger_dropdown} ${openBurger ? styles.burger_dropdown_slide_in : styles.burger_dropdown_slide_out}`}>
-                        <CldImage className={styles.burger_logo} src="Asmar Studio/zzaoiklmfooi7cv1uqk3" priority={true}
+                {shouldRender &&
+                    <div className={`${styles.burger_dropdown} ${activeClass}`}>
+                        <CldImage className={styles.burger_logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
                             alt="Asmar Studio Logo" width={100} height={75} onClick={() => { scrollToTop(), closeBurger() }} />
                         <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
                             <p>ABOUT US</p>
