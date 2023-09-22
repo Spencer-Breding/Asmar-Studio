@@ -74,10 +74,10 @@
         flex-direction:column;
     }
 
-    .gallery_item{
-        max-width:90%;
-        width:auto;
-        height:50vh;
+    .gallery_item {
+        max-width: 90%;
+        width: fit-content;
+        height: auto;
     }
 
     .imageWrapper:hover {
