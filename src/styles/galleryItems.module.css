@@ -32,6 +32,7 @@
     max-height: 85%;
     max-width: 100%;
     width: fit-content;
+    height:fit-content;
     position: relative;
     transition: 0.3s all ease-in-out;
     margin: auto;
@@ -75,9 +76,10 @@
     }
 
     .gallery_item {
-        max-width: 90%;
-        width: fit-content;
-        height: 50vh;
+        max-width: 70%;
+        max-height: 50vh;
+        width: auto;
+        height:auto;
     }
 
     .imageWrapper:hover {
