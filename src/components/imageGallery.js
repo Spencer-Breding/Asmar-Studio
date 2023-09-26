@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useEffect } from 'react';
 import GalleryItem from './galleryItem';
 import styles from '../styles/Gallery.module.css';
@@ -18,7 +18,7 @@ export default function ImageGallery() {
         { source: "Asmar Studio/Gallery/i4wepf7xpkqawfi3rhvq", description: "Ball Pit", priorityType: false, loadingType: "lazy" },
         { source: "Asmar Studio/Gallery/q4erbdyzmrtjzbruax7a", description: "Chinese Dragon", priorityType: false, loadingType: "lazy"  },
         { source: "Asmar Studio/Gallery/o3a0sl7gioliwmpbve1r", description: "Dragon's Face Fireplace", priorityType: false, loadingType: "lazy" },
-        { source: "Asmar Studio/Gallery/rotrpzjtgtr5tepp6xad", description: "Epsolon Tequila", priorityType: false, loadingType: "lazy" },
+        { source: "Asmar Studio/Gallery/rotrpzjtgtr5tepp6xad", description: "Espolón Tequila", priorityType: false, loadingType:"lazy" },
         { source: "Asmar Studio/Gallery/ap78sgf8zt0dmtjvbig7", description: "The Frogcats", priorityType: false, loadingType: "lazy" },
         { source: "Asmar Studio/Gallery/ch3vra8lucg84qhykqkv", description: "Frogcats Display", priorityType: false, loadingType: "lazy" },
         { source: "Asmar Studio/Gallery/nusbpovdbmhryvmvu8n9", description: "Giant Clam with Pearl", priorityType: false, loadingType: "lazy" },

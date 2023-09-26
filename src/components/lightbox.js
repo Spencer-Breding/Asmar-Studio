@@ -42,7 +42,8 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [transitioning, setTransitioning] = useState(false);
     let touchStartX = 0;
     let touchEndX = 0;
-    const MIN_SWIPE_DISTANCE = 50;
+    let numberOfFingers = 0;
+    const MIN_SWIPE_DISTANCE = 75;
 
     var previewIdx
     if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -105,16 +106,18 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     }, [handleClose, currentIndex, items.length, transitioning, handleAnimation, onNext, onPrev]);
 
     const handleTouchStart = (e) => {
-        touchStartX = e.touches[0].clientX;
+        numberOfFingers = e.touches.length;
+        if (numberOfFingers === 1) {
+            touchStartX = e.touches[0].clientX;
+        }
     };
 
     const handleTouchEnd = (e) => {
-        if (transitioning) return;
+        if (numberOfFingers !== 1 || transitioning) return;
 
         touchEndX = e.changedTouches[0].clientX;
 
         const swipeDistance = Math.abs(touchEndX - touchStartX);
-
         if (swipeDistance < MIN_SWIPE_DISTANCE) {
             return;
         }
