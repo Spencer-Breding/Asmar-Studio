@@ -26,6 +26,7 @@
     max-width: 90%;
     height: 80%;
     margin: auto;
+    margin-top: 0.25em;
     margin-bottom: 0;
     justify-content: center;
 }
@@ -132,6 +133,7 @@
     cursor: pointer;
     object-fit: cover;
     border: none;
+    cursor:default;
 }
 
 .animateOutToLeft,
@@ -182,9 +184,20 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-@media(max-width:48em) {
+@media(max-width:56.25em) {
     .arrowButton {
         display: none;
+    }
+    .previewImageWrapper {
+        width: 4.25em;
+        height: 4.25em;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .placeholder {
+        width: 4em;
+        height: 4em;
+        margin: 0.75rem 0.75rem;
     }
 }
 

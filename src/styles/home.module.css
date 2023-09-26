@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: fit-content;
-  width:100%;
+  width:100vw;
 }
 
 .textDiv {
@@ -32,7 +32,7 @@
 .headerText {
     color: white;
     border-bottom: 2px solid #dc9102;
-    font-size: 36px;
+    font-size: 42px;
     letter-spacing: 0.05em;
     padding-top: 0.1em;
 }
@@ -68,6 +68,9 @@
     .logo{
         width:60vw;
     }
+    .headerText{
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 48em) {
@@ -77,5 +80,8 @@
     }
     .textDiv{
         flex-wrap:wrap;
+    }
+    .headerText {
+        font-size: 32px;
     }
 }

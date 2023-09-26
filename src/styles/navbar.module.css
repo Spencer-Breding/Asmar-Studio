@@ -13,7 +13,7 @@
     padding-left: 1.75em;
     padding-top: 0.5em;
     height: 75px;
-    width: 100%;
+    width: 100vw;
     border-bottom: 2px solid #dc9102;
     gap: 2.5em;
 }
@@ -27,7 +27,7 @@
 
 .navbar_item p {
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
@@ -93,7 +93,7 @@
     padding:.5em;
     margin:-.5em;
     position: relative;
-    left: 90vw;
+    left: 95vw;
     gap: 0.45em;
     cursor:pointer;
 }
@@ -145,7 +145,30 @@
     transition: transform 0.5s ease-in-out;
 }
 
-@media (max-width: 48em) {
+@media(max-width: 87.5em){
+    .navbar_item p{
+        font-size: 24px;
+    }
+
+    .logo{
+        left: 1em;
+    }
+}
+
+@media(max-width: 80em) {
+    .navbar_item p {
+        font-size: 22px;
+    }
+}
+
+
+@media(max-width: 72.5em) {
+    .navbar_item p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 68em) {
 
     .burger {
         visibility:visible;
@@ -162,6 +185,12 @@
 
     .navbar_item {
         visibility: hidden;
+    }
+}
+
+@media(max-width:42.5em){
+    .burgerButton{
+        left: 92.5vw;
     }
 }
 

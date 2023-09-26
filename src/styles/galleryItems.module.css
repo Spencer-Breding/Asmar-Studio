@@ -57,10 +57,10 @@
 
 .gallery_item p {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.75em;
     text-align: center;
     font-weight: 500;
-    margin-top: auto;
+    margin-top: 0.5em;
     margin-bottom: 0;
 }
 
@@ -68,6 +68,9 @@
     .gallery_item{
         width: 30%;
     }
+        .gallery_item p {
+            font-size: 1.5em;
+        }
 }
 
 @media(max-width: 800px) {

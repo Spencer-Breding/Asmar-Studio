@@ -3,19 +3,9 @@ import { CldImage } from 'next-cloudinary';
 import { useState, useEffect, useCallback } from 'react';
 import styles from '../styles/Lightbox.module.css';
 
-const getPreviewItems = (currentIndex, items) => {
-    var startIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        startIdx = currentIndex - 2
-    } else {
-        startIdx = currentIndex - 3
-    }
-    var endIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        endIdx = startIdx + 5
-    } else {
-        endIdx = startIdx + 7
-    }
+const getPreviewItems = (currentIndex, items, previewIdx) => {
+    var startIdx = currentIndex - previewIdx
+    var endIdx = currentIndex + previewIdx + 1;
     const placeholder = { source: "", description: "" };
     let placeholdersBefore = 0;
     let placeholdersAfter = 0;
@@ -40,17 +30,27 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [isVisible, setIsVisible] = useState(false);
     const [imageAnimation, setImageAnimation] = useState('');
     const [transitioning, setTransitioning] = useState(false);
+    const [previewIdx, setPreviewIdx] = useState(3);
     let touchStartX = 0;
     let touchEndX = 0;
     let numberOfFingers = 0;
     const MIN_SWIPE_DISTANCE = 75;
 
-    var previewIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        previewIdx = 2
-    } else {
-        previewIdx = 3
-    }
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.matchMedia("(max-width: 42.5em)").matches) {
+                setPreviewIdx(2);
+            } else {
+                setPreviewIdx(3);
+            }
+        };
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 25);
         return () => clearTimeout(timer);
@@ -80,7 +80,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         });
     }, [currentIndex]);
 
-    const previewItems = getPreviewItems(currentIndex, items);
+    const previewItems = getPreviewItems(currentIndex, items, previewIdx);
 
     const handleClose = useCallback(() => {
         setIsVisible(false);
