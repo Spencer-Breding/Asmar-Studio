@@ -164,16 +164,25 @@
     .headerText {
         font-size: 32px;
     }
+    .capabilities{
+        font-size:20px;
+    }
     .competencies{
-        flex-direction:column;
-        gap: 1em;
+        flex-direction:row;
+        gap: 0;
         padding:0;
+        margin-left:0.5em;
         justify-content:center;
         width:100%;
         text-align:center;
     }
-    .competencies li{
+    .competencies p{
+        display:flex;
+        flex-direction:row;
         padding:0;
-        width:fit-content;
-    }
+        width:38%;
+        margin-left:auto;
+        margin-right:auto;
+        font-size:20px;
+      }
 }
