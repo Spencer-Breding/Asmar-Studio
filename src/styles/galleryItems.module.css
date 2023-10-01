@@ -59,7 +59,9 @@
     color: white;
     font-size: 1.75em;
     text-align: center;
+    font-family: Poppins;
     font-weight: 500;
+    font-size:24px;
     margin-top: 0.5em;
     margin-bottom: 0;
 }

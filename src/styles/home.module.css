@@ -1,28 +1,26 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: fit-content;
-  width:100vw;
-  margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
 }
 
 .textDiv {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     color: white;
     font-weight: 600;
-    margin: auto;
-    margin-left:0;
-    margin-right:0;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top:1em;
 }
 
     .textDiv p {
-        justify-content: space-evenly;
-        flex: 1;
-        text-align: center;
         text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
         letter-spacing: 2px;
         flex-wrap: wrap;
@@ -30,6 +28,7 @@
         margin-bottom: 0.75em;
         white-space: nowrap;
         font-size: calc(18px + 1vw);
+        width: 20%;
     }
 
 .headerText {
@@ -38,25 +37,26 @@
     font-size: calc(32px + 1.25vw);
     letter-spacing: 0.05em;
     padding-top: 0.1em;
-    margin-top:2em;
+    margin-top: 1em;
+    text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
 }
 
 #more {
-    margin-top: 1em;
     color: white;
-    text-align: center;
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
     font-size: calc(18px + 1vw);
     font-weight: 600;
     letter-spacing: 2px;
+    width: 100%;
+    margin-top: 0.5em;
 }
 
-.logo{
+.logo {
     width: 50vw;
-    height:auto;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:1em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
 }
 
 .about {
@@ -65,7 +65,7 @@
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
-    width:90%;
+    width: 90%;
 }
 
 .capabilities {
@@ -74,115 +74,206 @@
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
+    font-family: Poppins;
     width: 90%;
 }
 
 .competenciesHeader {
-    display:flex;
+    display: flex;
     color: white;
     font-size: calc(24px + 1vw);
+    text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
+    text-align:center;
 }
 
 .competencies {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3em;
     margin: auto;
+    margin-bottom: -2em;
     color: white;
     font-size: calc(18px + 1vw);
-    justify-content:center;
-    text-align:center;
-    width:80%;
+    font-family:Poppins;
+    justify-content: center;
+    text-align: left;
+    list-style-position: outside;
+    width: 80%;
 }
 
-.competencies p{
-    width:25%;
-}
+    .competencies li {
+        width: 25%;
+        margin-bottom: 2em;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-.competencies p span{
-    margin-left:0.25em;
-}
+        .competencies li span {
+            position: relative;
+            text-align:center;
+        }
 
+@media(max-width:124em) {
+    .textDiv p {
+        font-size: 32px;
+    }
 
-@media(max-width:124em){
-    .textDiv p{
-        font-size:28px;
+    #more {
+        font-size: 32px;
     }
-    #more{
-        font-size:28px;
+
+    .headerText {
+        font-size: 48px;
     }
-    .headerText{
-        font-size:42px;
+
+    .capabilities {
+        font-size: 30px;
     }
-    .capabilities{
-        font-size:30px;
+
+    .competenciesHeader {
+        font-size: 44px;
     }
-    .competenciesHeader{
+
+    .competencies {
         font-size: 36px;
     }
-    .competencies{
-        font-size:30px;
-    }
 }
 
-@media(max-width:105em){
-    .logo{
-        width:60vw;
+@media(max-width:105em) {
+    .logo {
+        width: 60vw;
     }
-    .textDiv p{
+
+    .textDiv p {
         font-size: 24px;
     }
 
     #more {
         font-size: 24px;
     }
-    .headerText{
-        font-size: 36px;
+
+    .headerText {
+        font-size: 46px;
     }
+
     .capabilities {
         font-size: 28px;
     }
 
     .competenciesHeader {
-        font-size: 34px;
+        font-size: 42px;
     }
 
     .competencies {
-        font-size: 28px;
+        font-size: 34px;
+    }
+
+        .competencies li {
+            width: 20%;
+        }
+}
+
+@media(max-width: 87.5em) {
+    .main{
+        margin-right:0.25em;
+        margin-left:0.25em;
+    }
+    .logo {
+        width: 70vw;
+    }
+
+    .textDiv {
+        width: 95%;
+    }
+
+        .textDiv p {
+            font-size: 22px;
+            width: 40%;
+        }
+
+    #more {
+        font-size: 22px;
+        width: 40%;
+        margin-top: 0;
+    }
+
+    .competencies {
+        width: 90%;
+        justify-content:space-evenly;
+    }
+
+        .competencies li {
+            width: 27.5%;
+        }
+}
+
+@media (max-width: 68em) {
+    .textDiv p {
+        margin-bottom: 1em;
     }
 }
 
+
 @media (max-width: 48em) {
-    .logo{
-        width: 75vw;
-        margin-top: 2.5em;
+
+    .textDiv {
+        flex-wrap: wrap;
+        width: 100%;
     }
-    .textDiv{
-        flex-wrap:wrap;
+
+        .textDiv p {
+            font-size: 20px;
+            width: 45%;
+        }
+
+    #more {
+        font-size: 20px;
+        width: 45%;
+        margin-top: 0;
     }
+
     .headerText {
         font-size: 32px;
     }
-    .capabilities{
-        font-size:20px;
+
+    .capabilities {
+        font-size: 20px;
     }
-    .competencies{
-        flex-direction:row;
+
+    .competenciesHeader{
+        font-size: 28px;
+    }
+
+    .competencies {
+        flex-direction: row;
         gap: 0;
-        padding:0;
-        margin-left:0.5em;
-        justify-content:center;
-        width:100%;
-        text-align:center;
-    }
-    .competencies p{
-        display:flex;
-        flex-direction:row;
-        padding:0;
-        width:38%;
-        margin-left:auto;
+        padding: 0;
+        margin-left: auto;
         margin-right:auto;
-        font-size:20px;
-      }
+        justify-content: center;
+        width: 90%;
+        font-size: 20px;
+    }
+
+        .competencies li {
+            width: 40%;
+            margin-left:auto;
+        }
+}
+
+@media(max-width: 36em){
+    .textDiv p{
+        width:100%;
+    }
+    #more{
+        width:100%;
+     }
+
+    .competenciesHeader{
+    }
+
+}
+
+@media(max-width:24em){
+
 }

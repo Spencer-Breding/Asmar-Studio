@@ -14,8 +14,8 @@ export default function Home() {
                 <p>FABRICATION</p>
                 <p>SCULPTURES</p>
                 <p>CUSTOM FURNITURE</p>
+                <p id={styles.more}>...AND MUCH MORE</p>
             </div>
-            <text id={styles.more}>...AND MUCH MORE</text>
             <h2 id="AboutUs" className={styles.headerText}>About Us</h2>
             <h2 id="Capabilities" className={styles.headerText}>Capabilities</h2>
             <p className={styles.capabilities}>Asmar Studio, Inc. is a premier fabrication, prop making and set building studio based in
@@ -24,19 +24,22 @@ export default function Home() {
                 industry as well as other major brands and their respective agencies.
             </p>
             <h3 className={styles.competenciesHeader}>Core Competencies Include:</h3>
-            <div className={styles.competencies}>
-                <p>• <span>Design</span></p>
-                <p>• <span>Modeling</span></p>
-                <p>• <span>Sculpting</span></p>
-                <p>• <span>Prototypes</span></p>
-                <p>• <span>Metalwork</span></p>
-                <p>• <span>Woodwork</span></p>
-                <p>• <span>Fiberglass</span></p>
-                <p>• <span>Trade Shows</span></p>
-                <p>• <span>Set Building</span></p>
-                <p>• <span>Painting & Finishing</span></p>
-                <p>• <span>Project Management & Logistics</span></p>
-            </div>
+            <ul className={styles.competencies}>
+                <li><span id={styles.design }>Design</span></li>
+                <li><span id={styles.modeling}>Modeling</span></li>
+                <li><span id={styles.sculpting}>Sculpting</span></li>
+                <li><span id={styles.prototypes}>Prototypes</span></li>
+                <li><span id={styles.metalwork}>Metalwork</span></li>
+                <li><span id={styles.woodwork}>Woodwork</span></li>
+                <li id={styles.fiberglass}><span>Fiberglass</span></li>
+                <li id={styles.carpentry}><span>Carpentry</span></li>
+                <li id={styles.welding}><span>Welding</span></li>
+                <li id={styles.tradeShows}><span>Trade Shows</span></li>
+                <li id={styles.setBuilding}><span>Set Building</span></li>
+                <li id={styles.furniture}><span>Custom Furniture</span></li>
+                <li id={styles.painting}><span>Painting & Finishing</span></li>
+                <li id={styles.management }><span id={styles.management}>Project Management & Logistics</span></li>
+            </ul>
             <h2 id="Gallery" className={styles.headerText}>Gallery</h2>
             <ImageGallery />
             <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
