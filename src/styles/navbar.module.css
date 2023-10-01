@@ -25,23 +25,25 @@
     position: relative;
 }
 
-.navbar_item p {
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
-    width: fit-content;
-    padding: 0.25em;
-    margin: 0 auto;
-    user-select: none;
-    justify-content: space-evenly;
-    transition: all linear 0.3s;
-}
+    .navbar_item p {
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        width: fit-content;
+        padding: 0.25em;
+        margin: 0 auto;
+        user-select: none;
+        justify-content: space-evenly;
+        transition: all linear 0.3s;
+        text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
+        filter:brightness(0.8);
+    }
 
     .navbar_item p:hover {
         cursor: pointer;
-        text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
+        filter:brightness(1);
     }
 
 .logo {
