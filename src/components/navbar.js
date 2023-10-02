@@ -11,6 +11,13 @@ export default function Navbar(props) {
         firstClick: false,
     });
 
+    let userIsScrolling = false;
+    let programmaticScroll = false;
+    window.addEventListener('scroll', () => {
+        userIsScrolling = true;
+        setTimeout(() => { userIsScrolling = false; }, 500);
+    });
+
     const animationClass = state.openBurger && state.firstClick ? 'openLine' : state.firstClick ? 'closeLine' : '';
 
     const sectionIds = useMemo(() => ["AboutUs", "Capabilities", "Gallery", "Testimonials", "Contact"], []);
@@ -46,6 +53,7 @@ export default function Navbar(props) {
             const offsetPosition = elementPosition - offsetHeightInPx;
 
             const adjustScroll = () => {
+                if (userIsScrolling) return;
                 const rect = element.getBoundingClientRect();
                 const bodyRect = document.body.getBoundingClientRect().top;
                 const elementPosition = rect.top - bodyRect;
@@ -62,7 +70,7 @@ export default function Navbar(props) {
             const gallery = document.getElementById("galleryContainer");
             if (gallery) {
                 gallery.querySelectorAll('img').forEach(img => {
-                    img.addEventListener('load', adjustScroll);
+                    img.addEventListener('load', adjustScroll, { once: true });
                 });
             }
         }
