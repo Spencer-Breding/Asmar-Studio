@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/navbar.module.css'
 
@@ -11,12 +11,21 @@ export default function Navbar(props) {
         firstClick: false,
     });
 
-    let userIsScrolling = false;
-    let programmaticScroll = false;
-    window.addEventListener('scroll', () => {
-        userIsScrolling = true;
-        setTimeout(() => { userIsScrolling = false; }, 500);
-    });
+    const userIsScrolling = useRef(false);
+    const userHasManuallyScrolled = useRef(false);
+
+
+    useEffect(() => {
+        const handleScrollEvent = () => {
+            userIsScrolling.current = true;
+            userHasManuallyScrolled.current = true;
+            setTimeout(() => { userIsScrolling.current = false; }, 500);
+        };
+        window.addEventListener('scroll', handleScrollEvent);
+        return () => {
+            window.removeEventListener('scroll', handleScrollEvent);
+        };
+    }, []);
 
     const animationClass = state.openBurger && state.firstClick ? 'openLine' : state.firstClick ? 'closeLine' : '';
 
@@ -53,7 +62,7 @@ export default function Navbar(props) {
             const offsetPosition = elementPosition - offsetHeightInPx;
 
             const adjustScroll = () => {
-                if (userIsScrolling) return;
+                if (userIsScrolling.current || userHasManuallyScrolled.current) return;
                 const rect = element.getBoundingClientRect();
                 const bodyRect = document.body.getBoundingClientRect().top;
                 const elementPosition = rect.top - bodyRect;
@@ -143,10 +152,11 @@ export default function Navbar(props) {
 
 
 
-const handleItemClick = useCallback((section) => {
-    handleScroll(section);
-    closeBurger();
-}, [handleScroll]);
+    const handleItemClick = useCallback((section) => {
+        userHasManuallyScrolled.current = false;
+        handleScroll(section);
+        closeBurger();
+    }, [handleScroll]);
 
     const scrollToTop = () => {
         window.scrollTo({
