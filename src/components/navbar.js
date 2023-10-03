@@ -167,22 +167,24 @@ export default function Navbar(props) {
     return (
         <>
             <div id="navbar" className={styles.nav_container}>
-                <CldImage className={styles.logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
-                    alt="Asmar Studio Logo" width={100} height={77} onClick={() => scrollToTop()} />
-                <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
-                    <p>ABOUT US</p>
-                </div>
-                <div className={styles.navbar_item} onClick={() => handleItemClick("Capabilities")}>
-                    <p>CAPABILITIES</p>
-                </div>
-                <div className={styles.navbar_item} onClick={() => handleItemClick("Gallery")}>
-                    <p>GALLERY</p>
-                </div>
-                <div className={styles.navbar_item} onClick={() => handleItemClick("Testimonials")}>
-                    <p>TESTIMONIALS</p>
-                </div>
-                <div className={styles.navbar_item} onClick={() => handleItemClick("Contact")}>
-                    <p>CONTACT US</p>
+                <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" priority={true}
+                    alt="Asmar Studio Logo" width={6113} height={4675} onClick={() => scrollToTop()} />
+                <div className={styles.word_container }>
+                    <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
+                        <p>ABOUT US</p>
+                    </div>
+                    <div className={styles.navbar_item} onClick={() => handleItemClick("Capabilities")}>
+                        <p>CAPABILITIES</p>
+                    </div>
+                    <div className={styles.navbar_item} onClick={() => handleItemClick("Gallery")}>
+                        <p>GALLERY</p>
+                    </div>
+                    <div className={styles.navbar_item} onClick={() => handleItemClick("Testimonials")}>
+                        <p>TESTIMONIALS</p>
+                    </div>
+                    <div className={styles.navbar_item} onClick={() => handleItemClick("Contact")}>
+                        <p>CONTACT US</p>
+                    </div>
                 </div>
             </div>
             <div id="burger" className={styles.burger}>
@@ -193,8 +195,8 @@ export default function Navbar(props) {
                 </div>
                 {state.shouldRender &&
                     <div className={`${styles.burger_dropdown} ${state.activeClass}`}>
-                        <CldImage className={styles.burger_logo} src="Asmar Studio/tknyls7qjuabe4ykrzqh" priority={true}
-                            alt="Asmar Studio Logo" width={100} height={77} onClick={() => { scrollToTop(), closeBurger() }} />
+                        <CldImage className={styles.burger_logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" priority={true}
+                            alt="Asmar Studio Logo" width={6113} height={4675} onClick={() => { scrollToTop(), closeBurger() }} />
                         <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
                             <p>ABOUT US</p>
                         </div>

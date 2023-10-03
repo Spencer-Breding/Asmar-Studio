@@ -7,7 +7,7 @@ import ImageGallery from './imageGallery'
 export default function Home() {
     return (
         <main className={styles.main}>
-            <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" alt="Asmar Studio Logo" priority={true} width={1000} height={1000} />
+            <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" alt="Asmar Studio Logo" priority={true} width={6113} height={4675} />
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>
                 <p>PROP MAKING</p>

@@ -34,7 +34,7 @@
 .headerText {
     color: white;
     border-bottom: 2px solid #dc9102;
-    font-size: calc(32px + 1.25vw);
+    font-size: calc(32px + 1.75vw);
     letter-spacing: 0.05em;
     padding-top: 0.1em;
     margin-top: 1em;
@@ -52,7 +52,7 @@
 }
 
 .logo {
-    width: 50vw;
+    width: 60vw;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -61,7 +61,7 @@
 
 .about {
     color: white;
-    font-size: calc(12px + 1vw);
+    font-size: calc(12px + 1.5vw);
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
@@ -70,7 +70,7 @@
 
 .capabilities {
     color: white;
-    font-size: calc(12px + 1vw);
+    font-size: calc(12px + 1.5vw);
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
@@ -81,7 +81,7 @@
 .competenciesHeader {
     display: flex;
     color: white;
-    font-size: calc(24px + 1vw);
+    font-size: calc(24px + 2vw);
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
     text-align:center;
 }
@@ -93,9 +93,9 @@
     margin: auto;
     margin-bottom: -2em;
     color: white;
-    font-size: calc(18px + 1vw);
+    font-size: calc(18px + 1.5vw);
     font-family:Poppins;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: left;
     list-style-position: outside;
     width: 80%;
@@ -114,6 +114,9 @@
         }
 
 @media(max-width:124em) {
+    .logo{
+        width: 50vw;
+    }
     .textDiv p {
         font-size: 32px;
     }
@@ -187,19 +190,18 @@
     }
 
         .textDiv p {
-            font-size: 22px;
-            width: 40%;
+            font-size: calc(18px + 1vw);
+            width: 45%;
         }
 
     #more {
-        font-size: 22px;
-        width: 40%;
+        font-size: calc(18px + 1vw);
+        width: 45%;
         margin-top: 0;
     }
 
     .competencies {
         width: 90%;
-        justify-content:space-evenly;
     }
 
         .competencies li {
@@ -222,13 +224,11 @@
     }
 
         .textDiv p {
-            font-size: 20px;
-            width: 45%;
+            font-size: 24px;
         }
 
     #more {
-        font-size: 20px;
-        width: 45%;
+        font-size: 24px;
         margin-top: 0;
     }
 
@@ -237,7 +237,7 @@
     }
 
     .capabilities {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .competenciesHeader{
@@ -252,7 +252,7 @@
         margin-right:auto;
         justify-content: center;
         width: 90%;
-        font-size: 20px;
+        font-size: 24px;
     }
 
         .competencies li {
@@ -275,5 +275,10 @@
 }
 
 @media(max-width:24em){
-
+    .capabilities{
+        font-size:20px;
+    }
+    .competencies{
+        font-size:20px;
+    }
 }

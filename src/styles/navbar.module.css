@@ -7,27 +7,34 @@
     left: 0;
     z-index: 1;
     margin: auto;
-    margin-top:0;
+    margin-top: 0;
     white-space: nowrap;
-    margin-right: 3em;
-    padding-left: 1.75em;
     padding-top: 0.5em;
-    height: 75px;
-    width: 100%;
+    height: fit-content;
+    min-height:6vh;
+    width: 100vw;
     border-bottom: 2px solid #dc9102;
-    gap: 2.5em;
 }
 
-.navbar_item{
-    margin-top:auto;
-    margin-bottom:auto;
+.word_container{
     display:flex;
+    position:relative;
+    width:100%;
+    justify-content:center;
+    gap:2em;
+}
+
+.navbar_item {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
     position: relative;
+    width: 15%;
 }
 
     .navbar_item p {
         color: white;
-        font-size: 32px;
+        font-size: calc(20px + 1.25vw);
         font-weight: 600;
         letter-spacing: 1px;
         text-decoration: none;
@@ -38,32 +45,31 @@
         justify-content: space-evenly;
         transition: all linear 0.3s;
         text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
-        filter:brightness(0.8);
+        filter: brightness(0.8);
     }
 
-    .navbar_item p:hover {
-        cursor: pointer;
-        filter:brightness(1);
-    }
+        .navbar_item p:hover {
+            cursor: pointer;
+            filter: brightness(1);
+        }
 
 .logo {
     position: absolute;
     left: 3em;
     top: .25em;
-    height: 4.75em;
+    height: 6vh;
     width: auto;
     transition: all 0.3s linear;
 }
 
     .logo:hover {
         filter: brightness(1.2);
-        cursor:pointer;
+        cursor: pointer;
     }
 
-#gallery{
-    margin-left:auto;
-    margin-right:auto;
-
+#gallery {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .burger {
@@ -75,7 +81,7 @@
     flex-flow: column nowrap;
     justify-content: space-around;
     width: 100vw;
-    height: 2em;
+    height: 5vh;
     z-index: 3;
     visibility: hidden;
     background-color: rgba(200,148,2, 0.5);
@@ -88,17 +94,17 @@
     }
 
 .burgerButton {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     width: 2.5em;
     height: fit-content;
-    padding:.5em;
-    margin:-.5em;
-    margin-left:auto;
-    margin-right:0.25em;
+    padding: .75vh;
+    margin: -.5em;
+    margin-left: auto;
+    margin-right: 0.25em;
     position: relative;
     gap: 0.45em;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .burger_line1, .burger_line2, .burger_line3 {
@@ -111,7 +117,7 @@
 }
 
 .burger_dropdown {
-    top: 2.5em;
+    top: 5.75vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -131,11 +137,17 @@
     transform: translateX(-100%);
 }
 
-.burger_logo{
+.burger_logo {
+    height:150px;
+    width:auto;
+    cursor:pointer;
 }
 
-.burger_item p{
-    color:white;
+.burger_item p {
+    color: white;
+    font-size: calc(16px + 2.5vw);
+    cursor: pointer;
+    text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
 }
 
 .burger_dropdown_slide_in {
@@ -148,12 +160,19 @@
     transition: transform 0.5s ease-in-out;
 }
 
-@media(max-width: 87.5em){
+@media(max-width:124em) {
     .navbar_item p{
+        font-size: 32px;
+    }
+}
+
+
+@media(max-width: 87.5em) {
+    .navbar_item p {
         font-size: 24px;
     }
 
-    .logo{
+    .logo {
         left: 1em;
     }
 }
@@ -174,16 +193,16 @@
 @media (max-width: 68em) {
 
     .burger {
-        visibility:visible;
+        visibility: visible;
     }
 
     .nav_container {
-        display:none;
+        display: none;
     }
 
     .logo_link {
         position: fixed;
-        visibility:hidden;
+        visibility: hidden;
     }
 
     .navbar_item {
@@ -191,8 +210,14 @@
     }
 }
 
-@media(max-width:42.5em){
-    .burgerButton{
+@media(max-width:42.5em) {
+    .burgerButton {
+    }
+}
+
+@media(max-width:25em){
+    .burger_logo{
+        height:125px;
     }
 }
 
@@ -216,8 +241,8 @@
     }
 }
 
-    @keyframes rotateMenu {
-        0% {
+@keyframes rotateMenu {
+    0% {
         transform: rotateY(-90deg)
     }
 
@@ -248,11 +273,13 @@
     0% {
         opacity: 1;
     }
-    50%{
-        opacity:0;
+
+    50% {
+        opacity: 0;
     }
-    100%{
-        opacity:0;
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -285,12 +312,14 @@
 }
 
 @keyframes closeLine2 {
-    0%{
+    0% {
         opacity: 0;
     }
-    50%{
-        opacity:0;
+
+    50% {
+        opacity: 0;
     }
+
     100% {
         opacity: 1;
     }

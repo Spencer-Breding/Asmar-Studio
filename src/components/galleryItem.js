@@ -2,7 +2,7 @@
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/galleryItems.module.css';
 
-export default function GalleryItem({ items, setCurrentIndex, priorityType, loadingType }) {
+export default function GalleryItem({ items, setCurrentIndex }) {
 
     const handleClick = (index) => {
         setCurrentIndex(index);
@@ -17,8 +17,8 @@ export default function GalleryItem({ items, setCurrentIndex, priorityType, load
                         <CldImage
                             src={item.source}
                             alt={item.description}
-                            loading={loadingType}
-                            priority={priorityType}
+                            loading="lazy"
+                            priority={false}
                             fill
                         />
                     </div>
