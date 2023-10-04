@@ -107,7 +107,8 @@
         flex-direction:column;
     }
     .gallery_item{
-        width: 70%;
+        max-width: fit-content;
+        height:auto;
         max-height:50vh;
     }
 }
