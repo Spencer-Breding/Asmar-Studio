@@ -61,7 +61,7 @@
 
 .about {
     color: white;
-    font-size: calc(12px + 1.5vw);
+    font-size: calc(12px + 1.75vw);
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
@@ -70,7 +70,7 @@
 
 .capabilities {
     color: white;
-    font-size: calc(12px + 1.5vw);
+    font-size: calc(12px + 1.75vw);
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
@@ -93,9 +93,9 @@
     margin: auto;
     margin-bottom: -2em;
     color: white;
-    font-size: calc(18px + 1.5vw);
+    font-size: calc(18px + 1.75vw);
     font-family:Poppins;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: left;
     list-style-position: outside;
     width: 80%;
@@ -130,7 +130,7 @@
     }
 
     .capabilities {
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .competenciesHeader {
@@ -138,7 +138,7 @@
     }
 
     .competencies {
-        font-size: 36px;
+        font-size: 40px;
     }
 }
 
