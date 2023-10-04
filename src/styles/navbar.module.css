@@ -160,6 +160,12 @@
     transition: transform 0.5s ease-in-out;
 }
 
+@media(max-width:160em){
+    .navbar_item p{
+        font-size: calc(20px + 1vw)
+    }
+}
+
 @media(max-width:124em) {
     .navbar_item p{
         font-size: 32px;

@@ -3,6 +3,7 @@ import React from 'react'
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/home.module.css'
 import ImageGallery from './imageGallery'
+import Testimonials from './testimonials'
 
 export default function Home() {
     return (
@@ -47,6 +48,7 @@ export default function Home() {
             <h2 id="Gallery" className={styles.headerText}>Gallery</h2>
             <ImageGallery />
             <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
+            <Testimonials/>
             <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
         </main>
     )
