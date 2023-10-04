@@ -87,8 +87,9 @@
     }
 
     .gallery_item {
-        width: 40%;
-        max-height:40vh;
+        max-width: 70%;
+        width: fit-content;
+        height: auto;
     }
 
     .imageWrapper:hover {
@@ -105,11 +106,6 @@
 @media(max-width:36em){
     .gallery{
         flex-direction:column;
-    }
-    .gallery_item {
-        max-width: 70%;
-        width: fit-content;
-        height: auto;
     }
 }
 
