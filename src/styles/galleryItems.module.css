@@ -109,7 +109,7 @@
     .gallery_item{
         max-width: fit-content;
         height:auto;
-        max-height:50vh;
+        max-height:80vh;
     }
 }
 
