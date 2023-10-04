@@ -7,6 +7,10 @@ import ImageGallery from './imageGallery'
 export default function Home() {
     return (
         <main className={styles.main}>
+            <meta
+                name="description"
+                content="Design, Modeling, Sculpting, Prototypes, Metalwork, Woodwork, Fiberglass, Carpentry, Welding, Trade Shows, Set Building, Custom Furniture, Painting, Finishing, Project Management, Logistics, Resin Work"
+            />
             <CldImage className={styles.logo} src="Asmar Studio/wiqgib8g0gzyhkfmy9pz" alt="Asmar Studio Logo" priority={true} width={2240} height={1713} />
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>

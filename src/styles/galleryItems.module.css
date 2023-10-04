@@ -108,8 +108,9 @@
     }
     .gallery_item{
         width: fit-content;
+        max-width:80vw;
         height:auto;
-        max-height:80vh;
+        max-height:50vh;
     }
 }
 
