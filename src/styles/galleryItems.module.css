@@ -106,11 +106,10 @@
     .gallery{
         flex-direction:column;
     }
-    .gallery_item{
+    .gallery_item {
+        max-width: 70%;
         width: fit-content;
-        max-width:80vw;
-        height:auto;
-        max-height:50vh;
+        height: auto;
     }
 }
 
