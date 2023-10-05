@@ -1,28 +1,19 @@
 .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: fit-content;
-    gap: 2em;
+    gap: 5em;
     justify-content: space-evenly;
     width: 100%;
     margin: 1em;
-}
-
-.row {
-    position: relative;
-    display: flex;
-    height: auto;
-    width: 100%;
-    margin-bottom: 1em;
 }
 
 .testimonial {
     color: white;
     display: flex;
     flex-direction: column;
-    width: 45%;
-    height: 100%;
+    width: 80%;
+    height: fit-content;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -63,24 +54,22 @@
 }
 
 @media (max-width: 68em) {
-    .row {
-        flex-direction: column;
-        margin-bottom: 0;
+
+    .container{
+        gap:3em;
     }
 
     .testimonial {
-        width: 90%;
         height: fit-content;
         margin-bottom: 2em;
         font-size:22px;
     }
 }
 
-
-@media (max-width: 48em) {
-}
-
 @media(max-width: 36em) {
+    .container{
+        gap: 2em;
+    }
     .testimonial {
         font-size: 20px;
         margin-bottom:1.5em;
