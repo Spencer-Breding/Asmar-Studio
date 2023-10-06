@@ -129,13 +129,14 @@
     transform-origin: top center;
     z-index: 1;
     pointer-events: all;
-    height: 98vw;
+    height: 95%;
     background-color: rgba(0,0,0);
     overscroll-behavior: contain;
     width: 100vw;
     align-items: center;
     justify-content: center;
     user-select: none;
+    padding-bottom:5%;
     transform: translateX(-100%);
 }
 
