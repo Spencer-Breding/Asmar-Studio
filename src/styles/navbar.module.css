@@ -119,8 +119,9 @@
 }
 
 .burger_dropdown {
-    top: 5.75vh;
+    top: 6vh;
     left: 0;
+    right:0;
     display: flex;
     flex-direction: column;
     position: fixed;
