@@ -37,6 +37,18 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const MIN_SWIPE_DISTANCE = 75;
 
     useEffect(() => {
+        const setVhProperty = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setVhProperty();
+        window.addEventListener('resize', setVhProperty);
+
+        return () => window.removeEventListener('resize', setVhProperty);
+    }, []);
+
+    useEffect(() => {
         const handleResize = () => {
             if (window.matchMedia("(max-width: 42.5em)").matches) {
                 setPreviewIdx(2);
