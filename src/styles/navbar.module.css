@@ -137,7 +137,6 @@
     align-items: center;
     justify-content: center;
     user-select: none;
-    padding-bottom: 5%;
     transform: translateX(-100%);
     touch-action: pinch-zoom, double-tap-zoom;
 }
