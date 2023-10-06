@@ -1,17 +1,16 @@
-﻿.lightbox {
+﻿﻿.lightbox {
     position: fixed;
     top: 0;
-    bottom:0;
     left: 0;
-    right:0;
     width: 100vw;
+    height: 100%;
     background: rgba(0,0,0, 1);
     display: flex;
     flex-direction: column;
     z-index: 3;
-    padding-top:0.5em;
+    padding-top: 0.5em;
     overscroll-behavior: contain;
-    touch-action:pinch-zoom, double-tap-zoom;
+    touch-action: pinch-zoom, double-tap-zoom;
 }
 
 .imageContainer {
@@ -37,7 +36,7 @@
 
 .mainImageWrapper {
     display: flex;
-    position:relative;
+    position: relative;
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -104,7 +103,7 @@
 
 .previewContainer {
     display: flex;
-    position:relative;
+    position: relative;
     justify-content: space-evenly;
     width: fit-content;
     margin: auto;
@@ -119,7 +118,7 @@
     margin: 1vw 1vw;
     cursor: pointer;
     border: none;
-    position:relative;
+    position: relative;
 }
 
 .previewImage {
@@ -188,12 +187,13 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-@media(max-width: 124em){
+@media(max-width: 124em) {
     .previewImageWrapper {
         width: 5rem;
         height: 5rem;
         margin: 1em 1em;
     }
+
     .placeholder {
         width: 5rem;
         height: 5rem;
@@ -205,6 +205,7 @@
     .arrowButton {
         display: none;
     }
+
     .previewImageWrapper {
         width: 4.25em;
         height: 4.25em;
