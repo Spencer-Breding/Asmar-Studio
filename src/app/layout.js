@@ -11,6 +11,12 @@ const goudy = Sorts_Mill_Goudy({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={goudy.className}>
+            <head>
+                <meta
+                    name="description"
+                    content="Design, Modeling, Sculpting, Prototypes, Metalwork, Woodwork, Fiberglass, Carpentry, Welding, Trade Shows, Set Building, Custom Furniture, Painting, Finishing, Project Management, Logistics, Resin Work"
+                />
+            </head>
             <body>
                 <Navbar />
                 <main>
