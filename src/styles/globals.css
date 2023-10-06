@@ -29,6 +29,12 @@ body {
 
 @media (max-width: 68em) {
     body{
-        margin-top:1.5em;
+        margin-top:3em;
+    }
+}
+
+@media(max-width: 25em){
+    body{
+        margin-top: 2em;
     }
 }

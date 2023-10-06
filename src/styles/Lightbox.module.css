@@ -10,6 +10,7 @@
     z-index: 3;
     padding-top:0.5em;
     overscroll-behavior: contain;
+    touch-action:pinch-zoom, double-tap-zoom;
 }
 
 .imageContainer {

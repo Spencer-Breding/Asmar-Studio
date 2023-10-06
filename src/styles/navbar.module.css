@@ -10,9 +10,10 @@
     margin-top: 0;
     white-space: nowrap;
     padding-top: 0.5em;
+    padding-bottom: 0.25em;
     height: fit-content;
-    min-height:6vh;
-    width: 100vw;
+    min-height: 135px;
+    width: 100%;
     border-bottom: 2px solid #dc9102;
 }
 
@@ -34,8 +35,8 @@
 
     .navbar_item p {
         color: white;
-        font-size: calc(20px + 1.25vw);
-        font-weight: 600;
+        font-size: calc(20px + 1vw);
+        font-weight: 500;
         letter-spacing: 1px;
         text-decoration: none;
         width: fit-content;
@@ -50,16 +51,17 @@
 
         .navbar_item p:hover {
             cursor: pointer;
-            filter: brightness(1);
+            filter: brightness(1.2);
         }
 
 .logo {
     position: absolute;
     left: 3em;
     top: .25em;
-    height: 6vh;
+    height: 135px;
     width: auto;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-in-out;
+    z-index:1;
 }
 
     .logo:hover {
@@ -145,7 +147,7 @@
 
 .burger_item p {
     color: white;
-    font-size: calc(16px + 2.5vw);
+    font-size: 32px;
     cursor: pointer;
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
 }
@@ -160,18 +162,64 @@
     transition: transform 0.5s ease-in-out;
 }
 
+@media(max-width:216em) {
+    .nav_container{
+        min-height:100px;
+    }
+    .logo {
+        height: 100px;
+    }
+
+    .navbar_item p {
+        font-size: 48px;
+    }
+}
+
 @media(max-width:160em){
+    .nav_container {
+        min-height: 92.5px;
+    }
     .navbar_item p{
-        font-size: calc(20px + 1vw)
+        font-size: 40px;
+    }
+    .logo{
+        height:92.5px;
     }
 }
 
 @media(max-width:124em) {
+    .nav_container {
+        min-height: 62.5px;
+    }
     .navbar_item p{
-        font-size: 32px;
+        font-size: 26px;
+    }
+    .logo{
+        height:62.5px;
     }
 }
 
+@media(max-width:105em){
+    .nav_container {
+        min-height: 60px;
+    }
+    .logo{
+        height:60px;
+    }
+}
+
+@media(max-width: 96em){
+    .nav_container{
+        min-height:52.5px;
+    }
+    .logo{
+        height:56px;
+        left:1.5em;
+    }
+    .navbar_item p{
+        font-size:24px;
+    }
+}
 
 @media(max-width: 87.5em) {
     .navbar_item p {
@@ -184,22 +232,29 @@
 }
 
 @media(max-width: 80em) {
+    .nav_container{
+        min-height:50px;
+    }
     .navbar_item p {
         font-size: 22px;
     }
-}
-
-
-@media(max-width: 72.5em) {
-    .navbar_item p {
-        font-size: 20px;
+    .logo{
+        height:52.5px;
     }
+
 }
 
 @media (max-width: 68em) {
 
     .burger {
         visibility: visible;
+    }
+    .burger_item p{
+        font-size:28px;
+    }
+
+    .burger_logo{
+        height:130px;
     }
 
     .nav_container {
@@ -222,8 +277,12 @@
 }
 
 @media(max-width:25em){
-    .burger_logo{
-        height:125px;
+    .burger_item p {
+        font-size: 20px;
+    }
+
+    .burger_logo {
+        height: 100px;
     }
 }
 
