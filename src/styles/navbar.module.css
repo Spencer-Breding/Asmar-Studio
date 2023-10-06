@@ -83,12 +83,12 @@
     flex-flow: column nowrap;
     justify-content: space-around;
     width: 100vw;
-    height: 5%;
+    height: 5vh;
     z-index: 1;
     visibility: hidden;
     background-color: rgba(200,148,2, 0.5);
-    padding-top: 0.75%;
-    padding-bottom: 0.75%;
+    padding-top: 0.75vh;
+    padding-bottom: 0.75vh;
 }
 
     .burger:focus {
@@ -119,7 +119,7 @@
 }
 
 .burger_dropdown {
-    top: 5.75%;
+    top: 5.75vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     cursor: default;
     z-index: 1;
     pointer-events: all;
-    height:95%;
+    height:97vh;
     background-color: rgba(0,0,0);
     overscroll-behavior: contain;
     width: 100vw;
