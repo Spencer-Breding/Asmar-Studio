@@ -5,6 +5,18 @@ import styles from '../styles/home.module.css'
 import ImageGallery from './imageGallery'
 import Testimonials from './testimonials'
 
+let resizeTimeout;
+
+window.addEventListener('resize', function () {
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(function () {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }, 200);
+});
+
+
 export default function Home() {
     return (
         <div className={styles.main}>
