@@ -1,23 +1,22 @@
 ﻿"use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import { CldImage } from 'next-cloudinary';
 import styles from '../styles/home.module.css'
 import ImageGallery from './imageGallery'
 import Testimonials from './testimonials'
 
-let resizeTimeout;
-
-window.addEventListener('resize', function () {
-    clearTimeout(resizeTimeout);
-
-    resizeTimeout = setTimeout(function () {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }, 200);
-});
-
-
 export default function Home() {
+    let resizeTimeout;
+    useEffect(() => {
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+
+            resizeTimeout = setTimeout(function () {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }, 200);
+        });
+    })
     return (
         <div className={styles.main}>
             <CldImage className={styles.logo} src="Asmar Studio/wiqgib8g0gzyhkfmy9pz" alt="Asmar Studio Logo" priority={true} width={2240} height={1713} />
