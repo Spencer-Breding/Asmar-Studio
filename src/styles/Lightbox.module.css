@@ -10,7 +10,7 @@
     z-index: 3;
     padding-top: 0.5em;
     overscroll-behavior: contain;
-    overflow-y: auto;
+    overflow: hidden;
     touch-action: pinch-zoom, double-tap-zoom;
 }
 
