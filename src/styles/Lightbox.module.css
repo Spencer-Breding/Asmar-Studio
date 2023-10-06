@@ -12,6 +12,7 @@
     overscroll-behavior: contain;
     overflow: hidden;
     touch-action: pinch-zoom, double-tap-zoom;
+    box-sizing:border-box;
 }
 
 .imageContainer {
