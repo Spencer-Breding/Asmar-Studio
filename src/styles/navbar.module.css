@@ -131,7 +131,7 @@
     height:97vh;
     background-color: rgba(0,0,0);
     overscroll-behavior: contain;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
     user-select: none;
