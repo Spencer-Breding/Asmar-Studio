@@ -293,6 +293,7 @@
             .competencies li {
                 width: 30%;
                 margin-left: auto;
+                text-indent: -10%;
             }
     }
 
