@@ -241,6 +241,9 @@
         .competencies{
             font-size:24px;
         }
+        .competencies li{
+            text-indent: -1em;
+        }
     }
 
 
@@ -413,6 +416,7 @@
             .competencies li {
                 width: 40%;
                 margin-left: auto;
+                text-indent:-1em;
             }
     }
 
