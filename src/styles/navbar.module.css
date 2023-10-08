@@ -87,8 +87,8 @@
     z-index: 1;
     visibility: hidden;
     background-color: rgba(200,148,2, 0.5);
-    padding-top: 0.75vh;
-    padding-bottom: 0.75vh;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
 }
 
     .burger:focus {
@@ -103,7 +103,7 @@
     padding: .75vh;
     margin: -.5em;
     margin-left: auto;
-    margin-right: 0.25em;
+    margin-right: 1em;
     position: relative;
     gap: 0.45em;
     cursor: pointer;
@@ -119,11 +119,8 @@
 }
 
 .burger_dropdown {
-    top: 6.5vh;
-    left: 0;
-    right:0;
+    top: 5.5vh;
     display: flex;
-    flex-direction: column;
     position: fixed;
     cursor: default;
     z-index: 1;
@@ -134,31 +131,46 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    text-align:center;
     user-select: none;
     transform: translateX(-100%);
     overflow-y:auto;
     box-sizing:border-box;
-    margin:auto;
-    padding:0;
+    margin-top:0;
+}
+
+.burger_div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: fit-content;
+    justify-content: center;
 }
 
 .burger_logo {
     position: relative;
-    height: 150px;
+    height: 20vh;
     width: auto;
     cursor: pointer;
     display: flex;
+    text-align:center;
+    justify-content:center;
+    margin:0 auto;
 }
 
 .burger_item{
     position:relative;
     display:flex;
+    width:auto;
+    text-align:center;
+    justify-content:center;
+    margin:0;
 }
 
     .burger_item p {
         position: relative;
         color: white;
-        font-size: 32px;
+        font-size: 48px;
         cursor: pointer;
         text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
         display: flex;
@@ -265,62 +277,64 @@
     }
 }
 
-@media (max-width: 68em) {
-
-    .burger {
-        visibility: visible;
-    }
-
-    .burger_item p {
-        font-size: 28px;
-    }
-
-    .burger_logo {
-        height: 100px;
-    }
-
-    .nav_container {
-        display: none;
-    }
-
-    .logo_link {
-        position: fixed;
-        visibility: hidden;
-    }
-
-    .navbar_item {
-        visibility: hidden;
-    }
-}
-
 @media screen and (orientation: landscape) {
 
-    .burger{
-        height:7vh;
-    }
-    .burger_dropdown{
-        top:8.5vh;
-    }
-
     @media (max-width: 68em) {
+        .burger {
+            visibility: visible;
+            height: 7vh;
+            padding-top: 1vh;
+            margin-bottom: 1vh;
+        }
 
-        .burger_logo{
-            height:100px;
+        .burger_dropdown {
+            top: 8vh;
+        }
+
+        .burgerButton{
+            margin-right:2.5vw;;
+        }
+
+        .burger_div{
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+        }
+
+        .burger_logo {
+            height: 30vh;
+            margin-top: 0;
+            top: 0;
+        }
+
+        .burger_item p{
+            font-size: 24px;
+        }
+
+        .nav_container {
+            display: none;
+        }
+
+        .logo_link {
+            visibility: hidden;
+        }
+
+        .navbar_item {
+            visibility: hidden;
         }
     }
 
     @media(max-width:42.5em) {
-        .burgerButton {
+        .burger {
+            height:10vh;
         }
-    }
-
-    @media(max-width:25em) {
-        .burger_item p {
-            font-size: 20px;
+        .burger_dropdown {
+            top: 11vh;
         }
-
-        .burger_logo {
-            height: 100px;
+        .burger_logo{
+            height: 25vh;
+        }
+        .burger_item p{
+            font-size:20px;
         }
     }
 }
@@ -328,6 +342,36 @@
 @media screen and (orientation: portrait) {
 
     @media (max-width: 68em) {
+
+        .burger {
+            visibility: visible;
+        }
+
+        .burger_logo {
+            height: 15vh;
+        }
+
+        .nav_container {
+            display: none;
+        }
+
+        .logo_link {
+            visibility: hidden;
+        }
+
+        .navbar_item {
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width: 52em) {
+
+        .burger_logo {
+            height: 15vh;
+        }
+        .burger_item p{
+            font-size: 30px;
+        }
     }
 
     @media(max-width:42.5em) {

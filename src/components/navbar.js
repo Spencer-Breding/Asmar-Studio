@@ -169,7 +169,7 @@ export default function Navbar(props) {
             <div id="navbar" className={styles.nav_container}>
                 <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" priority={true}
                     alt="Asmar Studio Logo" width={300} height={230} onClick={() => scrollToTop()} />
-                <div className={styles.word_container }>
+                <div className={styles.word_container}>
                     <div className={styles.navbar_item} onClick={() => handleItemClick("AboutUs")}>
                         <p>ABOUT US</p>
                     </div>
@@ -195,22 +195,24 @@ export default function Navbar(props) {
                 </div>
                 {state.shouldRender &&
                     <div className={`${styles.burger_dropdown} ${state.activeClass}`}>
-                        <CldImage className={styles.burger_logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" priority={true}
-                            alt="Asmar Studio Logo" width={300} height={230} onClick={() => { scrollToTop(), closeBurger() }} />
-                        <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
-                            <p>ABOUT US</p>
-                        </div>
-                        <div className={styles.burger_item} onClick={() => handleItemClick("Capabilities")}>
-                            <p>CAPABILITIES</p>
-                        </div>
-                        <div className={styles.burger_item} onClick={() => handleItemClick("Gallery")}>
-                            <p>GALLERY</p>
-                        </div>
-                        <div className={styles.burger_item} onClick={() => handleItemClick("Testimonials")}>
-                            <p>TESTIMONIALS</p>
-                        </div>
-                        <div className={styles.burger_item} onClick={() => handleItemClick("Contact")}>
-                            <p>CONTACT US</p>
+                        <div className={styles.burger_div}>
+                            <CldImage className={styles.burger_logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" priority={true}
+                                alt="Asmar Studio Logo" width={300} height={230} onClick={() => { scrollToTop(), closeBurger() }} />
+                            <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
+                                <p>ABOUT US</p>
+                            </div>
+                            <div className={styles.burger_item} onClick={() => handleItemClick("Capabilities")}>
+                                <p>CAPABILITIES</p>
+                            </div>
+                            <div className={styles.burger_item} onClick={() => handleItemClick("Gallery")}>
+                                <p>GALLERY</p>
+                            </div>
+                            <div className={styles.burger_item} onClick={() => handleItemClick("Testimonials")}>
+                                <p>TESTIMONIALS</p>
+                            </div>
+                            <div className={styles.burger_item} onClick={() => handleItemClick("Contact")}>
+                                <p>CONTACT US</p>
+                            </div>
                         </div>
                     </div>
                 }

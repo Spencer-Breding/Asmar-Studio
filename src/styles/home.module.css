@@ -342,10 +342,36 @@
         .textDiv p {
             margin-bottom: 1em;
         }
+        .headerText {
+            font-size: 42px;
+        }
+
+        .capabilities {
+            font-size: 28px;
+        }
+
+        .competenciesHeader {
+            font-size: 36px;
+        }
+
+        .competencies {
+            flex-direction: row;
+            gap: 0;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            width: 90%;
+            font-size: 26px;
+        }
+            .competencies li {
+                width: 30%;
+                margin-left: auto;
+            }
     }
 
 
-    @media (max-width: 48em) {
+    @media (max-width: 52em) {
 
         .textDiv {
             flex-wrap: wrap;
@@ -366,7 +392,7 @@
         }
 
         .capabilities {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .competenciesHeader {
@@ -381,7 +407,7 @@
             margin-right: auto;
             justify-content: center;
             width: 90%;
-            font-size: 24px;
+            font-size: 20px;
         }
 
             .competencies li {
