@@ -396,7 +396,7 @@
         }
 
         .competenciesHeader {
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .competencies {
@@ -426,6 +426,7 @@
         }
 
         .competenciesHeader {
+            font-size:22px;
         }
     }
 
