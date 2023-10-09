@@ -4,6 +4,7 @@ import { CldImage } from 'next-cloudinary';
 import styles from '../styles/home.module.css'
 import ImageGallery from './imageGallery'
 import Testimonials from './testimonials'
+import Contact from './contact';
 
 export default function Home() {
     let resizeTimeout;
@@ -19,7 +20,7 @@ export default function Home() {
     })
     return (
         <div className={styles.main}>
-            <CldImage className={styles.logo} src="Asmar Studio/wiqgib8g0gzyhkfmy9pz" alt="Asmar Studio Logo" priority={true} width={2240} height={1713} />
+            <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" alt="Asmar Studio Logo" priority={true} width={3264} height={2496} />
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>
                 <p>PROP MAKING</p>
@@ -57,6 +58,7 @@ export default function Home() {
             <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
             <Testimonials/>
             <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
+            <Contact/>
         </div>
     )
 }

@@ -1,0 +1,249 @@
+﻿.container {
+    display: flex;
+    color: white;
+    text-align: center;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+    .container div {
+        width: 25%;
+        white-space: nowrap;
+    }
+
+.title {
+    font-size: calc(20px + 1.25vw);
+    text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
+    margin-bottom: 0;
+}
+
+.body_text {
+    font-family: Poppins;
+    font-size: calc(16px + 1vw);
+}
+
+.logo_container {
+    display: flex;
+    flex-direction: row;
+    margin: 1em auto;
+    justify-content: center;
+    gap: 1em;
+}
+
+    .logo_container img {
+        width: 128px;
+        height: auto;
+    }
+
+        .logo_container img:hover {
+            animation: shake 0.5s ease-in-out;
+        }
+
+@media(max-width:216em) {
+    .logo_container img {
+        width: 100px;
+    }
+}
+
+@media(max-width:160em) {
+    .logo_container img {
+        width: 80px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+    @media(max-width:124em) {
+        .title {
+            font-size: 34px;
+        }
+
+        .body_text {
+            font-size: 26px;
+        }
+
+        .logo_container img {
+            width: 64px;
+        }
+    }
+
+    @media(max-width:96em) {
+        .title {
+            font-size: 30px;
+        }
+
+        .body_text {
+            font-size: 24px;
+        }
+
+        .logo_container img {
+            width: 60px;
+        }
+    }
+
+    @media(max-width:87.5em) {
+        .title {
+            font-size: 30px;
+        }
+
+        .body_text {
+            font-size: 24px;
+        }
+
+        .logo_container img {
+            width: 56px;
+        }
+    }
+
+    @media(max-width:80em) {
+        .title {
+            font-size: 28px;
+        }
+
+        .body_text {
+            font-size: 22px;
+        }
+
+        .logo_container img {
+            width: 54px;
+        }
+    }
+
+    @media(max-width:68em) {
+        .title {
+            font-size: 24px;
+        }
+
+        .body_text {
+            font-size: 18px;
+        }
+
+        .logo_container img {
+            width: 48px;
+        }
+    }
+    @media(max-width:54em){
+        .container div{
+            width:50%;
+        }
+        .title {
+            font-size: 28px;
+        }
+
+        .body_text {
+            font-size: 22px;
+        }
+
+        .logo_container img {
+            width: 60px;
+        }
+    }
+    @media(max-width:30em) {
+        .container div {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    @media(max-width:68em) {
+        .title {
+            font-size: 28px;
+        }
+
+        .body_text {
+            font-size: 20px;
+        }
+
+        .logo_container img {
+            width: 56px;
+        }
+    }
+
+    @media(max-width:60em) {
+        .title {
+            font-size: 24px;
+        }
+
+        .body_text {
+            font-size: 18px;
+        }
+
+        .logo_container img {
+            width: 52px;
+        }
+    }
+
+    @media(max-width:52em) {
+        .title {
+            font-size: 22px;
+        }
+
+        .body_text {
+            font-size: 16px;
+        }
+
+        .logo_container {
+            flex-direction: column;
+            gap: 0.75em;
+        }
+
+            .logo_container img {
+                width: 48px;
+            }
+    }
+
+    @media(max-width:42.5em) {
+        .container div {
+            width: 50%;
+        }
+
+        .body_text {
+            font-size: 16px;
+        }
+
+        .logo_container {
+            flex-direction: row;
+        }
+    }
+
+    @media(max-width:36em) {
+        .container div {
+            width: 100%;
+        }
+
+        .title{
+            font-size:24px;
+        }
+
+        .body_text {
+            font-size: 18px;
+        }
+
+        .logo_container {
+            flex-direction: row;
+        }
+
+        .logo_container img{
+            width: 56px;
+        }
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
