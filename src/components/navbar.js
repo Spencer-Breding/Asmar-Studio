@@ -76,12 +76,34 @@ export default function Navbar(props) {
 
             adjustScroll();
 
-            const gallery = document.getElementById("galleryContainer");
-            if (gallery) {
-                gallery.querySelectorAll('img').forEach(img => {
-                    img.addEventListener('load', adjustScroll, { once: true });
-                });
+            const adjustScrollIfImagesLoaded = () => {
+                const gallery = document.getElementById("galleryContainer");
+                if (gallery) {
+                    const images = gallery.querySelectorAll('img');
+                    let loadedImagesCount = 0;
+
+                    images.forEach(img => {
+                        if (img.complete) {
+                            loadedImagesCount++;
+                        } else {
+                            img.addEventListener('load', () => {
+                                loadedImagesCount++;
+                                if (loadedImagesCount === images.length) {
+                                    adjustScroll();
+                                }
+                            }, { once: true });
+                        }
+                    });
+
+                    if (loadedImagesCount === images.length) {
+                        adjustScroll();
+                    }
+                } else {
+                    adjustScroll();
+                }
             }
+
+            adjustScrollIfImagesLoaded();
         }
     }, []);
 
