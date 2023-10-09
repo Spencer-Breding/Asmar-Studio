@@ -76,23 +76,25 @@ export default function Navbar(props) {
 
             adjustScroll(); 
 
+            const observer = new MutationObserver(() => {
+                adjustScroll();  // Readjust the scroll when the DOM changes.
+            });
+
             const gallery = document.getElementById("galleryContainer");
             if (gallery) {
-                const images = gallery.querySelectorAll('img');
-                let unloadedImages = Array.from(images).filter(img => !img.complete);
-
-                if (unloadedImages.length) {
-                    let loadedImagesCount = 0;
-                    unloadedImages.forEach(img => {
-                        img.addEventListener('load', () => {
-                            loadedImagesCount++;
-                            if (loadedImagesCount === unloadedImages.length) {
-                                adjustScroll();
-                            }
-                        }, { once: true });
-                    });
-                }
+                observer.observe(gallery, {
+                    attributes: true,
+                    childList: true,
+                    subtree: true,  // Observe all descendants.
+                    attributeFilter: ['src', 'height', 'width'],  // Only observe attribute changes related to image loading.
+                });
             }
+
+            // Disconnect the observer after some time to prevent unwanted behavior.
+            // This timeout can be adjusted based on your needs.
+            setTimeout(() => {
+                observer.disconnect();
+            }, 3000);
         }
     }, []);
 
