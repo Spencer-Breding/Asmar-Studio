@@ -78,9 +78,7 @@ export default function Navbar(props) {
                 const gallery = document.getElementById("galleryContainer");
                 if (gallery) {
                     const images = gallery.querySelectorAll('img');
-                    if (Array.from(images).every(img => img.complete)) {
-                        adjustScroll();
-                    } else {
+                    if (!Array.from(images).every(img => img.complete)) {
                         let loadedImagesCount = 0;
                         images.forEach(img => {
                             img.addEventListener('load', () => {
@@ -91,11 +89,10 @@ export default function Navbar(props) {
                             }, { once: true });
                         });
                     }
-                } else {
-                    adjustScroll();
                 }
             }
 
+            adjustScroll();
             adjustScrollAfterImagesLoaded();
         }
     }, []);
