@@ -12,13 +12,12 @@
 
 .imageWrapper {
     display: inline-block;
-    border: 2px solid #dc9102;
     line-height: 0;
     overflow: hidden;
     vertical-align: middle;
     position: relative;
     transition: 0.3s all ease-in-out;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
     .imageWrapper img {
@@ -28,7 +27,8 @@
         margin: 0;
         padding: 0;
         position: relative !important;
-        box-sizing:border-box;
+        box-sizing: border-box;
+        border: 2px solid #dc9102;
     }
 
     .imageWrapper:hover {
