@@ -30,7 +30,7 @@
     .imageWrapper img {
         width: auto;
         height: auto;
-
+        object-fit:contain;
         margin: 0;
         padding: 0;
         position:relative !important;
