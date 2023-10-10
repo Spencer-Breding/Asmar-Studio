@@ -11,9 +11,9 @@
 
     .gallery_item img {
         display: flex;
-        width: auto;
+        width: fit-content;
         max-width: 100%;
-        height:auto;
+        height:fit-content;
         max-height: 85%;
         object-fit: contain;
         margin: auto;
