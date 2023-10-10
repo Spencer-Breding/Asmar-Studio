@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #dc9102;
     line-height: 0;
     overflow: hidden;
     vertical-align: middle;
@@ -30,10 +29,12 @@
     .imageWrapper img {
         width: auto;
         height: auto;
-        object-fit:contain;
+        object-fit: contain;
         margin: 0;
         padding: 0;
-        position:relative !important;
+        position: relative !important;
+        box-sizing: border-box;
+        border: 2px solid #dc9102;
     }
 
     .imageWrapper:hover {
