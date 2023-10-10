@@ -8,25 +8,32 @@
     text-align: center;
 }
 
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #dc9102;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out all;
+}
 
-    .gallery_image {
-        display: flex;
-        width: fit-content;
-        max-width:100%;
-        height: fit-content;
-        max-height:85%;
-        object-fit: contain;
-        margin: auto;
-        position: relative;
-        box-sizing: border-box;
-        border: 2px solid #dc9102;
-        transition: 0.3s ease-in-out all;
-    }
+.gallery_image:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+}
 
-        .gallery_image:hover {
-            transform: scale(1.025);
-            cursor: pointer;
-        }
+.gallery_image {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 85%;
+    object-fit: contain;
+    margin: auto;
+    position: relative;
+}
 
 .gallery_item p {
     color: white;
@@ -34,21 +41,21 @@
     text-align: center;
     font-family: Poppins;
     font-weight: 500;
-    font-size:calc(16px + 1vw);
+    font-size: calc(16px + 1vw);
     margin-top: auto;
     margin-bottom: auto;
 }
 
-@media(max-width: 124em){
-    .gallery_item p{
+@media(max-width: 124em) {
+    .gallery_item p {
         font-size: 26px;
     }
 }
 
-@media(max-width:87.5em){
-        .gallery_item p {
-            font-size: 1.5em;
-        }
+@media(max-width:87.5em) {
+    .gallery_item p {
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (orientation: landscape) {
@@ -72,11 +79,12 @@
 
     @media(max-width: 50em) {
         .gallery_item {
-            height:60vh;
+            height: 60vh;
         }
-        .gallery_item p{
-            font-size:18px;
-        }
+
+            .gallery_item p {
+                font-size: 18px;
+            }
     }
 
     @media(max-width: 36em) {
@@ -107,28 +115,28 @@
     @media(max-width: 50em) {
 
         .gallery_item {
-            width:70%;
-            height:50vh;
+            width: 70%;
+            height: 50vh;
         }
 
-        .gallery_item p{
-            font-size: 1.5em;
-        }
-
+            .gallery_item p {
+                font-size: 1.5em;
+            }
     }
 
     @media(max-width: 36em) {
-        .gallery_item{
-            width:fit-content;
-            height:45vh;
+        .gallery_item {
+            width: fit-content;
+            height: 45vh;
         }
-        .gallery_item p {
-            font-size: 1.35em;
-        }
+
+            .gallery_item p {
+                font-size: 1.35em;
+            }
     }
 
-    @media(max-width:20em){
-        .gallery_item p{
+    @media(max-width:20em) {
+        .gallery_item p {
             font-size: 1em;
         }
     }
