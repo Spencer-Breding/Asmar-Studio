@@ -18,7 +18,8 @@ export default function GalleryItem({ items, setCurrentIndex }) {
                             alt={item.description}
                             loading="lazy"
                             priority={false}
-                            fill
+                            height={2000}
+                            width={2000 }
                         />
                     </div>
                     <p>{item.description}</p>
