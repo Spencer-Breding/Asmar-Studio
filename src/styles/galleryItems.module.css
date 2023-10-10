@@ -10,14 +10,14 @@
 
 
     .gallery_item img {
-        display: flex;
-        width: fit-content;
+        display: block;
+        width: auto;
         max-width: 100%;
-        height:fit-content;
+        height:auto;
         max-height: 85%;
         object-fit: contain;
         margin: auto;
-        position: relative !important;
+        position: relative;
         box-sizing: border-box;
         border: 2px solid #dc9102;
         transition: 0.3s ease-in-out all;
