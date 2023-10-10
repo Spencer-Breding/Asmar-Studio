@@ -10,20 +10,20 @@ export default function GalleryItem({ items, setCurrentIndex }) {
     };
 
     return (
-            items.map((item, index) => (
-                <div key={index} className={styles.gallery_item}>
-                    <div className={styles.imageWrapper} onClick={() => handleClick(index)}>
-                        <CldImage
-                            src={item.source}
-                            alt={item.description}
-                            loading="lazy"
-                            priority={false}
-                            height={2000}
-                            width={2000 }
-                        />
-                    </div>
-                    <p>{item.description}</p>
-                </div>
-            ))
+        items.map((item, index) => (
+            <div key={index} className={styles.gallery_item}>
+                <CldImage
+                    className={styles.gallery_image }
+                    src={item.source}
+                    alt={item.description}
+                    loading="lazy"
+                    priority={false}
+                    height={2000}
+                    width={2000}
+                    onClick={() => handleClick(index)}
+                />
+                <p>{item.description}</p>
+            </div>
+        ))
     );
 }

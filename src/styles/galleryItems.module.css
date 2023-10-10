@@ -9,7 +9,7 @@
 }
 
 
-    .gallery_item img {
+    .gallery_image {
         display: flex;
         width: fit-content;
         max-width: 100%;
@@ -23,10 +23,10 @@
         transition: 0.3s ease-in-out all;
     }
 
-    .gallery_item img:hover {
-        transform: scale(1.025);
-        cursor: pointer;
-    }
+        .gallery_image:hover {
+            transform: scale(1.025);
+            cursor: pointer;
+        }
 
 .gallery_item p {
     color: white;
@@ -59,7 +59,7 @@
             height: 70vh;
         }
 
-        .gallery_item img:hover {
+        .gallery_image:hover {
             transform: none;
             cursor: pointer;
         }
@@ -94,7 +94,7 @@
             height: 40vh;
         }
 
-        .gallery_item img:hover {
+        .gallery_image:hover {
             transform: none;
             cursor: pointer;
         }
