@@ -12,13 +12,13 @@
 
 
     .gallery_item img {
-        display: inline-block;
+        display: flex;
         width: fit-content;
         max-width: 100%;
         height:fit-content;
         max-height: 85%;
         object-fit: scale-down;
-        margin: 0;
+        margin: auto;
         padding: 0;
         position: relative;
         box-sizing: border-box;
