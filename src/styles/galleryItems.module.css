@@ -10,7 +10,7 @@
 
 
     .gallery_item img {
-        display: inline-block;
+        display: flex;
         width: auto;
         max-width: 100%;
         height:auto;
@@ -36,7 +36,7 @@
     font-weight: 500;
     font-size:calc(16px + 1vw);
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: auto;
 }
 
 @media(max-width: 124em){
