@@ -10,7 +10,7 @@
 
 
     .gallery_item img {
-        display: block;
+        display: inline-block;
         width: auto;
         max-width: 100%;
         height:auto;
