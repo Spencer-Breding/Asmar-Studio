@@ -9,7 +9,7 @@
 }
 
 .textDiv {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     color: white;
@@ -66,17 +66,17 @@
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
-    width: 90%;
+    width: 100%;
 }
 
 .capabilities {
     color: white;
     font-size: calc(12px + 1.5vw);
-    margin: auto 4em;
+    margin: auto;
     text-align: center;
     font-weight: 500;
     font-family: Poppins;
-    width: 90%;
+    width: 100%;
 }
 
 .competenciesHeader {
@@ -100,7 +100,7 @@
     justify-content: center;
     text-align: left;
     list-style-position: inside;
-    width: 80%;
+    width: 90%;
     transform: translateX(2.5%);
 }
 

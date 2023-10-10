@@ -61,40 +61,10 @@ export default function Navbar(props) {
             const elementPosition = rect.top - bodyRect;
             const offsetPosition = elementPosition - offsetHeightInPx;
 
-            const adjustScroll = () => {
-                if (userIsScrolling.current || userHasManuallyScrolled.current) return;
-                const rect = element.getBoundingClientRect();
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementPosition = rect.top - bodyRect;
-                const offsetPosition = elementPosition - offsetHeightInPx;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-
-            adjustScroll(); 
-
-            const observer = new MutationObserver(() => {
-                adjustScroll();  // Readjust the scroll when the DOM changes.
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
             });
-
-            const gallery = document.getElementById("galleryContainer");
-            if (gallery) {
-                observer.observe(gallery, {
-                    attributes: true,
-                    childList: true,
-                    subtree: true,  // Observe all descendants.
-                    attributeFilter: ['src', 'height', 'width'],  // Only observe attribute changes related to image loading.
-                });
-            }
-
-            // Disconnect the observer after some time to prevent unwanted behavior.
-            // This timeout can be adjusted based on your needs.
-            setTimeout(() => {
-                observer.disconnect();
-            }, 3000);
         }
     }, []);
 

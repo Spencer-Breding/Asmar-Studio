@@ -10,8 +10,7 @@ export default function GalleryItem({ items, setCurrentIndex }) {
     };
 
     return (
-        <div className={styles.gallery}>
-            {items.map((item, index) => (
+            items.map((item, index) => (
                 <div key={index} className={styles.gallery_item}>
                     <div className={styles.imageWrapper} onClick={() => handleClick(index)}>
                         <CldImage
@@ -24,7 +23,6 @@ export default function GalleryItem({ items, setCurrentIndex }) {
                     </div>
                     <p>{item.description}</p>
                 </div>
-            ))}
-        </div>
+            ))
     );
 }
