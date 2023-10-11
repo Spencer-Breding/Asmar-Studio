@@ -39,7 +39,6 @@
         padding: 0;
         position: relative !important;
         box-sizing: border-box;
-        overflow:visible;
     }
 
     .imageWrapper:hover {
@@ -146,7 +145,7 @@
     @media(max-width: 30em) {
         .gallery_item {
             width: 90%;
-            height: 45vh;
+            height: 30vh;
         }
 
             .gallery_item p {
@@ -155,10 +154,6 @@
     }
 
     @media(max-width: 24em) {
-        .gallery_item {
-            height: 45vh;
-        }
-
             .gallery_item p {
                 font-size: 1em;
             }
