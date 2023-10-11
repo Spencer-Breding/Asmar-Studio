@@ -26,7 +26,8 @@ export default function Home() {
                 <source srcSet="./images/AsmarStudioLogoLarge.webp" media="(min-width:160em)" />
                 <source srcSet="./images/AsmarStudioLogoMedium.webp" media="(min-width:124em)" />
                 <source srcSet="./images/AsmarStudioLogoSmall.webp" media="(min-width:80em)" />
-                <Image className={styles.logo} src="./images/AsmarStudioLogoMobile.webp" alt="Asmar Studio Logo" priority={true} width={1} height={1} />
+                <source srcSet="./images/AsmarStudioLogoMobile.webp" media="(min-width:52em)" />
+                <Image className={styles.logo} src="./images/AsmarStudioLogoMobileSmall.webp" alt="Asmar Studio Logo" priority={true} width={1} height={1} />
             </picture>
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>
