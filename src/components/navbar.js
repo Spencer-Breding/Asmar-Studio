@@ -179,7 +179,7 @@ export default function Navbar(props) {
                 {state.shouldRender &&
                     <div className={`${styles.burger_dropdown} ${state.activeClass}`}>
                         <div className={styles.burger_div}>
-                            <Image className={styles.burger_logo} src="./images/AsmarStudioLogoMobile.webp" loading={lazy }
+                            <Image className={styles.burger_logo} src="./images/AsmarStudioLogoMobile.webp" loading="lazy"
                                 alt="Asmar Studio Logo" width={3264} height={2496} onClick={() => { scrollToTop(), closeBurger() }} />
                             <div className={styles.burger_item} onClick={() => handleItemClick("AboutUs")}>
                                 <p>ABOUT US</p>
