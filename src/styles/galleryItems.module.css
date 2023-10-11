@@ -116,7 +116,7 @@
 
         .gallery_item {
             width: 45%;
-            height: 40vh;
+            height: 30vh;
         }
 
         .imageWrapper:hover {
@@ -125,30 +125,42 @@
         }
 
         .gallery_item p {
-            font-size: 2em;
+            font-size: 1.75em;
         }
     }
 
     @media(max-width: 50em) {
 
         .gallery_item {
-            width: 70%;
-            height: 70vh;
+            height: 45vh;
         }
 
             .gallery_item p {
                 font-size: 1.5em;
             }
+        .imageWrapper img {
+            max-height: 90%;
+        }
     }
 
     @media(max-width: 30em) {
         .gallery_item {
-            width: 70%;
-            height: 70vh;
+            width: 90%;
+            height: 45vh;
         }
 
             .gallery_item p {
-                font-size: 1.35em;
+                font-size: 1.25em;
+            }
+    }
+
+    @media(max-width: 24em) {
+        .gallery_item {
+            height: 45vh;
+        }
+
+            .gallery_item p {
+                font-size: 1em;
             }
     }
 }

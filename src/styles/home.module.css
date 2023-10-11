@@ -437,11 +437,12 @@
 
     @media(max-width:24em) {
         .capabilities {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .competencies {
-            font-size: 18px;
+            font-size: 16px;
+            width:95%;
         }
     }
 }

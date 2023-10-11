@@ -374,18 +374,10 @@
         }
     }
 
-    @media(max-width:42.5em) {
-        .burgerButton {
-        }
-    }
-
     @media(max-width:25em) {
+
         .burger_item p {
             font-size: 20px;
-        }
-
-        .burger_logo {
-            height: 100px;
         }
     }
 }
