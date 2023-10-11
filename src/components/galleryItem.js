@@ -1,5 +1,5 @@
 "use client";
-import { CldImage } from 'next-cloudinary';
+import Image  from 'next/image';
 import styles from '../styles/galleryItems.module.css';
 
 export default function GalleryItem({ items, setCurrentIndex }) {
@@ -13,7 +13,7 @@ export default function GalleryItem({ items, setCurrentIndex }) {
         items.map((item, index) => (
             <div key={index} className={styles.gallery_item}>
                 <div className={styles.imageWrapper} onClick={() => handleClick(index)}>
-                    <CldImage
+                    <Image
                         src={item.source}
                         alt={item.description}
                         loading="lazy"

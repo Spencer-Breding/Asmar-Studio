@@ -1,5 +1,5 @@
 "use client";
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import styles from '../styles/Lightbox.module.css';
 
@@ -177,7 +177,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                 onTouchEnd={handleTouchEnd}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
-                        <CldImage className={styles.mainImage} src={item.source} alt={item.description} fill />
+                        <Image className={styles.mainImage} src={item.source} alt={item.description} fill />
                     </div>
                     <p className={styles.imageDescription}>{item.description}</p>
                 </div>
@@ -198,7 +198,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
 
                         return (
                             <div className={styles.previewImageWrapper }>
-                                <CldImage
+                                <Image
                                     key={index}
                                     src={previewItem.source}
                                     alt={previewItem.description}

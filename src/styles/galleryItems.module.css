@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #dc9102;
     line-height: 0;
     overflow: hidden;
     vertical-align: middle;
@@ -26,6 +25,7 @@
     transition: 0.3s all ease-in-out;
     margin: auto;
     box-sizing: border-box;
+    filter: drop-shadow(0 -4px 0 #bd7c02) drop-shadow(0 4px 0 #bd7c02) drop-shadow(-4px 0 0 #bd7c02) drop-shadow(4px 0 0 #bd7c02);
 }
 
     .imageWrapper img {
