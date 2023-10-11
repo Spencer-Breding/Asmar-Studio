@@ -367,10 +367,10 @@
     @media (max-width: 52em) {
 
         .burger_logo {
-            height: 15vh;
+            height: 12.5vh;
         }
         .burger_item p{
-            font-size: 30px;
+            font-size: 24px;
         }
     }
 
