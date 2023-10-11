@@ -8,6 +8,11 @@
     margin: 0;
 }
 
+.main picture{
+    display:flex;
+    margin:auto;
+}
+
 .textDiv {
     width: 100%;
     display: flex;

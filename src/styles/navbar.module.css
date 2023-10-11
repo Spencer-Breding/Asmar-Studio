@@ -292,7 +292,7 @@
         }
 
         .burgerButton{
-            margin-right:2.5vw;;
+            margin-right:2.5vw;
         }
 
         .burger_div{
@@ -323,7 +323,7 @@
         }
     }
 
-    @media(max-width:42.5em) {
+    @media(max-width:50em) {
         .burger {
             height:10vh;
         }

@@ -1,6 +1,6 @@
 ﻿"use client";
 import React, { useEffect } from 'react'
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 import styles from '../styles/home.module.css'
 import ImageGallery from './imageGallery'
 import Testimonials from './testimonials'
@@ -20,7 +20,15 @@ export default function Home() {
     })
     return (
         <div className={styles.main}>
-            <CldImage className={styles.logo} src="Asmar Studio/jgjzkdxemit8ke2ikowe" alt="Asmar Studio Logo" priority={true} width={3264} height={2496} />
+            <picture>
+                <source srcSet="./images/AsmarStudioLogo.webp" media="(min-width:241em)" />
+                <source srcSet="./images/AsmarStudioLogo4k.webp" media="(max-width:240em)" />
+                <source srcSet="./images/AsmarStudioLogoLarge.webp" media="(max-width:160em)" />
+                <source srcSet="./images/AsmarStudioLogoMedium.webp" media="(max-width:124em)" />
+                <source srcSet="./images/AsmarStudioLogoSmall.webp" media="(max-width:80em)" />
+                <source srcSet="./images/AsmarStudioLogoMobile.webp" media="(max-width:52em)" />
+                <Image className={styles.logo} src="./images/AsmarStudioLogoLarge.webp" alt="Asmar Studio Logo" priority={true} width={2240} height={1713} />
+            </picture>
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>
                 <p>PROP MAKING</p>
@@ -38,7 +46,7 @@ export default function Home() {
             </p>
             <h3 className={styles.competenciesHeader}>Core Competencies Include:</h3>
             <ul className={styles.competencies}>
-                <li><span id={styles.design }>Design</span></li>
+                <li><span id={styles.design}>Design</span></li>
                 <li><span id={styles.modeling}>Modeling</span></li>
                 <li><span id={styles.sculpting}>Sculpting</span></li>
                 <li><span id={styles.prototypes}>Prototypes</span></li>
@@ -51,14 +59,14 @@ export default function Home() {
                 <li id={styles.setBuilding}><span>Set Building</span></li>
                 <li id={styles.furniture}><span>Custom Furniture</span></li>
                 <li id={styles.painting}><span>Painting & Finishing</span></li>
-                <li id={styles.management }><span id={styles.management}>Project Management & Logistics</span></li>
+                <li id={styles.management}><span id={styles.management}>Project Management & Logistics</span></li>
             </ul>
             <h2 id="Gallery" className={styles.headerText}>Gallery</h2>
             <ImageGallery />
             <h2 id="Testimonials" className={styles.headerText}>Testimonials</h2>
-            <Testimonials/>
+            <Testimonials />
             <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
-            <Contact/>
+            <Contact />
         </div>
     )
 }
