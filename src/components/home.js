@@ -22,12 +22,12 @@ export default function Home() {
         <div className={styles.main}>
             <picture>
                 <source srcSet="./images/AsmarStudioLogo.webp" media="(min-width:241em)" />
-                <source srcSet="./images/AsmarStudioLogo4k.webp" media="(max-width:240em)" />
-                <source srcSet="./images/AsmarStudioLogoLarge.webp" media="(max-width:160em)" />
-                <source srcSet="./images/AsmarStudioLogoMedium.webp" media="(max-width:124em)" />
-                <source srcSet="./images/AsmarStudioLogoSmall.webp" media="(max-width:80em)" />
-                <source srcSet="./images/AsmarStudioLogoMobile.webp" media="(max-width:52em)" />
-                <Image className={styles.logo} src="./images/AsmarStudioLogoLarge.webp" alt="Asmar Studio Logo" priority={true} width={2240} height={1713} />
+                <source srcSet="./images/AsmarStudioLogo4k.webp" media="(min-width:240em)" />
+                <source srcSet="./images/AsmarStudioLogoLarge.webp" media="(min-width:160em)" />
+                <source srcSet="./images/AsmarStudioLogoMedium.webp" media="(min-width:124em)" />
+                <source srcSet="./images/AsmarStudioLogoSmall.webp" media="(min-width:80em)" />
+                <source srcSet="./images/AsmarStudioLogoMobile.webp" media="(min-width:52em)" />
+                <Image className={styles.logo} src="./images/AsmarStudioLogoLarge.webp" alt="Asmar Studio Logo" priority={true} width={1} height={1} />
             </picture>
             <div className={styles.textDiv}>
                 <p>SET BUILDING</p>
