@@ -26,6 +26,10 @@
     overflow: visible;
     padding: 6px;
     filter: drop-shadow(0 -4px 0 #bd7c02) drop-shadow(0 4px 0 #bd7c02) drop-shadow(-4px 0 0 #bd7c02) drop-shadow(4px 0 0 #bd7c02);
+    backdrop-filter:blur(0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
     .imageWrapper img {
