@@ -26,7 +26,8 @@
     margin: auto;
     box-sizing: border-box;
     overflow: visible;
-    padding:4px;
+    padding: 4px;
+    filter: drop-shadow(0 -4px 0 #bd7c02) drop-shadow(0 4px 0 #bd7c02) drop-shadow(-4px 0 0 #bd7c02) drop-shadow(4px 0 0 #bd7c02);
 }
 
     .imageWrapper img {
@@ -40,7 +41,6 @@
         padding: 0;
         position: relative !important;
         box-sizing: border-box;
-        filter: drop-shadow(0 -4px 0 #bd7c02) drop-shadow(0 4px 0 #bd7c02) drop-shadow(-4px 0 0 #bd7c02) drop-shadow(4px 0 0 #bd7c02);
     }
 
     .imageWrapper:hover {
