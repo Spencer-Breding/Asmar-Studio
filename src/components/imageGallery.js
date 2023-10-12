@@ -55,8 +55,19 @@ export default function ImageGallery() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleGalleryView = () => {
-        setIsExpanded(!isExpanded);
+        const newExpandedState = !isExpanded;
+        setIsExpanded(newExpandedState);
+
+        sessionStorage.setItem('galleryIsExpanded', newExpandedState);
     }
+
+    useEffect(() => {
+        const savedState = sessionStorage.getItem('galleryIsExpanded');
+
+        if (savedState !== null) {
+            setIsExpanded(savedState === 'true');
+        }
+    }, []);
 
     const displayedImages = isExpanded ? imageList : imageList.slice(0, 6);
 
@@ -91,7 +102,7 @@ export default function ImageGallery() {
             )}
             <div className={styles.button_div}>
                 <button onClick={toggleGalleryView}>
-                    {isExpanded ? 'View Less' : 'View More'}
+                    {isExpanded ? 'View Less' : 'View All'}
                 </button>
             </div>
         </div>
