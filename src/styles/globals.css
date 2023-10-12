@@ -2,7 +2,7 @@ body {
     background-color: black;
     overflow-x: hidden;
     overflow-y: auto;
-    margin: 4em 6em;
+    margin: 8em 6em;
 }
 
 ::-webkit-scrollbar {
@@ -29,7 +29,7 @@ body {
 @media screen and (orientation: landscape) {
     @media(max-width: 124em) {
         body {
-            margin: 2em 4em;
+            margin: 4em 4em;
         }
     }
 
