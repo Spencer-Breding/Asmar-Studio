@@ -6,6 +6,7 @@ import Lightbox from './lightbox';
 
 export default function ImageGallery() {
     const [currentIndex, setCurrentIndex] = useState(null);
+    const [windowWidth, setWindowWidth] = useState(0);
 
     const imageList = [
         { source: "./images/gallery/Caterpilla.webp", description: "Absolem Caterpillar Alice in Wonderland" },
@@ -86,9 +87,35 @@ export default function ImageGallery() {
         setCurrentIndex(index);
     }
 
+    useEffect(() => {
+        const updateWidth = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        window.addEventListener('resize', updateWidth);
+        updateWidth();
+        return () => window.removeEventListener('resize', updateWidth);
+    }, []);
+
+    const isMobile = windowWidth <= 1088;
+
     return (
         <div className={styles.container} id="galleryContainer">
-            <GalleryItem items={displayedImages} setCurrentIndex={(index) => setCurrentIndex(index)} />
+            {isMobile ? (
+                // Mobile View: Wrap every two items in a two-row container
+                imageList.map((item, index) => (
+                    index % 2 === 0 ? (
+                        <div className={styles.twoRowContainer} key={index}>
+                            <GalleryItem item={imageList[index]} setCurrentIndex={() => setCurrentIndex(index)} />
+                            {imageList[index + 1] && <GalleryItem item={imageList[index + 1]} setCurrentIndex={() => setCurrentIndex(index + 1)} />}
+                        </div>
+                    ) : null
+                ))
+            ) : (
+                // Desktop View: Display items individually
+                displayedImages.map((item, index) => (
+                    <GalleryItem item={item} setCurrentIndex={() => setCurrentIndex(index)} key={index} />
+                ))
+            )}
             {currentIndex !== null && (
                 <Lightbox
                     item={imageList[currentIndex]}

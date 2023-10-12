@@ -11,42 +11,86 @@
     padding-top: 2em;
 }
 
-.button_div{
+.twoRowContainer {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:2em;
     width:100%;
+    height:fit-content;
 }
 
-.button_div button {
-    display: flex;
-    margin: auto;
-    background-color: #dc9102;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    font-family: Poppins;
-    font-size: 28px;
-    font-weight:600;
-    padding: 0.25em;
-    cursor:pointer;
+
+.button_div {
+    width: 100%;
 }
+
+    .button_div button {
+        display: flex;
+        margin: auto;
+        background-color: #dc9102;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 600;
+        padding: 0.25em;
+        cursor: pointer;
+    }
 
 @media(max-width: 1024px) {
     .container {
-        padding-left:1em;
-        margin-right:1em;
+        padding-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    @media(max-width: 68em) {
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row; /* Set this to row for horizontal layout */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            gap: 3em;
+            justify-content: flex-start; /* Align items to the start */
+            width: 100%;
+            margin: 0;
+            padding-bottom: 2em;
+            padding-top: 2em;
+
+        }
+
+        .button_div {
+            display: none;
+        }
     }
 }
 
 @media screen and (orientation: portrait) {
+
     @media(max-width: 68em) {
-        .gallery {
-            flex-direction: row;
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row; /* Set this to row for horizontal layout */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            gap: 3em;
+            justify-content: flex-start; /* Align items to the start */
+            width: 100%;
+            margin: 0;
+            padding-bottom: 2em;
+            padding-top: 2em;
+            white-space: nowrap; /* Prevents wrapping of items */
         }
-    }
 
-    @media(max-width: 50em) {
-        .gallery {
+        .button_div {
+            display: none;
+        }
+        .twoRowContainer {
             flex-direction: column;
+            gap: 1em;
         }
-
     }
 }
