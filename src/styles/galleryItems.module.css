@@ -65,6 +65,10 @@
     .gallery_item p {
         font-size: 26px;
     }
+
+    .imageWrapper {
+        filter: drop-shadow(0 -3px 0 #bd7c02) drop-shadow(0 3px 0 #bd7c02) drop-shadow(-3px 0 0 #bd7c02) drop-shadow(3px 0 0 #bd7c02);
+    }
 }
 
 @media(max-width:87.5em) {
@@ -106,6 +110,10 @@
             .gallery_item p {
                 font-size: 18px;
             }
+
+        .imageWrapper {
+            filter: drop-shadow(0 -2px 0 #bd7c02) drop-shadow(0 2px 0 #bd7c02) drop-shadow(-2px 0 0 #bd7c02) drop-shadow(2px 0 0 #bd7c02);
+        }
     }
 
     @media(max-width: 36em) {
@@ -143,6 +151,11 @@
             .gallery_item p {
                 font-size: 1.5em;
             }
+
+        .imageWrapper {
+            filter: drop-shadow(0 -2px 0 #bd7c02) drop-shadow(0 2px 0 #bd7c02) drop-shadow(-2px 0 0 #bd7c02) drop-shadow(2px 0 0 #bd7c02);
+        }
+
         .imageWrapper img {
             max-height: 90%;
         }

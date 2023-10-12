@@ -74,23 +74,24 @@
     width: 100%;
 }
 
-.capabilities {
+.about {
     color: white;
     font-size: calc(12px + 1.5vw);
     margin: auto;
     text-align: center;
     font-weight: 500;
     font-family: Poppins;
-    width: 100%;
+    width: 90%;
 }
 
 .competenciesHeader {
     display: flex;
     color: white;
-    font-size: calc(24px + 2vw);
+    font-size: calc(24px + 1.5vw);
     font-weight:500;
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
     text-align:center;
+    margin:auto;
 }
 
 .competencies {
@@ -98,6 +99,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
+    margin-top:1em;
     margin-bottom: -2em;
     color: white;
     font-size: calc(18px + 1.5vw);
@@ -138,16 +140,16 @@
         font-size: 48px;
     }
 
-    .capabilities {
+    .about {
         font-size: 30px;
     }
 
     .competenciesHeader {
-        font-size: 44px;
+        font-size: 34px;
     }
 
     .competencies {
-        font-size: 36px;
+        font-size: 32px;
     }
 
 }
@@ -169,16 +171,11 @@
         font-size: 42px;
     }
 
-    .capabilities {
+    .about {
         font-size: 28px;
     }
 
-    .competenciesHeader {
-        font-size: 42px;
-    }
-
     .competencies {
-        font-size: 34px;
         transform:translateX(5%);
     }
 
@@ -238,12 +235,12 @@
             font-size: 38px;
         }
 
-        .capabilities {
+        .about {
             font-size: 24px;
         }
 
         .competenciesHeader {
-            font-size: 34px;
+            font-size: 28px;
         }
         .competencies{
             font-size:24px;
@@ -277,12 +274,12 @@
             font-size: 36px;
         }
 
-        .capabilities {
+        .about {
             font-size: 22px;
         }
 
         .competenciesHeader {
-            font-size: 32px;
+            font-size: 28px;
         }
 
         .competencies {
@@ -320,15 +317,15 @@
             font-size:28px;
         }
 
-        .capabilities{
+        .about{
             font-size: 18px;
         }
 
         .competenciesHeader {
-            font-size:24px;
+            font-size:20px;
         }
         .competencies{
-            font-size:18px;
+            font-size:16px;
         }
         .competencies li{
             width: 30%;
@@ -336,12 +333,12 @@
     }
 
     @media(max-width:24em) {
-        .capabilities {
-            font-size: 20px;
+        .about {
+            font-size: 18px;
         }
 
         .competencies {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 }
@@ -356,12 +353,13 @@
             font-size: 42px;
         }
 
-        .capabilities {
+        .about {
             font-size: 28px;
+            width: 100%;
         }
 
         .competenciesHeader {
-            font-size: 36px;
+            font-size: 32px;
         }
 
         .competencies {
@@ -401,12 +399,12 @@
             font-size: 32px;
         }
 
-        .capabilities {
+        .about {
             font-size: 20px;
         }
 
         .competenciesHeader {
-            font-size: 24px;
+            font-size: 28px;
         }
 
         .competencies {
@@ -436,13 +434,17 @@
         }
 
         .competenciesHeader {
-            font-size:22px;
+            font-size:24px;
         }
     }
 
     @media(max-width:24em) {
-        .capabilities {
+        .about {
             font-size: 16px;
+        }
+
+        .competenciesHeader{
+            font-size:20px;
         }
 
         .competencies {

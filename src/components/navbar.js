@@ -53,7 +53,7 @@ export default function Navbar(props) {
                 offsetHeightInPx -= 12;
             } else if (burgerMenu && window.getComputedStyle(burgerMenu).display !== 'none') {
                 offsetHeightInPx = parseFloat(window.getComputedStyle(burgerMenu).height);
-                offsetHeightInPx += 8;
+                offsetHeightInPx += 0;
             }
 
             const rect = element.getBoundingClientRect();
