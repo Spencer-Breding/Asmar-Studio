@@ -71,17 +71,16 @@
     margin: auto 4em;
     text-align: center;
     font-weight: 500;
-    width: 100%;
-}
-
-.about {
-    color: white;
-    font-size: calc(12px + 1.5vw);
-    margin: auto;
-    text-align: center;
-    font-weight: 500;
     font-family: Poppins;
     width: 90%;
+}
+
+.peter {
+    width: 30vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2em;
 }
 
 .competenciesHeader {
@@ -142,6 +141,10 @@
 
     .about {
         font-size: 30px;
+    }
+
+    .peter{
+        margin-top:1.5em;
     }
 
     .competenciesHeader {
@@ -239,6 +242,10 @@
             font-size: 24px;
         }
 
+        .peter{
+            width:40vw;
+        }
+
         .competenciesHeader {
             font-size: 28px;
         }
@@ -321,6 +328,10 @@
             font-size: 18px;
         }
 
+        .peter {
+            width: 45vw;
+        }
+
         .competenciesHeader {
             font-size:20px;
         }
@@ -356,6 +367,10 @@
         .about {
             font-size: 28px;
             width: 100%;
+        }
+
+        .peter {
+            width: 70vw;
         }
 
         .competenciesHeader {

@@ -51,6 +51,7 @@ export default function Home() {
                 Hollywood, art and entertainment industry masterpieces to life for red
                 carpet premiers, trade shows, corporate events and more!
             </p>
+            <Image className={styles.peter} src="./images/PeterAsmar.webp" alt="Peter Asmar" width={1} height={1} />
             <h2 id="Capabilities" className={styles.headerText}>Capabilities</h2>
             <h3 className={styles.competenciesHeader}>Core Competencies Include:</h3>
             <ul className={styles.competencies}>
