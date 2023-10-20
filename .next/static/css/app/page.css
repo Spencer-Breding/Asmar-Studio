@@ -1015,12 +1015,13 @@
 .home_about__7XlFx {
     color: white;
     font-size: calc(12px + 1.5vw);
-    margin: auto 4em;
+    margin: auto;
+    margin-bottom:0.5em;
     text-align: left;
     text-indent: calc(12px + 1.5vw);
     font-weight: 500;
     font-family: Poppins;
-    width: 90%;
+    width: 85%;
 }
 
 .home_peter___Anyo {
@@ -1260,53 +1261,62 @@
             }
     }
 
-    @media(max-width: 36em) {
+    @media(max-width: 50em) {
         .home_logo__fwoF8{
-            width: 35%;
-        }
-        .home_textDiv__GApgZ p {
-            font-size:20px;
-        }
-
-        #home_more__U_0Wj {
-            font-size:20px;
-        }
-
-        .home_headerText__0GAyB{
-            font-size:28px;
-        }
-
-        .home_about__7XlFx {
-            font-size: 18px;
-            text-indent: 18px;
-        }
-
-        .home_peter___Anyo {
-            width: 45vw;
-        }
-
-        .home_competenciesHeader__9psDf {
-            font-size:20px;
-        }
-        .home_competencies__nkdoi{
-            font-size:16px;
-        }
-        .home_competencies__nkdoi li{
-            width: 30%;
+            width:80%;
         }
     }
 
-    @media(max-width:24em) {
-        .home_about__7XlFx {
-            font-size: 18px;
-            text-indent: 18px;
+        @media(max-width: 36em) {
+            .home_logo__fwoF8 {
+                width: 50%;
+            }
+
+            .home_textDiv__GApgZ p {
+                font-size: 20px;
+            }
+
+            #home_more__U_0Wj {
+                font-size: 20px;
+            }
+
+            .home_headerText__0GAyB {
+                font-size: 28px;
+            }
+
+            .home_about__7XlFx {
+                font-size: 18px;
+                text-indent: 18px;
+            }
+
+            .home_peter___Anyo {
+                width: 45vw;
+            }
+
+            .home_competenciesHeader__9psDf {
+                font-size: 20px;
+            }
+
+            .home_competencies__nkdoi {
+                font-size: 16px;
+            }
+
+                .home_competencies__nkdoi li {
+                    width: 30%;
+                }
         }
 
-        .home_competencies__nkdoi {
-            font-size: 16px;
+        @media(max-width:24em) {
+            .home_about__7XlFx {
+                font-size: 18px;
+                text-indent: 18px;
+            }
+
+            .home_competencies__nkdoi {
+                font-size: 16px;
+            }
         }
     }
-}
 
 @media screen and (orientation: portrait) {
 
@@ -1371,7 +1381,7 @@
 
         .home_about__7XlFx {
             font-size: 20px;
-            text-indent: 20px;
+            text-indent: 12px;
         }
 
         .home_competenciesHeader__9psDf {

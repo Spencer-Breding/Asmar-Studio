@@ -68,12 +68,13 @@
 .about {
     color: white;
     font-size: calc(12px + 1.5vw);
-    margin: auto 4em;
+    margin: auto;
+    margin-bottom:0.5em;
     text-align: left;
     text-indent: calc(12px + 1.5vw);
     font-weight: 500;
     font-family: Poppins;
-    width: 90%;
+    width: 85%;
 }
 
 .peter {
@@ -313,53 +314,62 @@
             }
     }
 
-    @media(max-width: 36em) {
+    @media(max-width: 50em) {
         .logo{
-            width: 35%;
-        }
-        .textDiv p {
-            font-size:20px;
-        }
-
-        #more {
-            font-size:20px;
-        }
-
-        .headerText{
-            font-size:28px;
-        }
-
-        .about {
-            font-size: 18px;
-            text-indent: 18px;
-        }
-
-        .peter {
-            width: 45vw;
-        }
-
-        .competenciesHeader {
-            font-size:20px;
-        }
-        .competencies{
-            font-size:16px;
-        }
-        .competencies li{
-            width: 30%;
+            width:80%;
         }
     }
 
-    @media(max-width:24em) {
-        .about {
-            font-size: 18px;
-            text-indent: 18px;
+        @media(max-width: 36em) {
+            .logo {
+                width: 50%;
+            }
+
+            .textDiv p {
+                font-size: 20px;
+            }
+
+            #more {
+                font-size: 20px;
+            }
+
+            .headerText {
+                font-size: 28px;
+            }
+
+            .about {
+                font-size: 18px;
+                text-indent: 18px;
+            }
+
+            .peter {
+                width: 45vw;
+            }
+
+            .competenciesHeader {
+                font-size: 20px;
+            }
+
+            .competencies {
+                font-size: 16px;
+            }
+
+                .competencies li {
+                    width: 30%;
+                }
         }
 
-        .competencies {
-            font-size: 16px;
+        @media(max-width:24em) {
+            .about {
+                font-size: 18px;
+                text-indent: 18px;
+            }
+
+            .competencies {
+                font-size: 16px;
+            }
         }
     }
-}
 
 @media screen and (orientation: portrait) {
 
@@ -424,7 +434,7 @@
 
         .about {
             font-size: 20px;
-            text-indent: 20px;
+            text-indent: 12px;
         }
 
         .competenciesHeader {

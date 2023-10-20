@@ -42,17 +42,14 @@ export default function Home() {
                 building studio based in Gardena, California. Starting over 30 years
                 ago, Peter Asmar has made a name for himself in the industry.
             </p>
-            <br/>
             <p className={styles.about}>Starting out with mostly carpentry, visual art, composition and painting,
                 he has manifested and refined his craft to a full-fledged studio.
             </p>
-            <br />
             <p className={styles.about}>Asmar Studio specializes in large scale, highly detailed character
                 and set piece fabrications and has become the go-to company for firms
                 in the entertainment industry as well as other major brands and their
                 respective agencies.
             </p>
-            <br />
             <p className={styles.about}>Working with clients’ imaginations and visions, Asmar Studio has brought
                 Hollywood, art and entertainment industry masterpieces to life for red
                 carpet premiers, trade shows, corporate events and more!
