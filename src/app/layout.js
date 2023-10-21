@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import Navbar from '../components/navbar'
 import { Sorts_Mill_Goudy } from 'next/font/google'
 
@@ -12,16 +12,11 @@ const goudy = Sorts_Mill_Goudy({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={goudy.className}>
-            <head>
-                <Helmet>
-                    <meta
-                        http-equiv="Content-Security-Policy"
-                        content="default-src 'self'; img-src 'self'; font-src 'self';"
-                    />
-                </Helmet>
-                <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+            <Head>
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="default-src 'self'; img-src 'self'; font-src 'self';"
+                />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
                 <meta
@@ -29,7 +24,10 @@ export default function RootLayout({ children }) {
                     content="Design, Modeling, Sculpting, Prototypes, Metalwork, Woodwork, Fiberglass, Carpentry, Welding, Trade Shows, Set Building, Custom Furniture, Painting, Finishing, Project Management, Logistics, Resin Work"
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
-            </head>
+                <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+            </Head>
             <body>
                 <Navbar />
                 <main>
