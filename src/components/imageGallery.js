@@ -37,7 +37,7 @@ export default function ImageGallery() {
         { source: "./images/gallery/Mowgli.webp", description: "Mowgli" },
         { source: "./images/gallery/Raven.webp", description: "Raven" },
         { source: "./images/gallery/Turtles.webp", description: "Ninja Turtles" },
-        { source: "./images/gallery/Paramount.webp", description: "Paramount Mountain" },
+        { source: "./images/gallery/Paramount.webp", description: "Paramount" },
         { source: "./images/gallery/Pinocchio.webp", description: "3D Pinocchio Billboard" },
         { source: "./images/gallery/QueensGambit.webp", description: "Giant Chess Pieces" },
         { source: "./images/gallery/Rampage.webp", description: "Destroyed Freeway Ramp" },
