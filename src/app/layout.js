@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import Head from 'next/head';
 import Navbar from '../components/navbar'
 import { Sorts_Mill_Goudy } from 'next/font/google'
 
@@ -12,7 +11,7 @@ const goudy = Sorts_Mill_Goudy({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={goudy.className}>
-            <Head>
+            <head>
                 <meta
                     http-equiv="Content-Security-Policy"
                     content="default-src 'self'; img-src 'self'; font-src 'self';"
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
                 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-            </Head>
+            </head>
             <body>
                 <Navbar />
                 <main>
