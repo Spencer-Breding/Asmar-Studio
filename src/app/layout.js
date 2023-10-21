@@ -12,10 +12,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={goudy.className}>
             <head>
-                <meta
-                    http-equiv="Content-Security-Policy"
-                    content="default-src 'self'; img-src 'self'; font-src 'self';"
-                />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
                 <meta
