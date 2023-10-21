@@ -1,4 +1,4 @@
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 import styles from '../styles/Contact.module.css';
 
 export default function Contact() {
@@ -20,10 +20,10 @@ export default function Contact() {
                 <p className={styles.title}>Follow Us</p>
                 <div className={styles.logo_container}>
                     <a href="https://www.instagram.com/asmarstudio/" target="_blank">
-                        <CldImage className={styles.logo} src="Asmar Studio/cmy266h5wvovmotyjza9" alt="Instagram Logo" width={600} height={600} />
+                        <Image className={styles.logo} src="./images/instagram.webp" alt="Instagram Logo" width={600} height={600} />
                     </a>
                     <a href="https://www.facebook.com/asmarstudio/" target="_blank">
-                        <CldImage className={styles.logo} src="Asmar Studio/gq3ranyygdpvvherw23s" alt="Facebook Logo" width={500} height={500} />
+                        <Image className={styles.logo} src="./images/facebook.webp" alt="Facebook Logo" width={500} height={500} />
                     </a>
                 </div>
             </div>
