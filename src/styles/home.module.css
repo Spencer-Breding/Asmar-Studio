@@ -388,7 +388,7 @@
         }
 
         .peter {
-            width: 70vw;
+            width: 50vw;
         }
 
         .competenciesHeader {
@@ -435,6 +435,10 @@
         .about {
             font-size: 20px;
             text-indent: 12px;
+        }
+
+        .peter {
+            width: 70vw;
         }
 
         .competenciesHeader {
