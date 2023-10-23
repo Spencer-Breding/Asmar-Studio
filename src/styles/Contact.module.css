@@ -183,11 +183,11 @@
         }
 
         .body_text {
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .logo_container {
-            flex-direction: column;
+            flex-direction: row;
             gap: 0.75em;
         }
 
