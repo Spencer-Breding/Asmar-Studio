@@ -437,10 +437,6 @@
             text-indent: 12px;
         }
 
-        .peter {
-            width: 70vw;
-        }
-
         .competenciesHeader {
             font-size: 28px;
         }
@@ -453,22 +449,26 @@
             margin-right: auto;
             justify-content: center;
             width: 90%;
-            font-size: 20px;
+            font-size: 24px;
         }
 
             .competencies li {
-                width: 40%;
+                width: 45%;
                 margin-left: auto;
             }
     }
 
-    @media(max-width: 36em) {
+    @media(max-width: 40em) {
         .textDiv p {
             width: 100%;
         }
 
         #more {
             width: 100%;
+        }
+
+        .peter {
+            width: 70vw;
         }
 
         .competenciesHeader {
