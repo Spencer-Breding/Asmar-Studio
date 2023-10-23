@@ -384,7 +384,7 @@
         .about {
             font-size: 28px;
             text-indent: 28px;
-            width: 100%;
+            width: 90%;
         }
 
         .peter {
@@ -433,8 +433,8 @@
         }
 
         .about {
-            font-size: 20px;
-            text-indent: 12px;
+            font-size: 24px;
+            text-indent: 16px;
         }
 
         .competenciesHeader {
@@ -453,7 +453,7 @@
         }
 
             .competencies li {
-                width: 45%;
+                width: 30%;
                 margin-left: auto;
             }
     }
@@ -465,6 +465,11 @@
 
         #more {
             width: 100%;
+        }
+
+        .about {
+            font-size: 20px;
+            text-indent: 12px;
         }
 
         .peter {
