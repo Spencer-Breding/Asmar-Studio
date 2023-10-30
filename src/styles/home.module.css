@@ -220,9 +220,6 @@
         transform: translateX(2.5%);
     }
 
-        .competencies li {
-            width: 27.5%;
-        }
 }
 
 @media screen and (orientation: landscape) {
@@ -453,7 +450,7 @@
         }
 
             .competencies li {
-                width: 30%;
+                width: 45%;
                 margin-left: auto;
             }
     }
