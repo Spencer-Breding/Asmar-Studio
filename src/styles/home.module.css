@@ -307,7 +307,7 @@
             .competencies li {
                 width: 30%;
                 margin-left: auto;
-                text-indent: -10.5%;
+                text-indent: -22px;
             }
     }
 
@@ -405,6 +405,7 @@
             .competencies li {
                 width: 30%;
                 margin-left: auto;
+                text-indent: -26px;
             }
     }
 
@@ -452,7 +453,7 @@
             .competencies li {
                 width: 45%;
                 margin-left: auto;
-                text-indent: -18px;
+                text-indent: -24px;
             }
     }
 
