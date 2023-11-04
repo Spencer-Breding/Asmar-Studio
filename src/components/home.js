@@ -79,6 +79,7 @@ export default function Home() {
             <Testimonials />
             <h2 id="Contact" className={styles.headerText}>Contact Us</h2>
             <Contact />
+             <p className={styles.copyright}>&copy; 2023 Asmar Studio, Inc.</p>
         </div>
     )
 }

@@ -578,6 +578,10 @@ body {
     margin: 8em 6em;
 }
 
+a[href^="tel"] {
+    color: #dc9102;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

@@ -192,7 +192,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100 * var(--vh));
+    height: 100%;
     background: rgba(0,0,0, 1);
     display: flex;
     flex-direction: column;
@@ -854,11 +854,11 @@
         }
 
         .Contact_body_text__fYPZs {
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .Contact_logo_container__HzTxR {
-            flex-direction: column;
+            flex-direction: row;
             gap: 0.75em;
         }
 
@@ -955,10 +955,10 @@
     margin: 0;
 }
 
-.home_main__C5E0Z picture{
-    display:flex;
-    margin:auto;
-}
+    .home_main__C5E0Z picture {
+        display: flex;
+        margin: auto;
+    }
 
 .home_textDiv__GApgZ {
     width: 100%;
@@ -969,7 +969,7 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    margin-top:1em;
+    margin-top: 1em;
 }
 
     .home_textDiv__GApgZ p {
@@ -991,7 +991,7 @@
     padding-top: 0.1em;
     margin-top: 1em;
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
-    font-weight:500;
+    font-weight: 500;
 }
 
 #home_more__U_0Wj {
@@ -1016,7 +1016,7 @@
     color: white;
     font-size: calc(12px + 1.5vw);
     margin: auto;
-    margin-bottom:0.5em;
+    margin-bottom: 0.5em;
     text-align: left;
     text-indent: calc(12px + 1.5vw);
     font-weight: 500;
@@ -1029,17 +1029,17 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top:2em;
+    margin-top: 2em;
 }
 
 .home_competenciesHeader__9psDf {
     display: flex;
     color: white;
     font-size: calc(24px + 1.5vw);
-    font-weight:500;
+    font-weight: 500;
     text-shadow: 1px 0 0 #dc9102, 0 -1px 0 #dc9102, 0 1px 0 #dc9102, -1px 0 0 #dc9102;
-    text-align:center;
-    margin:auto;
+    text-align: center;
+    margin: auto;
 }
 
 .home_competencies__nkdoi {
@@ -1047,7 +1047,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-    margin-top:1em;
+    margin-top: 1em;
     margin-bottom: -2em;
     color: white;
     font-size: calc(18px + 1.5vw);
@@ -1069,13 +1069,22 @@
 
         .home_competencies__nkdoi li span {
             position: relative;
-            text-align:center;
+            text-align: center;
         }
 
+.home_copyright__JR_sL {
+    font-size: calc(12px + 0.5vw);
+    margin-top: 4em;
+    margin-bottom: 0;
+    color: white;
+    font-family:Poppins;
+}
+
 @media(max-width:124em) {
-    .home_logo__fwoF8{
+    .home_logo__fwoF8 {
         width: 50vw;
     }
+
     .home_textDiv__GApgZ p {
         font-size: 32px;
     }
@@ -1093,8 +1102,8 @@
         text-indent: 30px;
     }
 
-    .home_peter___Anyo{
-        margin-top:1.5em;
+    .home_peter___Anyo {
+        margin-top: 1.5em;
     }
 
     .home_competenciesHeader__9psDf {
@@ -1105,6 +1114,9 @@
         font-size: 32px;
     }
 
+    .home_copyright__JR_sL {
+        font-size: 14px;
+    }
 }
 
 @media(max-width:105em) {
@@ -1130,7 +1142,7 @@
     }
 
     .home_competencies__nkdoi {
-        transform:translateX(5%);
+        transform: translateX(5%);
     }
 
         .home_competencies__nkdoi li {
@@ -1139,10 +1151,11 @@
 }
 
 @media(max-width: 87.5em) {
-    .home_main__C5E0Z{
-        margin-right:0.25em;
-        margin-left:0.25em;
+    .home_main__C5E0Z {
+        margin-right: 0.25em;
+        margin-left: 0.25em;
     }
+
     .home_logo__fwoF8 {
         width: 70vw;
     }
@@ -1166,25 +1179,24 @@
         width: 90%;
         transform: translateX(2.5%);
     }
-
-        .home_competencies__nkdoi li {
-            width: 27.5%;
-        }
 }
 
 @media screen and (orientation: landscape) {
 
     @media (max-width: 68em) {
         .home_textDiv__GApgZ p {
-            font-size:28px;
+            font-size: 28px;
         }
+
         #home_more__U_0Wj {
             font-size: 28px;
         }
-        .home_logo__fwoF8{
-            margin-top:0;
+
+        .home_logo__fwoF8 {
+            margin-top: 0;
             width: 30%;
         }
+
         .home_headerText__0GAyB {
             font-size: 38px;
         }
@@ -1194,38 +1206,45 @@
             text-indent: 24px;
         }
 
-        .home_peter___Anyo{
-            width:40vw;
+        .home_peter___Anyo {
+            width: 40vw;
         }
 
         .home_competenciesHeader__9psDf {
             font-size: 28px;
         }
-        .home_competencies__nkdoi{
-            font-size:24px;
+
+        .home_competencies__nkdoi {
+            font-size: 24px;
         }
-        .home_competencies__nkdoi li{
+
+            .home_competencies__nkdoi li {
+            }
+
+        .home_copyright__JR_sL {
+            font-size: 12px;
         }
     }
 
 
     @media (max-width: 54em) {
-        .home_logo__fwoF8{
-            width:37.5%;
+        .home_logo__fwoF8 {
+            width: 37.5%;
         }
+
         .home_textDiv__GApgZ {
             flex-wrap: wrap;
             width: 100%;
         }
 
             .home_textDiv__GApgZ p {
-                width:45%;
+                width: 45%;
                 font-size: 24px;
             }
 
         #home_more__U_0Wj {
             font-size: 24px;
-            width:45%;
+            width: 45%;
             margin-top: 0;
         }
 
@@ -1251,72 +1270,72 @@
             justify-content: center;
             width: 90%;
             font-size: 22px;
-            list-style-position:inside;
+            list-style-position: inside;
         }
 
             .home_competencies__nkdoi li {
                 width: 30%;
                 margin-left: auto;
-                text-indent: -10%;
+                text-indent: -20px;
             }
     }
 
     @media(max-width: 50em) {
-        .home_logo__fwoF8{
-            width:80%;
+        .home_logo__fwoF8 {
+            width: 80%;
         }
     }
 
-        @media(max-width: 36em) {
-            .home_logo__fwoF8 {
-                width: 50%;
-            }
-
-            .home_textDiv__GApgZ p {
-                font-size: 20px;
-            }
-
-            #home_more__U_0Wj {
-                font-size: 20px;
-            }
-
-            .home_headerText__0GAyB {
-                font-size: 28px;
-            }
-
-            .home_about__7XlFx {
-                font-size: 18px;
-                text-indent: 18px;
-            }
-
-            .home_peter___Anyo {
-                width: 45vw;
-            }
-
-            .home_competenciesHeader__9psDf {
-                font-size: 20px;
-            }
-
-            .home_competencies__nkdoi {
-                font-size: 16px;
-            }
-
-                .home_competencies__nkdoi li {
-                    width: 30%;
-                }
+    @media(max-width: 36em) {
+        .home_logo__fwoF8 {
+            width: 50%;
         }
 
-        @media(max-width:24em) {
-            .home_about__7XlFx {
-                font-size: 18px;
-                text-indent: 18px;
-            }
+        .home_textDiv__GApgZ p {
+            font-size: 20px;
+        }
 
-            .home_competencies__nkdoi {
-                font-size: 16px;
+        #home_more__U_0Wj {
+            font-size: 20px;
+        }
+
+        .home_headerText__0GAyB {
+            font-size: 28px;
+        }
+
+        .home_about__7XlFx {
+            font-size: 18px;
+            text-indent: 18px;
+        }
+
+        .home_peter___Anyo {
+            width: 45vw;
+        }
+
+        .home_competenciesHeader__9psDf {
+            font-size: 20px;
+        }
+
+        .home_competencies__nkdoi {
+            font-size: 16px;
+        }
+
+            .home_competencies__nkdoi li {
+                width: 30%;
             }
+    }
+
+    @media(max-width:24em) {
+        .home_about__7XlFx {
+            font-size: 18px;
+            text-indent: 18px;
+        }
+
+        .home_competencies__nkdoi {
+            font-size: 16px;
         }
     }
+}
 
 @media screen and (orientation: portrait) {
 
@@ -1324,6 +1343,7 @@
         .home_textDiv__GApgZ p {
             margin-bottom: 1em;
         }
+
         .home_headerText__0GAyB {
             font-size: 42px;
         }
@@ -1331,11 +1351,11 @@
         .home_about__7XlFx {
             font-size: 28px;
             text-indent: 28px;
-            width: 100%;
+            width: 90%;
         }
 
         .home_peter___Anyo {
-            width: 70vw;
+            width: 50vw;
         }
 
         .home_competenciesHeader__9psDf {
@@ -1352,10 +1372,16 @@
             width: 90%;
             font-size: 26px;
         }
+
             .home_competencies__nkdoi li {
                 width: 30%;
                 margin-left: auto;
+                text-indent: -24px;
             }
+
+        .home_copyright__JR_sL {
+            font-size: 12px;
+        }
     }
 
 
@@ -1380,8 +1406,8 @@
         }
 
         .home_about__7XlFx {
-            font-size: 20px;
-            text-indent: 12px;
+            font-size: 24px;
+            text-indent: 16px;
         }
 
         .home_competenciesHeader__9psDf {
@@ -1396,16 +1422,17 @@
             margin-right: auto;
             justify-content: center;
             width: 90%;
-            font-size: 20px;
+            font-size: 24px;
         }
 
             .home_competencies__nkdoi li {
-                width: 40%;
+                width: 45%;
                 margin-left: auto;
+                text-indent: -22px;
             }
     }
 
-    @media(max-width: 36em) {
+    @media(max-width: 40em) {
         .home_textDiv__GApgZ p {
             width: 100%;
         }
@@ -1414,8 +1441,17 @@
             width: 100%;
         }
 
+        .home_about__7XlFx {
+            font-size: 20px;
+            text-indent: 12px;
+        }
+
+        .home_peter___Anyo {
+            width: 70vw;
+        }
+
         .home_competenciesHeader__9psDf {
-            font-size:24px;
+            font-size: 24px;
         }
     }
 
@@ -1425,13 +1461,13 @@
             text-indent: 16px;
         }
 
-        .home_competenciesHeader__9psDf{
-            font-size:20px;
+        .home_competenciesHeader__9psDf {
+            font-size: 20px;
         }
 
         .home_competencies__nkdoi {
             font-size: 16px;
-            width:95%;
+            width: 95%;
         }
     }
 }
