@@ -71,7 +71,7 @@
     margin: auto;
     margin-bottom: 0.5em;
     text-align: left;
-    text-indent: calc(12px + 1.5vw);
+    text-indent: calc(12px + 2.5vw);
     font-weight: 500;
     font-family: Poppins;
     width: 85%;
@@ -151,8 +151,8 @@
     }
 
     .about {
-        font-size: 30px;
-        text-indent: 30px;
+        font-size: 28px;
+        text-indent: 56px;
     }
 
     .peter {
@@ -189,11 +189,6 @@
         font-size: 42px;
     }
 
-    .about {
-        font-size: 28px;
-        text-indent: 28px;
-    }
-
     .competencies {
         transform: translateX(5%);
     }
@@ -228,6 +223,11 @@
         margin-top: 0;
     }
 
+    .about {
+        font-size: 24px;
+        text-indent: 48px;
+    }
+
     .competencies {
         width: 90%;
         transform: translateX(2.5%);
@@ -255,8 +255,8 @@
         }
 
         .about {
-            font-size: 24px;
-            text-indent: 24px;
+            font-size: 22px;
+            text-indent: 44px;
         }
 
         .peter {
@@ -303,11 +303,6 @@
 
         .headerText {
             font-size: 36px;
-        }
-
-        .about {
-            font-size: 22px;
-            text-indent: 22px;
         }
 
         .competenciesHeader {
@@ -358,7 +353,7 @@
 
         .about {
             font-size: 18px;
-            text-indent: 18px;
+            text-indent: 36px;
         }
 
         .peter {
@@ -379,10 +374,6 @@
     }
 
     @media(max-width:24em) {
-        .about {
-            font-size: 18px;
-            text-indent: 18px;
-        }
 
         .competencies {
             font-size: 16px;
@@ -402,8 +393,8 @@
         }
 
         .about {
-            font-size: 28px;
-            text-indent: 28px;
+            font-size: 22px;
+            text-indent: 44px;
             width: 90%;
         }
 
@@ -458,11 +449,6 @@
             font-size: 32px;
         }
 
-        .about {
-            font-size: 24px;
-            text-indent: 16px;
-        }
-
         .competenciesHeader {
             font-size: 28px;
         }
@@ -496,7 +482,7 @@
 
         .about {
             font-size: 20px;
-            text-indent: 12px;
+            text-indent: 40px;
         }
 
         .peter {
@@ -511,7 +497,7 @@
     @media(max-width:24em) {
         .about {
             font-size: 16px;
-            text-indent: 16px;
+            text-indent: 36px;
         }
 
         .competenciesHeader {
